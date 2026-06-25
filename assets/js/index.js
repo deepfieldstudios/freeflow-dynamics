@@ -260,19 +260,7 @@ function Nav() {
       borderBottom: scrolled ? '1px solid var(--ffd-line)' : '1px solid transparent',
       transition: 'background 0.35s ease, border-color 0.35s ease'
     }
-  }, !scrolled && !lightHero && /*#__PURE__*/React.createElement("div", {
-    "aria-hidden": "true",
-    style: {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      right: 0,
-      height: '180%',
-      background: 'linear-gradient(to bottom, rgba(20,33,32,0.55), rgba(20,33,32,0))',
-      pointerEvents: 'none',
-      zIndex: 0
-    }
-  }), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'relative',
       zIndex: 1,
@@ -597,7 +585,7 @@ function Hero() {
       width: '100%',
       height: '100%',
       objectFit: 'cover',
-      objectPosition: 'center top'
+      objectPosition: 'center 30%'
     }
   }), /*#__PURE__*/React.createElement("div", {
     style: {
