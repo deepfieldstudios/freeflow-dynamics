@@ -1,0 +1,8 @@
+/* ============================================================
+   Freeflow Dynamics — Web Fonts
+   All three faces are free on Google Fonts.
+   Served via Google Fonts CDN — no local binaries required.
+   Offline builds: download Bodoni Moda, Outfit & JetBrains Mono
+   from fonts.google.com and add @font-face rules here.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');

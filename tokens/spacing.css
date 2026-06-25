@@ -1,0 +1,19 @@
+/* ============================================================
+   Freeflow Dynamics — Spacing & Radius Tokens
+   Airy / editorial density — lots of negative space.
+   ============================================================ */
+:root {
+
+  /* ── SPACE SCALE ────────────────────────────────────────── */
+  --ffd-space-1: 0.5rem;    /*   8px  tight gap              */
+  --ffd-space-2: 1rem;      /*  16px  standard inner pad     */
+  --ffd-space-3: 1.5rem;    /*  24px  component gap          */
+  --ffd-space-4: 2.5rem;    /*  40px  section sub-gap        */
+  --ffd-space-5: 4rem;      /*  64px  section gap            */
+  --ffd-space-6: 6.5rem;    /* 104px  hero / section padding */
+
+  /* ── BORDER RADIUS ──────────────────────────────────────── */
+  --ffd-radius-sm: 4px;     /* chips, badges  */
+  --ffd-radius:    10px;    /* cards, inputs  */
+  --ffd-radius-lg: 20px;    /* large cards    */
+}

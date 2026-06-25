@@ -1,0 +1,18 @@
+/* ============================================================
+   FREEFLOW DYNAMICS — minimal base styles
+   Quiet defaults so any page starts on-brand.
+   ============================================================ */
+
+body {
+  font-family: var(--ffd-font-body);
+  font-weight: 300;
+  color: var(--ffd-text);
+  background: var(--ffd-bg);
+  line-height: var(--ffd-leading-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--ffd-tide);
+  color: var(--ffd-foam);
+}

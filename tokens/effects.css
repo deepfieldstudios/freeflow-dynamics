@@ -1,0 +1,36 @@
+/* ============================================================
+   Freeflow Dynamics — Shadow, Gradient & Motion Tokens
+   Shadows are always tinted to deep teal, never neutral grey.
+   ============================================================ */
+:root {
+
+  /* ── SHADOWS (teal-tinted) ──────────────────────────────── */
+  --ffd-shadow-sm: 0 1px 2px rgba(35,60,58,.10);
+  --ffd-shadow:    0 12px 30px -16px rgba(35,60,58,.38);
+  --ffd-shadow-lg: 0 30px 60px -28px rgba(35,60,58,.50);
+
+  /* ── SIGNATURE GRADIENTS ────────────────────────────────── */
+
+  /* The Descent — mist surface → tide → slate → deep abyss  */
+  /* Literal dive profile: use as hero BG, vertical rail      */
+  --ffd-gradient-descent: linear-gradient(
+    180deg,
+    var(--ffd-mist)       0%,
+    var(--ffd-tide)       40%,
+    var(--ffd-slate)      74%,
+    var(--ffd-deep-tide-2) 100%
+  );
+
+  /* The Shore — earth/cocoa → clay → cyan tide               */
+  /* Horizon meeting: warm coast flowing to cool ocean        */
+  --ffd-gradient-shore: linear-gradient(
+    90deg,
+    var(--ffd-cocoa) 0%,
+    var(--ffd-clay)  42%,
+    var(--ffd-tide)  100%
+  );
+
+  /* ── MOTION ─────────────────────────────────────────────── */
+  /* Restrained — reveals on scroll; respect prefers-reduced-motion */
+  --ffd-motion: 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+}

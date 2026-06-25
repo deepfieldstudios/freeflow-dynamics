@@ -1,0 +1,31 @@
+/* ============================================================
+   Freeflow Dynamics — Typography Tokens
+   Three voices: Display (Bodoni Moda) · UI (Outfit) · Metric (JetBrains Mono)
+   Body type is always Outfit — never Inter.
+   ============================================================ */
+:root {
+
+  /* ── FONT FAMILIES ──────────────────────────────────────── */
+  --ffd-font-display: "Bodoni Moda", "Didot", Georgia, serif;
+  --ffd-font-body:    "Outfit", "Helvetica Neue", Arial, sans-serif;
+  --ffd-font-metric:  "JetBrains Mono", "SFMono-Regular", Menlo, monospace;
+
+  /* ── TYPE SCALE ─────────────────────────────────────────── */
+  --ffd-text-xs:   0.75rem;                        /*  12px */
+  --ffd-text-sm:   0.875rem;                       /*  14px */
+  --ffd-text-base: 1rem;                           /*  16px */
+  --ffd-text-md:   1.125rem;                       /*  18px */
+  --ffd-text-lg:   1.5rem;                         /*  24px */
+  --ffd-text-xl:   2rem;                           /*  32px */
+  --ffd-text-2xl:  clamp(2.25rem, 4vw, 3rem);      /* ~36–48px */
+  --ffd-text-3xl:  clamp(3rem, 7vw, 5.5rem);       /* ~48–88px */
+
+  /* ── TRACKING ───────────────────────────────────────────── */
+  --ffd-tracking-display: -0.02em;   /* tight for Bodoni headlines */
+  --ffd-tracking-eyebrow:  0.28em;   /* wide caps for labels       */
+  --ffd-tracking-metric:  -0.02em;   /* tight for JetBrains nums   */
+
+  /* ── LEADING ────────────────────────────────────────────── */
+  --ffd-leading-tight: 1.04;   /* display headlines */
+  --ffd-leading-body:  1.65;   /* body copy         */
+}

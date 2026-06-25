@@ -1,0 +1,57 @@
+/* ============================================================
+   Freeflow Dynamics — Color Tokens
+   Direction: sun-faded volcanic coast meets soft ocean.
+   Three families: Soft Ocean · Volcanic Earth · Coastal Greens
+   ============================================================ */
+:root {
+
+  /* ── SOFT OCEAN ─────────────────────────────────────────── */
+  --ffd-deep-tide:   #2f4f4d;   /* muted deep teal — primary dark surface  */
+  --ffd-deep-tide-2: #233c3a;   /* deepest — gradient floor                */
+  --ffd-slate:       #5e7a78;   /* slate teal-green — secondary deep       */
+  --ffd-tide:        #59aec3;   /* bright soft cyan — primary cool accent  */
+  --ffd-tide-deep:   #2f8aa0;   /* cyan legible as text on light           */
+  --ffd-tide-light:  #8fcdd9;   /* cyan on dark surfaces                   */
+  --ffd-sky:         #94b5be;   /* dusty blue                              */
+  --ffd-mist:        #b6cdcb;   /* powder aqua — core heritage colour      */
+  --ffd-cloud:       #c4ccd5;   /* cool grey-blue neutral                  */
+
+  /* ── COASTAL GREENS ─────────────────────────────────────── */
+  --ffd-sage:        #88996d;   /* olive — earthy supporting green         */
+  --ffd-sage-light:  #bdd19e;   /* light sage tint                         */
+  --ffd-sage-grey:   #bcc4b7;   /* muted sage-grey neutral                 */
+
+  /* ── VOLCANIC EARTH ─────────────────────────────────────── */
+  --ffd-ink:         #33322c;   /* warm charcoal — primary text, never #000 */
+  --ffd-ink-soft:    #4a4840;   /* raised dark surface                     */
+  --ffd-cocoa:       #6e4f43;   /* deep warm brown — earth text accent     */
+  --ffd-clay:        #bc9177;   /* caramel/clay — primary warm accent      */
+  --ffd-clay-glow:   #d4a98a;   /* clay legible on dark surfaces           */
+  --ffd-caramel:     #b88955;   /* deeper warm                             */
+  --ffd-gold:        #e5b050;   /* golden highlight — use sparingly only   */
+  --ffd-taupe:       #c7b3a3;   /* warm neutral mid                        */
+  --ffd-sand:        #d7c3a0;   /* warm sand surface                       */
+  --ffd-shell:       #f2ebdc;   /* primary light background — warm cream   */
+  --ffd-foam:        #faf6ec;   /* near-white card surface                 */
+
+  /* ── NEUTRALS / LINES ───────────────────────────────────── */
+  --ffd-stone:       #6e6a5f;   /* secondary text on light                 */
+  --ffd-stone-soft:  #948f81;   /* muted captions                          */
+  --ffd-line:        #dad0be;   /* hairline on light surfaces              */
+  --ffd-line-dark:   #46615f;   /* hairline on deep teal                   */
+
+  /* ── SEMANTIC ROLES ─────────────────────────────────────── */
+  --ffd-bg:          var(--ffd-shell);
+  --ffd-bg-deep:     var(--ffd-deep-tide);
+  --ffd-surface:     var(--ffd-foam);
+  --ffd-text:        var(--ffd-ink);
+  --ffd-text-muted:  var(--ffd-stone);
+  --ffd-text-invert: var(--ffd-shell);
+  --ffd-accent:      var(--ffd-tide);
+  --ffd-accent-warm: var(--ffd-clay);
+
+  --ffd-success:     var(--ffd-tide-deep);
+  --ffd-warning:     var(--ffd-gold);
+  --ffd-alert:       var(--ffd-cocoa);
+  --ffd-info:        var(--ffd-slate);
+}
