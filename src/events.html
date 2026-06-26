@@ -18,6 +18,28 @@
 </style>
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+<link rel="canonical" href="https://freeflowdynamics.com/events.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Freeflow Dynamics">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://freeflowdynamics.com/events.html">
+<meta property="og:title" content="Upcoming Events — Freeflow Dynamics · Natalie Bruce · Freediving Workshops &amp; Trips">
+<meta property="og:description" content="Upcoming freediving workshops, depth training trips, and competition coaching with Natalie Bruce of Freeflow Dynamics. New events announced here first.">
+<meta property="og:image" content="https://freeflowdynamics.com/assets/og/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Natalie Bruce surfacing after a freedive — Freeflow Dynamics, Tenerife">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Upcoming Events — Freeflow Dynamics · Natalie Bruce · Freediving Workshops &amp; Trips">
+<meta name="twitter:description" content="Upcoming freediving workshops, depth training trips, and competition coaching with Natalie Bruce of Freeflow Dynamics. New events announced here first.">
+<meta name="twitter:image" content="https://freeflowdynamics.com/assets/og/og-default.jpg">
+<meta name="theme-color" content="#233c3a">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://freeflowdynamics.com/#organization","name":"Freeflow Dynamics","alternateName":"Freeflow Dynamics by Natalie Bruce","url":"https://freeflowdynamics.com/","description":"Freediving coaching and human-performance programs with professional freediver Natalie Bruce — online worldwide and in-water in Tenerife.","email":"info@freeflowdynamics.com","image":"https://freeflowdynamics.com/assets/og/og-default.jpg","logo":"https://freeflowdynamics.com/assets/lockup-horizontal.svg","founder":{"@id":"https://freeflowdynamics.com/#natalie"},"areaServed":{"@type":"Place","name":"Worldwide (online)"},"address":{"@type":"PostalAddress","addressLocality":"Tenerife","addressRegion":"Canary Islands","addressCountry":"ES"},"sameAs":["https://www.instagram.com/natalie.freediver","https://www.instagram.com/freeflowdynamics"]},{"@type":"WebSite","@id":"https://freeflowdynamics.com/#website","name":"Freeflow Dynamics","url":"https://freeflowdynamics.com/","publisher":{"@id":"https://freeflowdynamics.com/#organization"},"inLanguage":"en"},{"@type":"Person","@id":"https://freeflowdynamics.com/#natalie","name":"Natalie Bruce","jobTitle":"Professional Freediver & Human-Performance Coach","description":"US professional freediver and human-performance coach based in Tenerife. Holder of 12 continental and 17 US national AIDA records across depth, static and dynamic disciplines.","url":"https://freeflowdynamics.com/about.html","image":"https://freeflowdynamics.com/assets/photos/natalie-bruce-about-portrait-headshot.jpg","homeLocation":{"@type":"Place","name":"Tenerife, Canary Islands, Spain"},"nationality":"American","knowsAbout":["Freediving","Apnea","Breath-hold training","Freediving safety","Human-performance coaching"],"award":["12× AIDA continental freediving records","17× AIDA US national freediving records"],"worksFor":{"@id":"https://freeflowdynamics.com/#organization"},"sameAs":["https://www.instagram.com/natalie.freediver"]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freeflowdynamics.com/"},{"@type":"ListItem","position":2,"name":"Events","item":"https://freeflowdynamics.com/events.html"}]}]}</script>
 </head>
 <body>
 <div id="root"></div>
@@ -103,8 +125,8 @@ function Nav(){
                 <a href={h} style={{fontFamily:'var(--ffd-font-body)',fontWeight:active?500:400,fontSize:'0.9rem',color:active?txtActive:txt,textDecoration:'none',display:'flex',alignItems:'center',gap:'0.3rem',borderBottom:active?'1.5px solid var(--ffd-clay)':'none',paddingBottom:'1px',transition:'color 0.3s ease'}}>
                   {l}{hasDd&&<span style={{fontSize:'0.5rem',color:caret,lineHeight:1}}>▾</span>}
                 </a>
-                {hasDd&&dd===l&&(
-                  <div style={{position:'absolute',top:'100%',left:'-1rem',paddingTop:'0.7rem',zIndex:200}}><div style={{background:'var(--ffd-foam)',border:'1px solid var(--ffd-line)',borderRadius:'var(--ffd-radius-lg)',boxShadow:'0 20px 44px -16px rgba(35,60,58,0.26)',minWidth:230,padding:'0.4rem'}}>
+                {hasDd&&(
+                  <div style={{position:'absolute',top:'100%',left:'-1rem',paddingTop:'0.7rem',zIndex:200,opacity:dd===l?1:0,visibility:dd===l?'visible':'hidden',pointerEvents:dd===l?'auto':'none',transition:'opacity 0.18s ease'}}><div style={{background:'var(--ffd-foam)',border:'1px solid var(--ffd-line)',borderRadius:'var(--ffd-radius-lg)',boxShadow:'0 20px 44px -16px rgba(35,60,58,0.26)',minWidth:230,padding:'0.4rem'}}>
                     {ddItems[l].map((item,i)=>(
                       <a key={i} href={item.h} onMouseEnter={e=>e.currentTarget.style.background='var(--ffd-shell)'} onMouseLeave={e=>e.currentTarget.style.background='transparent'} style={{display:'flex',flexDirection:'column',gap:'0.15rem',padding:'0.7rem 0.9rem',borderRadius:'var(--ffd-radius)',textDecoration:'none',background:'transparent',transition:'background 0.18s'}}>
                         <span style={{fontFamily:'var(--ffd-font-body)',fontWeight:500,fontSize:'0.88rem',color:'var(--ffd-ink)'}}>{item.l}</span>
