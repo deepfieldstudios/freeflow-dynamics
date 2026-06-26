@@ -585,7 +585,7 @@ function Hero() {
       width: '100%',
       height: '100%',
       objectFit: 'cover',
-      objectPosition: 'center 80%'
+      objectPosition: 'center bottom'
     }
   }), /*#__PURE__*/React.createElement("div", {
     style: {

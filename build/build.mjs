@@ -12,6 +12,7 @@
 //   5. rewrites the page HTML accordingly and emits it to the repo root.
 
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { transformSync } from '@babel/core';
@@ -79,6 +80,8 @@ ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(App));
 })();
 `;
   writeFileSync(join(ROOT, 'assets', 'js', `${name}.js`), clientJs);
+  // content hash for cache-busting the bundle URL (so a deploy can never run a stale bundle)
+  const hash = createHash('sha256').update(clientJs).digest('hex').slice(0, 8);
 
   // 5. Rewrite the page HTML.
   let out = html;
@@ -94,7 +97,7 @@ ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(App));
   // inject pre-rendered markup into the root container
   out = out.replace(/<div id="root">\s*<\/div>/, `<div id="root">${ssr}</div>`);
   // load the page bundle at end of body
-  out = out.replace(/<\/body>/, `<script src="assets/js/${name}.js"></script>\n</body>`);
+  out = out.replace(/<\/body>/, `<script src="assets/js/${name}.js?v=${hash}"></script>\n</body>`);
 
   writeFileSync(join(ROOT, file), out);
   console.log(`✓ ${file}  (ssr ${ssr.length.toLocaleString()} chars, bundle ${clientJs.length.toLocaleString()} chars)`);
