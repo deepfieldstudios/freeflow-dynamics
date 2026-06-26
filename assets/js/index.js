@@ -600,15 +600,6 @@ function Hero() {
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'absolute',
-      bottom: 0,
-      left: 0,
-      right: 0,
-      height: '28%',
-      background: 'linear-gradient(to top, var(--ffd-deep-tide-2), transparent)'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'absolute',
       bottom: '2.5rem',
       right: '2rem',
       fontFamily: 'var(--ffd-font-display)',
