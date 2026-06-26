@@ -219,7 +219,7 @@ function Nav() {
     return () => window.removeEventListener('scroll', f);
   }, []);
   const cur = window.location.pathname.split('/').pop() || 'index.html';
-  const lightHero = cur === 'contact.html';
+  const lightHero = cur === 'contact.html' || cur === 'media.html';
   const onLight = scrolled || lightHero;
   const pActive = cur === 'partners.html';
   const ddItems = {
