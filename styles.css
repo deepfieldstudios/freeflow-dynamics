@@ -9,3 +9,96 @@
 @import './tokens/typography.css';
 @import './tokens/spacing.css';
 @import './tokens/effects.css';
+
+/* ============================================================
+   Responsive — tablet & mobile.
+   The site uses inline-style grids; these rules target the
+   serialized declarations (e.g. grid-template-columns:0.85fr 1.15fr)
+   and override them at small breakpoints.
+   ============================================================ */
+
+/* Never allow horizontal scrolling on small screens */
+@media (max-width: 1024px){
+  html, body { max-width: 100%; overflow-x: hidden; }
+}
+
+/* TABLET — dense 3/4-up card rows relax to 2-up */
+@media (max-width: 1024px){
+  [style*="grid-template-columns:repeat(3,1fr)"],
+  [style*="grid-template-columns:repeat(4,1fr)"]{
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+}
+
+/* MOBILE — stack every multi-column grid to a single column */
+@media (max-width: 680px){
+  [style*="grid-template-columns:0.85fr 1.15fr"],
+  [style*="grid-template-columns:0.9fr 1.1fr"],
+  [style*="grid-template-columns:1.15fr 0.85fr"],
+  [style*="grid-template-columns:1.1fr 0.9fr"],
+  [style*="grid-template-columns:1.4fr 1fr"],
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns:repeat(2,1fr)"],
+  [style*="grid-template-columns:repeat(3,1fr)"],
+  [style*="grid-template-columns:repeat(4,1fr)"],
+  [style*="grid-template-columns:118px 1fr 116px"]{
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Home hero: drop the forced 100vh, trim nav-clearance padding,
+     and give the now-stacked photo a real height (it was height:100%). */
+  [style*="min-height:100vh;display:grid;grid-template-columns:0.85fr 1.15fr"]{
+    min-height: auto !important;
+  }
+  [style*="min-height:100vh;display:grid;grid-template-columns:0.85fr 1.15fr"] > div:first-child{
+    padding-top: 6rem !important;
+    padding-bottom: 3rem !important;
+  }
+  [style*="min-height:100vh;display:grid;grid-template-columns:0.85fr 1.15fr"] > div:last-child{
+    height: 60vh !important;
+    min-height: 320px;
+  }
+
+  /* Photo strip: horizontal scroll instead of five slivers */
+  [style*="display:flex;height:340px"]{ overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  [style*="display:flex;height:340px"] > div{ min-width: 66% !important; }
+
+  /* Generous section side-padding can shrink a touch on phones */
+  [style*="max-width:1280px"], [style*="max-width:1240px"]{ max-width: 100% !important; }
+}
+
+/* ---- Mobile navigation (hamburger) ---- */
+.ffd-burger{ display: none; }
+@media (max-width: 760px){
+  .ffd-burger{ display: inline-block; }
+  .ffd-navlinks{
+    display: none !important;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0 !important;
+    background: var(--ffd-deep-tide);
+    padding: 0.4rem clamp(1.25rem,5vw,4rem) 1.2rem;
+    border-top: 1px solid var(--ffd-line-dark);
+    box-shadow: 0 26px 46px -20px rgba(20,33,32,0.55);
+  }
+  .ffd-navlinks[data-open="true"]{ display: flex !important; }
+  /* uniform legible styling regardless of the page's per-hero colour scheme */
+  .ffd-navlinks a, .ffd-navlinks span{ color: var(--ffd-foam) !important; }
+  .ffd-navlinks > a,
+  .ffd-navlinks > div > a{
+    padding: 0.9rem 0 !important;
+    font-size: 1rem !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(242,235,220,0.10) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    width: 100%;
+    display: block !important;
+  }
+  .ffd-navlinks > div{ width: 100%; position: static !important; }
+  /* hover dropdowns and the vertical divider don't belong in the stacked panel */
+  .ffd-navlinks > div > div{ display: none !important; }
+  .ffd-navlinks > div[style*="width:1px"]{ display: none !important; }
+}

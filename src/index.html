@@ -101,6 +101,7 @@ function Nav(){
   const [scrolled,setScrolled]=useState(false);
   const [dd,setDd]=useState(null);
   const [phov,setPhov]=useState(false);
+  const [mobileOpen,setMobileOpen]=useState(false);
   useEffect(()=>{
     const f=()=>setScrolled(window.scrollY>40);
     f(); window.addEventListener('scroll',f,{passive:true});
@@ -136,7 +137,7 @@ function Nav(){
             FREE<em style={{fontStyle:'italic',fontWeight:400,color:flowColor}}>FLOW</em>{' '}DYNAMICS
           </div>
         </a>
-        <div style={{display:'flex',alignItems:'center',gap:'1.4rem',flexShrink:0}}>
+        <button className="ffd-burger" aria-label="Toggle menu" onClick={()=>setMobileOpen(o=>!o)} style={{background:'none',border:'none',cursor:'pointer',padding:'0.4rem',flexShrink:0}}><span style={{display:'block',width:24,height:2,borderRadius:2,background:logoColor,margin:'5px 0',transition:'transform .25s,opacity .25s',transform:mobileOpen?'translateY(7px) rotate(45deg)':'none'}}/><span style={{display:'block',width:24,height:2,borderRadius:2,background:logoColor,margin:'5px 0',transition:'opacity .2s',opacity:mobileOpen?0:1}}/><span style={{display:'block',width:24,height:2,borderRadius:2,background:logoColor,margin:'5px 0',transition:'transform .25s',transform:mobileOpen?'translateY(-7px) rotate(-45deg)':'none'}}/></button><div className="ffd-navlinks" data-open={mobileOpen?'true':'false'} style={{display:'flex',alignItems:'center',gap:'1.4rem',flexShrink:0}}>
           {[{l:'Programs',h:'programs.html'},{l:'About',h:'about.html'},{l:'Events',h:'events.html'},{l:'Media',h:'media.html'}].map(({l,h})=>{
             const hasDd=l in ddItems;const active=cur===h;
             return(
