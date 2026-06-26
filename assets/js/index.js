@@ -446,7 +446,7 @@ function Hero() {
   return /*#__PURE__*/React.createElement("section", {
     id: "hero",
     style: {
-      minHeight: '82vh',
+      minHeight: '90vh',
       display: 'grid',
       gridTemplateColumns: '0.85fr 1.15fr',
       background: 'var(--ffd-shell)',
