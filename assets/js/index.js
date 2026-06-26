@@ -351,13 +351,17 @@ function Nav() {
         color: caret,
         lineHeight: 1
       }
-    }, "\u25BE")), hasDd && dd === l && /*#__PURE__*/React.createElement("div", {
+    }, "\u25BE")), hasDd && /*#__PURE__*/React.createElement("div", {
       style: {
         position: 'absolute',
         top: '100%',
         left: '-1rem',
         paddingTop: '0.7rem',
-        zIndex: 200
+        zIndex: 200,
+        opacity: dd === l ? 1 : 0,
+        visibility: dd === l ? 'visible' : 'hidden',
+        pointerEvents: dd === l ? 'auto' : 'none',
+        transition: 'opacity 0.18s ease'
       }
     }, /*#__PURE__*/React.createElement("div", {
       style: {

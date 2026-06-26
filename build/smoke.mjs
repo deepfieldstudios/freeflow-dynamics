@@ -15,7 +15,9 @@ let failures = 0;
 for (const file of readdirSync(ROOT).filter((f) => f.endsWith('.html'))) {
   const name = file.replace(/\.html$/, '');
   const url = `${SITE_ORIGIN}/${name === 'index' ? '' : file}`;
-  const dom = new JSDOM(readFileSync(join(ROOT, file), 'utf8'), {
+  const source = readFileSync(join(ROOT, file), 'utf8');
+  if (!source.includes('id="root"')) continue; // skip static pages (e.g. 404.html)
+  const dom = new JSDOM(source, {
     runScripts: 'outside-only', pretendToBeVisual: true, url,
   });
   const w = dom.window;
