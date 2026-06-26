@@ -210,6 +210,7 @@ function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [dd, setDd] = useState(null);
   const [phov, setPhov] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   useEffect(() => {
     const f = () => setScrolled(window.scrollY > 40);
     f();
@@ -301,7 +302,53 @@ function Nav() {
       fontWeight: 400,
       color: flowColor
     }
-  }, "FLOW"), ' ', "DYNAMICS")), /*#__PURE__*/React.createElement("div", {
+  }, "FLOW"), ' ', "DYNAMICS")), /*#__PURE__*/React.createElement("button", {
+    className: "ffd-burger",
+    "aria-label": "Toggle menu",
+    onClick: () => setMobileOpen(o => !o),
+    style: {
+      background: 'none',
+      border: 'none',
+      cursor: 'pointer',
+      padding: '0.4rem',
+      flexShrink: 0
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'block',
+      width: 24,
+      height: 2,
+      borderRadius: 2,
+      background: logoColor,
+      margin: '5px 0',
+      transition: 'transform .25s,opacity .25s',
+      transform: mobileOpen ? 'translateY(7px) rotate(45deg)' : 'none'
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'block',
+      width: 24,
+      height: 2,
+      borderRadius: 2,
+      background: logoColor,
+      margin: '5px 0',
+      transition: 'opacity .2s',
+      opacity: mobileOpen ? 0 : 1
+    }
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'block',
+      width: 24,
+      height: 2,
+      borderRadius: 2,
+      background: logoColor,
+      margin: '5px 0',
+      transition: 'transform .25s',
+      transform: mobileOpen ? 'translateY(-7px) rotate(-45deg)' : 'none'
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "ffd-navlinks",
+    "data-open": mobileOpen ? 'true' : 'false',
     style: {
       display: 'flex',
       alignItems: 'center',
