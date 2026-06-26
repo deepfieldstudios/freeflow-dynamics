@@ -243,11 +243,11 @@ function Nav() {
       h: 'competition.html'
     }]
   };
-  const txt = onLight ? 'var(--ffd-stone)' : 'rgba(242,235,220,0.85)';
-  const txtActive = onLight ? 'var(--ffd-ink)' : 'var(--ffd-foam)';
+  const txt = onLight ? 'var(--ffd-stone)' : 'var(--ffd-ink)';
+  const txtActive = 'var(--ffd-ink)';
   const logoColor = onLight ? 'var(--ffd-deep-tide)' : 'var(--ffd-foam)';
   const flowColor = onLight ? 'var(--ffd-tide-deep)' : 'var(--ffd-tide-light)';
-  const caret = onLight ? 'var(--ffd-clay)' : 'var(--ffd-clay-glow)';
+  const caret = 'var(--ffd-clay)';
   return /*#__PURE__*/React.createElement("nav", {
     style: {
       position: 'fixed',
@@ -399,14 +399,14 @@ function Nav() {
     }, item.sub))))));
   }), /*#__PURE__*/React.createElement(Btn, {
     size: "sm",
-    variant: onLight ? 'primary' : 'ghost',
+    variant: "primary",
     href: BOOKING_URL,
     onClick: openBooking
   }, "Book a session"), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 1,
       height: 22,
-      background: onLight ? 'var(--ffd-line)' : 'rgba(242,235,220,0.3)'
+      background: onLight ? 'var(--ffd-line)' : 'rgba(51,50,44,0.18)'
     }
   }), /*#__PURE__*/React.createElement("a", {
     href: "partners.html",
@@ -417,9 +417,9 @@ function Nav() {
       fontWeight: 500,
       fontSize: '0.82rem',
       letterSpacing: '0.04em',
-      color: pActive || phov ? onLight ? 'var(--ffd-foam)' : 'var(--ffd-deep-tide)' : onLight ? 'var(--ffd-cocoa)' : 'var(--ffd-foam)',
-      background: pActive || phov ? onLight ? 'var(--ffd-cocoa)' : 'var(--ffd-foam)' : 'transparent',
-      border: '1.5px solid ' + (onLight ? 'var(--ffd-cocoa)' : 'rgba(242,235,220,0.6)'),
+      color: pActive || phov ? 'var(--ffd-foam)' : 'var(--ffd-cocoa)',
+      background: pActive || phov ? 'var(--ffd-cocoa)' : 'transparent',
+      border: '1.5px solid var(--ffd-cocoa)',
       borderRadius: 'var(--ffd-radius-sm)',
       padding: '0.4rem 0.85rem',
       textDecoration: 'none',
