@@ -595,7 +595,7 @@ function Hero() {
     style: {
       position: 'absolute',
       inset: 0,
-      background: 'linear-gradient(90deg, rgba(35,60,58,1) 0%, rgba(35,60,58,0.82) 5%, rgba(35,60,58,0.4) 15%, rgba(35,60,58,0.12) 26%, rgba(35,60,58,0) 38%)'
+      background: 'linear-gradient(90deg, rgba(35,60,58,1) 0%, rgba(35,60,58,0.82) 3%, rgba(35,60,58,0.4) 8%, rgba(35,60,58,0.12) 14%, rgba(35,60,58,0) 20%)'
     }
   }), /*#__PURE__*/React.createElement("div", {
     style: {
