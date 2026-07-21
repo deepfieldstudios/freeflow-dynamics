@@ -1,4 +1,4 @@
-/* Auto-generated from src/about.html by build/build.mjs — do not edit directly. */
+/* Auto-generated from src/contact.html by build/build.mjs — do not edit directly. */
 (function () {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const {
@@ -598,668 +598,152 @@ function Footer() {
   }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 Natalie Bruce / Freeflow Dynamics"), /*#__PURE__*/React.createElement("span", null, "Partners: Orca \xB7 USANA \xB7 CETMA"))));
 }
 
-/* ── ABOUT PAGE ── */
-
-function AboutHero() {
-  return /*#__PURE__*/React.createElement("section", {
-    style: {
-      position: 'relative',
-      height: '70vh',
-      minHeight: 500,
-      display: 'flex',
-      alignItems: 'flex-end',
-      overflow: 'hidden'
-    }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: `${P}/natalie-bruce-social-waterline-surface-float.jpg`,
-    alt: "Natalie Bruce floating face-up at the surface on the line, an over-under view of calm water and the green Tenerife coastline",
-    style: {
-      position: 'absolute',
-      inset: 0,
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      objectPosition: 'center 40%'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'absolute',
-      inset: 0,
-      background: 'linear-gradient(to top, rgba(35,60,58,0.9) 0%, rgba(35,60,58,0.3) 55%, rgba(35,60,58,0.1) 100%)'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'relative',
-      zIndex: 2,
-      maxWidth: 1280,
-      margin: '0 auto',
-      width: '100%',
-      padding: '0 clamp(1.25rem,5vw,4rem) clamp(3rem,6vw,5rem)'
-    }
-  }, /*#__PURE__*/React.createElement(Eyebrow, {
-    dark: true,
-    style: {
-      marginBottom: '1rem'
-    }
-  }, "About"), /*#__PURE__*/React.createElement("h1", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: 'clamp(3rem,7vw,5.5rem)',
-      lineHeight: 1,
-      letterSpacing: '-0.02em',
-      color: 'var(--ffd-foam)',
-      maxWidth: '16ch'
-    }
-  }, "Natalie Bruce"), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontStyle: 'italic',
-      fontSize: 'clamp(1.1rem,2.5vw,1.5rem)',
-      color: 'var(--ffd-clay-glow)',
-      marginTop: '0.5rem'
-    }
-  }, "US professional freediver \xB7 Colorado, USA")));
-}
-function Bio() {
-  return /*#__PURE__*/React.createElement("section", {
-    style: {
-      background: 'var(--ffd-shell)',
-      padding: 'clamp(5rem,11vw,9rem) 0'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      maxWidth: 1280,
-      margin: '0 auto',
-      padding: '0 clamp(1.25rem,5vw,4rem)',
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: 'clamp(3rem,8vw,8rem)',
-      alignItems: 'start'
-    }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Eyebrow, {
-    style: {
-      marginBottom: '1.4rem'
-    }
-  }, "The person"), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 400,
-      fontSize: 'clamp(1.5rem,3.2vw,2.3rem)',
-      lineHeight: 1.22,
-      letterSpacing: '-0.015em',
-      color: 'var(--ffd-ink)',
-      marginBottom: '2rem'
-    }
-  }, "I started swimming at four, just outside Chicago. Breath-holding never came easily \u2014 even short underwater sets were a struggle \u2014 which is part of why freediving came to mean what it does."), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '1.06rem',
-      color: 'var(--ffd-stone)',
-      lineHeight: 1.72,
-      fontWeight: 300,
-      marginBottom: '1.4rem'
-    }
-  }, "I grew up immersed in sport, studied Kinesiology and Sports Science, and built a career as a sports massage therapist in Chicago. For years the water was something I trained in \u2014 not yet something I listened to."), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '1.06rem',
-      color: 'var(--ffd-stone)',
-      lineHeight: 1.72,
-      fontWeight: 300,
-      marginBottom: '1.4rem'
-    }
-  }, "After several years at Chicago's pace, I moved to Thailand. In 2021, on the island of Koh Phangan, I took my first freediving course. With a background in swimming, yoga, and meditation, it felt immediately familiar \u2014 as if the pieces had quietly been leading back to the ocean."), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '1.06rem',
-      color: 'var(--ffd-stone)',
-      lineHeight: 1.72,
-      fontWeight: 300,
-      marginBottom: '2rem'
-    }
-  }, "What began as curiosity became a path. I entered my first major competition in 2023 at the CMAS Depth World Championship in Roat\xE1n, and in 2024 turned to indoor and depth freediving \u2014 becoming the first American woman past 200m in dynamic, now 257m, and rising into the top ten women in the world in two and a half years."), /*#__PURE__*/React.createElement(Waterline, {
-    style: {
-      margin: '2rem 0'
-    }
-  }), /*#__PURE__*/React.createElement("blockquote", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontStyle: 'italic',
-      fontSize: '1.35rem',
-      lineHeight: 1.42,
-      color: 'var(--ffd-deep-tide)',
-      borderLeft: '2px solid var(--ffd-clay)',
-      paddingLeft: '1.2rem'
-    }
-  }, "\"The sea always brings me back to a softer mind.\"", /*#__PURE__*/React.createElement("cite", {
+/* ── CONTACT PAGE ── */
+function Channel({
+  k,
+  v,
+  href,
+  note
+}) {
+  const [hov, setHov] = useState(false);
+  return /*#__PURE__*/React.createElement("a", {
+    href: href,
+    onMouseEnter: () => setHov(true),
+    onMouseLeave: () => setHov(false),
     style: {
       display: 'block',
-      fontStyle: 'normal',
-      fontFamily: 'var(--ffd-font-body)',
-      fontSize: '0.68rem',
-      letterSpacing: '0.16em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-stone-soft)',
-      marginTop: '0.7rem'
-    }
-  }, "\u2014 @natalie.freediver"))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'sticky',
-      top: '6rem'
-    }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: `${P}/natalie-bruce-about-portrait-orca-coast.jpg`,
-    alt: "Natalie Bruce, US professional freediver, smiling in an Orca wetsuit on the coast after a swim",
-    style: {
-      width: '100%',
-      borderRadius: 'var(--ffd-radius-lg)',
-      objectFit: 'cover',
-      objectPosition: 'center 28%',
-      aspectRatio: '3/4'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: '1.2rem',
-      display: 'flex',
-      justifyContent: 'space-between',
-      padding: '0 0.2rem'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      textAlign: 'center'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-metric)',
-      fontSize: '1.6rem',
-      color: 'var(--ffd-deep-tide)',
-      letterSpacing: '-0.03em'
-    }
-  }, "12\xD7"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.65rem',
-      letterSpacing: '0.16em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-stone)',
-      marginTop: '0.2rem'
-    }
-  }, "Continental")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      textAlign: 'center'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-metric)',
-      fontSize: '1.6rem',
-      color: 'var(--ffd-deep-tide)',
-      letterSpacing: '-0.03em'
-    }
-  }, "17\xD7"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.65rem',
-      letterSpacing: '0.16em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-stone)',
-      marginTop: '0.2rem'
-    }
-  }, "US National")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      textAlign: 'center'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-metric)',
-      fontSize: '1.6rem',
-      color: 'var(--ffd-deep-tide)',
-      letterSpacing: '-0.03em'
-    }
-  }, "USA"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.65rem',
-      letterSpacing: '0.16em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-stone)',
-      marginTop: '0.2rem'
-    }
-  }, "Colorado"))))));
-}
-function StatsBanner() {
-  const records = [{
-    v: '17×',
-    l: 'US national records'
-  }, {
-    v: '12×',
-    l: 'Continental records'
-  }, {
-    v: 'Top 10',
-    l: 'Women · world ranking'
-  }, {
-    v: '257m',
-    l: 'Dynamic, monofin'
-  }];
-  const medals = [{
-    m: 'Vice-World Champion',
-    d: '2025 AIDA World Championships, Wakayama · Dynamic bi-fins, 249m'
-  }, {
-    m: 'Bronze medal',
-    d: '2025 AIDA World Championships, Wakayama · Dynamic monofin, 257m'
-  }];
-  return /*#__PURE__*/React.createElement("section", {
-    style: {
-      background: 'var(--ffd-deep-tide-2)',
-      padding: 'clamp(4rem,9vw,7rem) 0'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      maxWidth: 1280,
-      margin: '0 auto',
-      padding: '0 clamp(1.25rem,5vw,4rem)'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: '0.9fr 1.1fr',
-      gap: 'clamp(2rem,6vw,5rem)',
-      alignItems: 'start',
-      marginBottom: '3rem'
-    }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Eyebrow, {
-    dark: true,
-    style: {
-      marginBottom: '1.2rem'
-    }
-  }, "Career"), /*#__PURE__*/React.createElement("h2", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: 'clamp(2rem,4.2vw,3rem)',
-      letterSpacing: '-0.02em',
-      lineHeight: 1.06,
-      color: 'var(--ffd-foam)'
-    }
-  }, "On the record.")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '1.4rem',
-      alignSelf: 'end'
-    }
-  }, medals.map((x, i) => /*#__PURE__*/React.createElement("div", {
-    key: i,
-    style: {
-      borderLeft: '2px solid var(--ffd-clay)',
-      paddingLeft: '1.1rem'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontStyle: 'italic',
-      fontSize: '1.25rem',
-      color: 'var(--ffd-foam)',
-      lineHeight: 1.2
-    }
-  }, x.m), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-body)',
-      fontSize: '0.82rem',
-      color: 'var(--ffd-stone-soft)',
-      marginTop: '0.3rem',
-      lineHeight: 1.5
-    }
-  }, x.d))))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(4,1fr)',
-      gap: '0',
-      borderLeft: '1px solid var(--ffd-line-dark)'
-    }
-  }, records.map((s, i) => /*#__PURE__*/React.createElement("div", {
-    key: i,
-    style: {
-      borderRight: '1px solid var(--ffd-line-dark)',
-      padding: '1.5rem 1.2rem',
-      textAlign: 'center'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-metric)',
-      fontSize: '1.8rem',
-      color: 'var(--ffd-foam)',
-      letterSpacing: '-0.03em',
-      lineHeight: 1
-    }
-  }, s.v), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.62rem',
-      letterSpacing: '0.16em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-stone-soft)',
-      marginTop: '0.4rem'
-    }
-  }, s.l)))), /*#__PURE__*/React.createElement("a", {
-    href: "competition.html",
-    style: {
-      display: 'inline-flex',
-      alignItems: 'center',
-      gap: '0.5rem',
-      marginTop: '2rem',
-      fontFamily: 'var(--ffd-font-body)',
-      fontWeight: 500,
-      fontSize: '0.9rem',
-      color: 'var(--ffd-tide-light)',
-      textDecoration: 'none'
-    }
-  }, "See the full competition record ", /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontFamily: 'var(--ffd-font-metric)'
-    }
-  }, "\u2192"))));
-}
-function ThePractice() {
-  return /*#__PURE__*/React.createElement("section", {
-    style: {
       background: 'var(--ffd-foam)',
-      padding: 'clamp(5rem,11vw,9rem) 0'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      maxWidth: 1280,
-      margin: '0 auto',
-      padding: '0 clamp(1.25rem,5vw,4rem)',
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: 'clamp(3rem,7vw,7rem)',
-      alignItems: 'center'
-    }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
-    src: `${P}/natalie-bruce-about-meditation-rocks-tenerife.jpg`,
-    alt: "Natalie Bruce sitting in meditation on volcanic rock above the sea in Tenerife",
-    style: {
-      width: '100%',
+      border: '1px solid var(--ffd-line)',
       borderRadius: 'var(--ffd-radius-lg)',
-      objectFit: 'cover',
-      aspectRatio: '3/4'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.68rem',
-      letterSpacing: '0.1em',
-      color: 'var(--ffd-stone-soft)',
-      marginTop: '0.7rem',
-      fontFamily: 'var(--ffd-font-body)'
-    }
-  }, "Tenerife, 2023")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Eyebrow, {
-    style: {
-      marginBottom: '1.4rem'
-    }
-  }, "The practice"), /*#__PURE__*/React.createElement("h2", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: 'clamp(1.9rem,3.8vw,2.9rem)',
-      lineHeight: 1.1,
-      letterSpacing: '-0.02em',
-      color: 'var(--ffd-ink)',
-      marginBottom: '1.6rem'
-    }
-  }, "Calm is a trained capacity."), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '1.06rem',
-      color: 'var(--ffd-stone)',
-      lineHeight: 1.72,
-      fontWeight: 300,
-      marginBottom: '1.4rem'
-    }
-  }, "Every session begins with breath. Not as a technique, but as a way of arriving \u2014 of meeting the water with a quieter mind than you walked in with. That's the practice. That's what I teach."), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '1.06rem',
-      color: 'var(--ffd-stone)',
-      lineHeight: 1.72,
-      fontWeight: 300,
-      marginBottom: '2rem'
-    }
-  }, "My coaching is informed by a foundation in Kinesiology, NASM personal-training certification, a sports-massage license, and Yoga Alliance training \u2014 built on years as a competitive swimmer. I bring performance science, recovery, and breathwork together, because the divers who go furthest are rarely the most forceful \u2014 they're the most settled."), /*#__PURE__*/React.createElement(Waterline, {
-    style: {
-      margin: '1.8rem 0'
-    }
-  }), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontStyle: 'italic',
-      fontSize: '1.2rem',
-      color: 'var(--ffd-deep-tide)',
-      lineHeight: 1.45
-    }
-  }, "\"Flow isn't found. It's trained.\""))));
-}
-function MovementBanner() {
-  return /*#__PURE__*/React.createElement("section", {
-    style: {
-      position: 'relative',
-      overflow: 'hidden',
-      height: 500
-    }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: `${P}/natalie-bruce-about-yoga-coast-tenerife.jpg`,
-    alt: "Natalie Bruce in a yoga side-angle pose on volcanic rock by the sea in Tenerife",
-    style: {
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      objectPosition: 'center 35%'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'absolute',
-      inset: 0,
-      background: 'linear-gradient(90deg, rgba(35,60,58,0.75) 0%, rgba(35,60,58,0.2) 100%)'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'absolute',
-      inset: 0,
-      display: 'flex',
-      alignItems: 'center',
-      padding: '0 clamp(1.25rem,5vw,4rem)'
+      padding: '2rem 1.9rem',
+      boxShadow: hov ? '0 20px 44px -16px rgba(35,60,58,0.26)' : 'var(--ffd-shadow)',
+      textDecoration: 'none',
+      transform: hov ? 'translateY(-3px)' : 'none',
+      transition: 'transform 0.22s ease, box-shadow 0.22s ease'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      maxWidth: 480
+      fontFamily: 'var(--ffd-font-body)',
+      fontWeight: 500,
+      fontSize: '0.72rem',
+      letterSpacing: '0.22em',
+      textTransform: 'uppercase',
+      color: 'var(--ffd-tide-deep)',
+      marginBottom: '0.9rem'
     }
-  }, /*#__PURE__*/React.createElement(Eyebrow, {
-    dark: true,
+  }, k), /*#__PURE__*/React.createElement("div", {
     style: {
-      marginBottom: '1rem'
+      fontFamily: 'var(--ffd-font-metric)',
+      fontSize: '1.12rem',
+      color: 'var(--ffd-ink)',
+      marginBottom: '0.7rem',
+      wordBreak: 'break-word'
     }
-  }, "Dryland training"), /*#__PURE__*/React.createElement("p", {
+  }, v), /*#__PURE__*/React.createElement("p", {
     style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 400,
-      fontSize: 'clamp(1.6rem,3.5vw,2.6rem)',
-      lineHeight: 1.2,
-      letterSpacing: '-0.015em',
-      color: 'var(--ffd-foam)'
-    }
-  }, "The body trains on the rock. The breath trains in the water."), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '0.95rem',
-      color: 'rgba(215,230,226,0.8)',
+      fontSize: '0.9rem',
+      color: 'var(--ffd-stone)',
       fontWeight: 300,
-      lineHeight: 1.65,
-      marginTop: '1rem'
+      lineHeight: 1.6
     }
-  }, "Yoga, mobility, and breathwork form the foundation of every training cycle. Tenerife, 2023."), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.62rem',
-      letterSpacing: '0.1em',
-      color: 'rgba(215,230,226,0.45)',
-      marginTop: '0.5rem',
-      fontFamily: 'var(--ffd-font-body)'
-    }
-  }, "Photo: Tenerife, 2023"))));
+  }, note));
 }
-function Gallery3() {
-  const photos = [{
-    src: `${P}/natalie-bruce-about-portrait-usana-wetsuit.jpg`,
-    alt: 'Natalie Bruce standing in USANA wetsuit on a quiet shoreline',
-    cap: 'Before the session'
+function ContactPage() {
+  const channels = [{
+    k: 'Email',
+    v: 'info@freeflowdynamics.com',
+    href: 'mailto:info@freeflowdynamics.com',
+    note: 'For coaching enquiries, workshops, and collaborations. I read every message.'
   }, {
-    src: `${P}/natalie-bruce-about-portrait-usana-fins.jpg`,
-    alt: 'Natalie Bruce holding USANA freediving fins by the water',
-    cap: 'Kit ready'
+    k: 'Instagram · Freeflow Dynamics',
+    v: '@freeflowdynamics',
+    href: 'https://instagram.com/freeflowdynamics',
+    note: 'Training, events, and behind the scenes of the coaching practice.'
   }, {
-    src: `${P}/natalie-bruce-about-rest-volcanic-rock.jpg`,
-    alt: 'Natalie Bruce resting against warm volcanic rock, Tenerife',
-    cap: '@monalisa.fiedler · Tenerife'
+    k: 'Instagram · Natalie',
+    v: '@natalie.freediver',
+    href: 'https://instagram.com/natalie.freediver',
+    note: 'Natalie’s personal page — competitions, records, and daily practice.'
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
       background: 'var(--ffd-shell)',
-      padding: 'clamp(4rem,8vw,7rem) 0'
+      padding: 'clamp(9rem,15vw,12rem) 0 clamp(5rem,10vw,8rem)'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      maxWidth: 1280,
+      maxWidth: 1100,
       margin: '0 auto',
       padding: '0 clamp(1.25rem,5vw,4rem)'
     }
   }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 720
+    }
+  }, /*#__PURE__*/React.createElement(Eyebrow, {
+    style: {
+      marginBottom: '1.4rem'
+    }
+  }, "Contact"), /*#__PURE__*/React.createElement("h1", {
+    style: {
+      fontFamily: 'var(--ffd-font-display)',
+      fontWeight: 500,
+      fontSize: 'clamp(2.8rem,6.5vw,4.8rem)',
+      lineHeight: 1.0,
+      letterSpacing: '-0.02em',
+      color: 'var(--ffd-ink)',
+      marginBottom: '1.4rem'
+    }
+  }, "Let\u2019s talk."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '1.1rem',
+      color: 'var(--ffd-stone)',
+      fontWeight: 300,
+      lineHeight: 1.72,
+      maxWidth: '52ch',
+      marginBottom: '2.2rem'
+    }
+  }, "Whether you\u2019re chasing a first personal best or preparing for competition, the best place to start is a free call. Reach out any time \u2014 by email, on Instagram, or book a time below."), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: '0.85rem',
+      flexWrap: 'wrap'
+    }
+  }, /*#__PURE__*/React.createElement(Btn, {
+    variant: "primary",
+    size: "lg",
+    href: BOOKING_URL,
+    onClick: openBooking
+  }, "Book a free coaching call"), /*#__PURE__*/React.createElement(Btn, {
+    variant: "outline",
+    size: "lg",
+    href: "mailto:info@freeflowdynamics.com"
+  }, "Email Natalie"))), /*#__PURE__*/React.createElement(Waterline, {
+    style: {
+      maxWidth: 520,
+      margin: 'clamp(3.5rem,7vw,5.5rem) 0 clamp(3rem,6vw,4.5rem)'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "ffd-contact-grid",
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(3,1fr)',
-      gap: '1.2rem'
+      gap: '1.4rem'
     }
-  }, photos.map((ph, i) => /*#__PURE__*/React.createElement("div", {
-    key: i,
+  }, channels.map((c, i) => /*#__PURE__*/React.createElement(Channel, _extends({
+    key: i
+  }, c)))), /*#__PURE__*/React.createElement("p", {
     style: {
-      borderRadius: 'var(--ffd-radius-lg)',
-      overflow: 'hidden',
-      position: 'relative'
-    }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: ph.src,
-    alt: ph.alt,
-    style: {
-      width: '100%',
-      aspectRatio: '2/3',
-      objectFit: 'cover',
-      objectPosition: 'center top',
-      display: 'block'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'absolute',
-      bottom: 0,
-      left: 0,
-      right: 0,
-      padding: '0.7rem 1rem',
-      background: 'linear-gradient(to top, rgba(51,50,44,0.6), transparent)'
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontSize: '0.64rem',
-      letterSpacing: '0.1em',
-      textTransform: 'uppercase',
-      color: 'rgba(242,235,220,0.6)',
-      fontFamily: 'var(--ffd-font-body)'
-    }
-  }, ph.cap)))))));
-}
-function Partners() {
-  return /*#__PURE__*/React.createElement("section", {
-    style: {
-      background: 'var(--ffd-foam)',
-      padding: 'clamp(3.5rem,7vw,5.5rem) 0'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      maxWidth: 1280,
-      margin: '0 auto',
-      padding: '0 clamp(1.25rem,5vw,4rem)',
-      textAlign: 'center'
-    }
-  }, /*#__PURE__*/React.createElement(Eyebrow, {
-    style: {
-      marginBottom: '1.8rem',
-      justifyContent: 'center'
-    }
-  }, "Partners"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: 'clamp(2.5rem,8vw,6rem)',
-      flexWrap: 'wrap'
-    }
-  }, ['Orca', 'USANA', 'CETMA'].map(name => /*#__PURE__*/React.createElement("div", {
-    key: name,
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: 'clamp(1.4rem,3vw,2.2rem)',
-      letterSpacing: '0.04em',
-      color: 'var(--ffd-deep-tide)',
-      opacity: 0.55
-    }
-  }, name)))));
-}
-function AboutQuote() {
-  return /*#__PURE__*/React.createElement("section", {
-    style: {
-      background: 'var(--ffd-deep-tide)',
-      padding: 'clamp(5rem,11vw,9rem) 0'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      maxWidth: 900,
-      margin: '0 auto',
-      padding: '0 clamp(1.25rem,5vw,4rem)',
-      textAlign: 'center'
-    }
-  }, /*#__PURE__*/React.createElement(Enso, {
-    size: 64,
-    color: "rgba(242,235,220,0.15)",
-    style: {
-      margin: '0 auto 2.5rem'
-    }
-  }), /*#__PURE__*/React.createElement("blockquote", {
-    style: {
+      marginTop: '2.6rem',
       fontFamily: 'var(--ffd-font-display)',
       fontStyle: 'italic',
-      fontSize: 'clamp(1.5rem,3.5vw,2.4rem)',
-      lineHeight: 1.38,
-      color: 'var(--ffd-foam)',
-      marginBottom: '1.5rem'
-    }
-  }, "\"The human body at peace with itself is more precious than the rarest gem.\""), /*#__PURE__*/React.createElement("cite", {
-    style: {
-      fontStyle: 'normal',
-      fontFamily: 'var(--ffd-font-body)',
-      fontSize: '0.7rem',
-      letterSpacing: '0.18em',
-      textTransform: 'uppercase',
+      fontSize: '1.1rem',
       color: 'var(--ffd-stone-soft)'
     }
-  }, "Je Tsongkhapa \xB7 1357\u20131419"), /*#__PURE__*/React.createElement(Waterline, {
-    dark: true,
-    style: {
-      margin: '3rem auto',
-      maxWidth: 300
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      justifyContent: 'center'
-    }
-  }, /*#__PURE__*/React.createElement(Btn, {
-    variant: "secondary",
-    href: "programs.html"
-  }, "Work with me"))));
+  }, "One breath at a time.")));
 }
 function App() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", {
-    style: {
-      paddingTop: 0
-    }
-  }, /*#__PURE__*/React.createElement(AboutHero, null), /*#__PURE__*/React.createElement(Bio, null), /*#__PURE__*/React.createElement(StatsBanner, null), /*#__PURE__*/React.createElement(ThePractice, null), /*#__PURE__*/React.createElement(MovementBanner, null), /*#__PURE__*/React.createElement(Gallery3, null), /*#__PURE__*/React.createElement(Partners, null), /*#__PURE__*/React.createElement(AboutQuote, null)), /*#__PURE__*/React.createElement(Footer, null));
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(ContactPage, null)), /*#__PURE__*/React.createElement(Footer, null));
 }
 ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(App));
 })();

@@ -224,20 +224,20 @@ function Nav() {
   const onLight = scrolled || lightHero;
   const pActive = cur === 'partners.html';
   const ddItems = {
-    Programs: [{
-      l: 'Freedive Foundations',
-      sub: '8 weeks · Beginner',
+    Coaching: [{
+      l: 'Pool Only Trainings',
+      sub: '$175 / month',
       h: 'programs.html'
     }, {
-      l: 'Performance Freediving',
-      sub: '12 weeks · Intermediate',
+      l: 'Full Performance Package',
+      sub: '$275 / month',
       h: 'programs.html'
     }, {
       l: 'Private Coaching',
-      sub: '1:1 · Flexible',
+      sub: '1:1 · Custom',
       h: 'programs.html'
     }],
-    About: [{
+    'About Natalie': [{
       l: 'About Natalie',
       sub: 'The person & the practice',
       h: 'about.html'
@@ -356,17 +356,20 @@ function Nav() {
       flexShrink: 0
     }
   }, [{
-    l: 'Programs',
+    l: 'Coaching',
     h: 'programs.html'
   }, {
-    l: 'About',
+    l: 'About Natalie',
     h: 'about.html'
   }, {
-    l: 'Events',
+    l: 'Upcoming Events',
     h: 'events.html'
   }, {
     l: 'Media',
     h: 'media.html'
+  }, {
+    l: 'Contact',
+    h: 'contact.html'
   }].map(({
     l,
     h
@@ -573,7 +576,7 @@ function Footer() {
     style: {
       color: 'rgba(215,230,226,0.45)'
     }
-  }, "Tenerife \xB7 Canary Islands"))), /*#__PURE__*/React.createElement("div", {
+  }, "Colorado \xB7 USA"))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -647,7 +650,7 @@ function CompHero() {
       maxWidth: '44ch',
       lineHeight: 1.65
     }
-  }, "AIDA competition across depth, static, and dynamic disciplines. Competing worldwide, training from Tenerife.")));
+  }, "AIDA competition across depth, static, and dynamic disciplines. Competing worldwide, training year-round.")));
 }
 function Bar({
   code,

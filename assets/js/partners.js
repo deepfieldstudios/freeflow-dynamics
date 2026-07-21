@@ -229,20 +229,20 @@ function Nav() {
   const onLight = scrolled || lightHero;
   const pActive = cur === 'partners.html';
   const ddItems = {
-    Programs: [{
-      l: 'Freedive Foundations',
-      sub: '8 weeks · Beginner',
+    Coaching: [{
+      l: 'Pool Only Trainings',
+      sub: '$175 / month',
       h: 'programs.html'
     }, {
-      l: 'Performance Freediving',
-      sub: '12 weeks · Intermediate',
+      l: 'Full Performance Package',
+      sub: '$275 / month',
       h: 'programs.html'
     }, {
       l: 'Private Coaching',
-      sub: '1:1 · Flexible',
+      sub: '1:1 · Custom',
       h: 'programs.html'
     }],
-    About: [{
+    'About Natalie': [{
       l: 'About Natalie',
       sub: 'The person & the practice',
       h: 'about.html'
@@ -361,17 +361,20 @@ function Nav() {
       flexShrink: 0
     }
   }, [{
-    l: 'Programs',
+    l: 'Coaching',
     h: 'programs.html'
   }, {
-    l: 'About',
+    l: 'About Natalie',
     h: 'about.html'
   }, {
-    l: 'Events',
+    l: 'Upcoming Events',
     h: 'events.html'
   }, {
     l: 'Media',
     h: 'media.html'
+  }, {
+    l: 'Contact',
+    h: 'contact.html'
   }].map(({
     l,
     h
@@ -578,7 +581,7 @@ function Footer() {
     style: {
       color: 'rgba(215,230,226,0.45)'
     }
-  }, "Tenerife \xB7 Canary Islands"))), /*#__PURE__*/React.createElement("div", {
+  }, "Colorado \xB7 USA"))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -685,8 +688,8 @@ function Reach() {
     v: 'AIDA',
     l: 'World competitor'
   }, {
-    v: 'Tenerife',
-    l: 'Atlantic training base'
+    v: 'USA',
+    l: 'Colorado home base'
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
@@ -791,7 +794,7 @@ function BrandStory() {
       fontWeight: 300,
       marginBottom: '1.4rem'
     }
-  }, "Freeflow Dynamics is built on a single image \u2014 volcanic coast meeting open ocean. It's a brand about discipline without aggression, performance without noise. Calm as a trained capacity."), /*#__PURE__*/React.createElement("p", {
+  }, "Freeflow Dynamics is built on a single feeling \u2014 the calm of one breath in open water. It's a brand about discipline without aggression, performance without noise. Calm as a trained capacity."), /*#__PURE__*/React.createElement("p", {
     style: {
       fontSize: '1.06rem',
       color: 'var(--ffd-stone)',
@@ -923,7 +926,7 @@ function Collaborate() {
   }, {
     n: '03',
     title: 'Content & storytelling',
-    desc: 'Photography, film, and editorial from Tenerife and competition worldwide. Premium natural-light imagery, authentically captured.'
+    desc: 'Photography, film, and editorial from training and competition worldwide. Premium natural-light imagery, authentically captured.'
   }, {
     n: '04',
     title: 'Events & appearances',
