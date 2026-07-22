@@ -633,8 +633,8 @@ function Hero() {
       overflow: 'hidden'
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: `${PHOTOS}/natalie-bruce-hero-freediving-descent.jpg`,
-    alt: "Natalie Bruce freediving on a head-down descent along the line into deep blue water",
+    src: `${PHOTOS}/natalie-bruce-hero-line-hang-sunburst.jpg`,
+    alt: "Natalie Bruce hanging at the freediving line beneath a sunburst, a safety diver above in clear blue water",
     style: {
       width: '100%',
       height: '100%',
@@ -1484,7 +1484,7 @@ function Connect() {
     if (!email) return;
     window.location.href = 'mailto:info@freeflowdynamics.com?subject=' + encodeURIComponent('Subscribe to updates') + '&body=' + encodeURIComponent('Please add me to the Free Flow Dynamics updates list.\n\nEmail: ' + email);
   };
-  const tiles = ['natalie-bruce-hero-line-hang-sunburst', 'natalie-bruce-atmosphere-cenote-descent', 'natalie-bruce-competition-aida-worlds-podium', 'natalie-bruce-social-usa-team-flag-underwater'];
+  const tiles = ['natalie-bruce-atmosphere-freefall-lightbeam', 'natalie-bruce-atmosphere-cenote-descent', 'natalie-bruce-competition-aida-worlds-podium', 'natalie-bruce-social-usa-team-flag-underwater'];
   const igLink = {
     fontFamily: 'var(--ffd-font-metric)',
     fontSize: '1rem',
