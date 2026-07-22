@@ -113,12 +113,12 @@ function Nav(){
   const pActive=cur==='partners.html';
   const ddItems={
     Coaching:[
-      {l:'Pool Only Trainings',sub:'$175 / month',h:'programs.html'},
+      {l:'Pool Training Plan',sub:'$175 / month',h:'programs.html'},
       {l:'Full Performance Package',sub:'$275 / month',h:'programs.html'},
       {l:'Private Coaching',sub:'1:1 · Custom',h:'programs.html'},
     ],
-    'About Natalie':[
-      {l:'About Natalie',sub:'The person & the practice',h:'about.html'},
+    Story:[
+      {l:'Story',sub:'The person & the practice',h:'about.html'},
       {l:'Competition Records',sub:'AIDA · World No. 7',h:'competition.html'},
     ],
   };
@@ -138,7 +138,7 @@ function Nav(){
           </div>
         </a>
         <button className="ffd-burger" aria-label="Toggle menu" onClick={()=>setMobileOpen(o=>!o)} style={{background:'none',border:'none',cursor:'pointer',padding:'0.4rem',flexShrink:0}}><span style={{display:'block',width:24,height:2,borderRadius:2,background:logoColor,margin:'5px 0',transition:'transform .25s,opacity .25s',transform:mobileOpen?'translateY(7px) rotate(45deg)':'none'}}/><span style={{display:'block',width:24,height:2,borderRadius:2,background:logoColor,margin:'5px 0',transition:'opacity .2s',opacity:mobileOpen?0:1}}/><span style={{display:'block',width:24,height:2,borderRadius:2,background:logoColor,margin:'5px 0',transition:'transform .25s',transform:mobileOpen?'translateY(-7px) rotate(-45deg)':'none'}}/></button><div className="ffd-navlinks" data-open={mobileOpen?'true':'false'} style={{display:'flex',alignItems:'center',gap:'1.4rem',flexShrink:0}}>
-          {[{l:'Coaching',h:'programs.html'},{l:'About Natalie',h:'about.html'},{l:'Upcoming Events',h:'events.html'},{l:'Media',h:'media.html'},{l:'Contact',h:'contact.html'}].map(({l,h})=>{
+          {[{l:'Coaching',h:'programs.html'},{l:'Story',h:'about.html'},{l:'Schedule',h:'events.html'},{l:'Media',h:'media.html'},{l:'Contact',h:'contact.html'}].map(({l,h})=>{
             const hasDd=l in ddItems;const active=cur===h;
             return(
               <div key={l} style={{position:'relative'}} onMouseEnter={()=>setDd(l)} onMouseLeave={()=>setDd(null)}>
@@ -158,9 +158,9 @@ function Nav(){
               </div>
             );
           })}
-          <Btn size="sm" variant="primary" href={BOOKING_URL} onClick={openBooking}>Book a session</Btn>
+          <Btn size="sm" variant="primary" href={BOOKING_URL} onClick={openBooking}>Get Started</Btn>
           <div style={{width:1,height:22,background:onLight?'var(--ffd-line)':'rgba(51,50,44,0.18)'}}/>
-          <a href="partners.html" onMouseEnter={()=>setPhov(true)} onMouseLeave={()=>setPhov(false)} style={{fontFamily:'var(--ffd-font-body)',fontWeight:500,fontSize:'0.82rem',letterSpacing:'0.04em',color:(pActive||phov)?'var(--ffd-foam)':'var(--ffd-cocoa)',background:(pActive||phov)?'var(--ffd-cocoa)':'transparent',border:'1.5px solid var(--ffd-cocoa)',borderRadius:'var(--ffd-radius-sm)',padding:'0.4rem 0.85rem',textDecoration:'none',transition:'all 0.2s',whiteSpace:'nowrap'}}>Partners</a>
+          <a href="partners.html" onMouseEnter={()=>setPhov(true)} onMouseLeave={()=>setPhov(false)} style={{fontFamily:'var(--ffd-font-body)',fontWeight:500,fontSize:'0.82rem',letterSpacing:'0.04em',color:(pActive||phov)?'var(--ffd-foam)':'var(--ffd-cocoa)',background:(pActive||phov)?'var(--ffd-cocoa)':'transparent',border:'1.5px solid var(--ffd-cocoa)',borderRadius:'var(--ffd-radius-sm)',padding:'0.4rem 0.85rem',textDecoration:'none',transition:'all 0.2s',whiteSpace:'nowrap'}}>Let's Collaborate</a>
         </div>
       </div>
     </nav>
@@ -168,7 +168,7 @@ function Nav(){
 }
 /* ── HERO ── */
 function Hero() {
-  const stats = [{v:'12×',l:'Continental records'},{v:'17×',l:'US national records'},{v:'USA',l:'Colorado'},{v:'1 breath',l:'The whole practice'}];
+  const stats = [{v:'12×',l:'Continental records'},{v:'17×',l:'US national records'},{v:'102m',l:'Down the line'},{v:'1 breath',l:'The whole practice'}];
   return (
     <section id="hero" style={{minHeight:'100vh',display:'grid',gridTemplateColumns:'0.85fr 1.15fr',background:'var(--ffd-shell)',position:'relative',overflow:'hidden'}}>
       {/* Left: dark teal panel */}
@@ -180,9 +180,9 @@ function Hero() {
         <h1 style={{fontFamily:'var(--ffd-font-display)',fontWeight:500,fontSize:'clamp(3.2rem,7vw,5.5rem)',lineHeight:0.97,letterSpacing:'-0.02em',color:'var(--ffd-foam)',marginBottom:'0.5rem',position:'relative',zIndex:1}}>
           FREE<em style={{fontStyle:'italic',color:'var(--ffd-tide-light)'}}>FLOW</em><br/>DYNAMICS
         </h1>
-        <div style={{fontFamily:'var(--ffd-font-display)',fontStyle:'italic',color:'var(--ffd-clay-glow)',fontSize:'clamp(1.05rem,2vw,1.45rem)',marginBottom:'2.2rem',letterSpacing:'-0.01em'}}>by Natalie Bruce</div>
-        <p style={{fontSize:'1.06rem',color:'rgba(215,230,226,0.85)',fontWeight:300,maxWidth:'38ch',marginBottom:'2rem',lineHeight:1.65}}>
-          A coaching practice drawn from the water — calm, control, and clarity, one breath at a time.
+        <div style={{fontFamily:'var(--ffd-font-display)',fontStyle:'italic',color:'var(--ffd-clay-glow)',fontSize:'clamp(1.15rem,2.2vw,1.6rem)',marginBottom:'1.6rem',letterSpacing:'-0.01em'}}>The breath is where performance begins.</div>
+        <p style={{fontSize:'1.06rem',color:'rgba(215,230,226,0.85)',fontWeight:300,maxWidth:'42ch',marginBottom:'2rem',lineHeight:1.65}}>
+          I coach freedivers, athletes, and everyday people to apply the relaxation tools behind my success as a top athlete — improving performance under pressure, in and out of the water.
         </p>
         <div style={{display:'flex',gap:'0.85rem',flexWrap:'wrap',marginBottom:'3rem'}}>
           <Btn variant="secondary" size="lg" href="programs.html">Work with me</Btn>
@@ -244,29 +244,14 @@ function About() {
         </div>
         {/* Text */}
         <div style={{paddingTop:'2.5rem'}}>
-          <Eyebrow style={{marginBottom:'1.4rem'}}>The person</Eyebrow>
-          <h2 style={{fontFamily:'var(--ffd-font-display)',fontWeight:500,fontSize:'clamp(2rem,4vw,3.1rem)',lineHeight:1.08,letterSpacing:'-0.02em',color:'var(--ffd-ink)',marginBottom:'1.6rem'}}>
-            Freediving is a practice of stillness. The water teaches the rest.
+          <Eyebrow style={{marginBottom:'1.4rem'}}>The coach</Eyebrow>
+          <h2 style={{fontFamily:'var(--ffd-font-display)',fontWeight:500,fontSize:'clamp(2.2rem,4.5vw,3.4rem)',lineHeight:1.08,letterSpacing:'-0.02em',color:'var(--ffd-ink)',marginBottom:'1.6rem'}}>
+            Stillness is a skill.
           </h2>
-          <p style={{fontSize:'1.08rem',color:'var(--ffd-stone)',fontWeight:300,lineHeight:1.7,marginBottom:'1.4rem'}}>
-            Natalie Bruce is a US professional freediver and human-performance coach based in Colorado, USA. She holds 12 continental and 17 US national records in AIDA competition — depth, static apnea, and dynamic disciplines.
+          <p style={{fontSize:'1.12rem',color:'var(--ffd-stone)',fontWeight:300,lineHeight:1.72,marginBottom:'2rem'}}>
+            Natalie Bruce is a US professional freediver and performance coach with a foundation in kinesiology, yoga, and meditation. The answer starts with the breath.
           </p>
-          <p style={{fontSize:'1.08rem',color:'var(--ffd-stone)',fontWeight:300,lineHeight:1.7,marginBottom:'2rem'}}>
-            The brand carries two truths: the calm of breath-hold, and the discipline of elite performance. Her practice asks the same question each session — can you meet the water with a softer mind?
-          </p>
-          <Waterline style={{margin:'1.6rem 0'}}/>
-          <blockquote style={{fontFamily:'var(--ffd-font-display)',fontStyle:'italic',fontSize:'1.3rem',lineHeight:1.4,color:'var(--ffd-deep-tide)',borderLeft:'2px solid var(--ffd-clay)',paddingLeft:'1.2rem',marginBottom:'2rem'}}>
-            "The sea always brings me back to a softer mind."
-            <cite style={{display:'block',fontStyle:'normal',fontFamily:'var(--ffd-font-body)',fontSize:'0.7rem',letterSpacing:'0.16em',textTransform:'uppercase',color:'var(--ffd-stone-soft)',marginTop:'0.7rem'}}>— @natalie.freediver</cite>
-          </blockquote>
-          <div style={{display:'flex',gap:'2rem'}}>
-            {[{v:'12×',l:'Continental'},{v:'17×',l:'US National'},{v:'AIDA',l:'Competitor'}].map((s,i)=>(
-              <div key={i}>
-                <div style={{fontFamily:'var(--ffd-font-metric)',fontSize:'1.8rem',color:'var(--ffd-deep-tide)',letterSpacing:'-0.03em',lineHeight:1}}>{s.v}</div>
-                <div style={{fontSize:'0.68rem',letterSpacing:'0.18em',textTransform:'uppercase',color:'var(--ffd-stone)',marginTop:'0.25rem'}}>{s.l}</div>
-              </div>
-            ))}
-          </div>
+          <Btn variant="outline" size="lg" href="about.html">Read her story</Btn>
         </div>
       </div>
     </section>
@@ -433,12 +418,12 @@ function Footer() {
           <div style={{fontFamily:'var(--ffd-font-metric)',fontSize:'0.88rem',lineHeight:2.1,color:'var(--ffd-sand)'}}>
             <div>@freeflowdynamics</div><div>@natalie.freediver</div>
             <a href="mailto:info@freeflowdynamics.com" style={{color:'var(--ffd-tide-light)',textDecoration:'none',display:'block'}}>info@freeflowdynamics.com</a>
-            <div style={{color:'rgba(215,230,226,0.5)'}}>Colorado · USA</div>
+            <div style={{color:'rgba(215,230,226,0.5)'}}>Evergreen, Colorado</div>
           </div>
         </div>
         <div style={{display:'flex',justifyContent:'space-between',gap:'1rem',flexWrap:'wrap',fontSize:'0.72rem',color:'rgba(148,143,129,0.7)',fontFamily:'var(--ffd-font-body)'}}>
           <span>© 2026 Natalie Bruce / Freeflow Dynamics</span>
-          <span>Partners: Orca · USANA · CETMA</span>
+          <span>Partners: Orca · USANA · Lobster · Blue Element</span>
         </div>
       </div>
     </footer>
@@ -447,31 +432,82 @@ function Footer() {
 
 /* ── REVIEWS (placeholder — swap items[] for real testimonials) ── */
 function Reviews() {
-  const items = [
-    {q:'Add a short testimonial from a diver here \u2014 what shifted in their breath, their depth, or their mind.', who:'Client name', role:'Program \u00b7 Location'},
-    {q:'Two or three sentences read best. Send these over and they drop straight into these cards.', who:'Client name', role:'Program \u00b7 Location'},
-    {q:'A third review keeps the row balanced. Replace this placeholder with the real words.', who:'Client name', role:'Program \u00b7 Location'},
-  ];
   return (
     <section style={{background:'var(--ffd-foam)',padding:'clamp(5rem,11vw,9rem) 0'}}>
-      <div style={{maxWidth:1280,margin:'0 auto',padding:'0 clamp(1.25rem,5vw,4rem)'}}>
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'1rem',alignItems:'end',marginBottom:'3.5rem'}}>
-          <div>
-            <Eyebrow style={{marginBottom:'1rem'}}>Reviews</Eyebrow>
-            <h2 style={{fontFamily:'var(--ffd-font-display)',fontWeight:500,fontSize:'clamp(2.1rem,4.5vw,3.2rem)',letterSpacing:'-0.02em',lineHeight:1.06,color:'var(--ffd-ink)'}}>In their words.</h2>
-          </div>
-          <p style={{fontSize:'1.05rem',color:'var(--ffd-stone)',fontWeight:300,lineHeight:1.65,maxWidth:'46ch'}}>A few words from divers I've worked with \u2014 more coming soon.</p>
+      <div style={{maxWidth:820,margin:'0 auto',padding:'0 clamp(1.25rem,5vw,4rem)',textAlign:'center'}}>
+        <Eyebrow style={{marginBottom:'1rem',justifyContent:'center'}}>Reviews</Eyebrow>
+        <h2 style={{fontFamily:'var(--ffd-font-display)',fontWeight:500,fontSize:'clamp(2.1rem,4.5vw,3.2rem)',letterSpacing:'-0.02em',lineHeight:1.06,color:'var(--ffd-ink)',marginBottom:'2.8rem'}}>In their words.</h2>
+        <div style={{background:'var(--ffd-shell)',border:'1px solid var(--ffd-line)',borderRadius:'var(--ffd-radius-lg)',padding:'clamp(2.2rem,5vw,3.4rem)',boxShadow:'var(--ffd-shadow)',textAlign:'left'}}>
+          <div style={{fontFamily:'var(--ffd-font-display)',fontSize:'3rem',lineHeight:0.6,color:'var(--ffd-clay)',marginBottom:'1rem'}}>\u201C</div>
+          <p style={{fontFamily:'var(--ffd-font-display)',fontStyle:'italic',fontSize:'clamp(1.15rem,2.2vw,1.4rem)',lineHeight:1.5,color:'var(--ffd-deep-tide)',marginBottom:'1.8rem'}}>
+            After obtaining my AIDA 3 certification, I plateaued with my depth PBs for a couple of years living in a landlocked state. Structured, consistent training with Natalie improved my dynamic performance tremendously \u2014 including dynamic PBs I had never considered achievable \u2014 and it translated into comfort at depth and very consistent improvement and new PBs in my depth performances. Highly recommend!
+          </p>
+          <Waterline style={{marginBottom:'1.2rem'}}/>
+          <div style={{fontFamily:'var(--ffd-font-body)',fontWeight:500,fontSize:'0.95rem',color:'var(--ffd-ink)'}}>Rafal</div>
+          <div style={{fontSize:'0.7rem',letterSpacing:'0.14em',textTransform:'uppercase',color:'var(--ffd-stone-soft)',marginTop:'0.25rem'}}>Coaching client \u00b7 Idaho Springs, CO</div>
         </div>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'1.4rem'}}>
-          {items.map((r,i)=>(
-            <div key={i} style={{background:'var(--ffd-shell)',border:'1px solid var(--ffd-line)',borderRadius:'var(--ffd-radius-lg)',padding:'2rem 1.9rem',display:'flex',flexDirection:'column',boxShadow:'var(--ffd-shadow)'}}>
-              <div style={{fontFamily:'var(--ffd-font-display)',fontSize:'2.6rem',lineHeight:0.7,color:'var(--ffd-clay)',marginBottom:'0.8rem'}}>\u201C</div>
-              <p style={{fontFamily:'var(--ffd-font-display)',fontStyle:'italic',fontSize:'1.2rem',lineHeight:1.45,color:'var(--ffd-deep-tide)',marginBottom:'1.6rem',flex:1}}>{r.q}</p>
-              <Waterline style={{marginBottom:'1.2rem'}}/>
-              <div style={{fontFamily:'var(--ffd-font-body)',fontWeight:500,fontSize:'0.9rem',color:'var(--ffd-ink)'}}>{r.who}</div>
-              <div style={{fontSize:'0.7rem',letterSpacing:'0.14em',textTransform:'uppercase',color:'var(--ffd-stone-soft)',marginTop:'0.25rem'}}>{r.role}</div>
-            </div>
+        <p style={{fontSize:'0.95rem',color:'var(--ffd-stone-soft)',fontWeight:300,marginTop:'1.8rem'}}>More words from divers I've worked with \u2014 coming soon.</p>
+      </div>
+    </section>
+  );
+}
+
+/* ── ENSŌ / BRAND ── */
+function EnsoSection() {
+  return (
+    <section style={{background:'var(--ffd-deep-tide)',padding:'clamp(5rem,11vw,9rem) 0',position:'relative',overflow:'hidden'}}>
+      <div style={{maxWidth:1180,margin:'0 auto',padding:'0 clamp(1.25rem,5vw,4rem)',display:'grid',gridTemplateColumns:'0.8fr 1.2fr',gap:'clamp(3rem,7vw,6rem)',alignItems:'center'}}>
+        <div style={{display:'flex',justifyContent:'center'}}>
+          <Enso size={320} color="var(--ffd-tide-light)"/>
+        </div>
+        <div>
+          <Eyebrow dark style={{marginBottom:'1.4rem'}}>The symbol</Eyebrow>
+          <h2 style={{fontFamily:'var(--ffd-font-display)',fontWeight:500,fontSize:'clamp(2rem,4.5vw,3.1rem)',letterSpacing:'-0.02em',lineHeight:1.06,color:'var(--ffd-foam)',marginBottom:'1.6rem'}}>The ensō circle</h2>
+          <p style={{fontFamily:'var(--ffd-font-display)',fontStyle:'italic',fontSize:'clamp(1.15rem,2.2vw,1.45rem)',lineHeight:1.4,color:'var(--ffd-clay-glow)',marginBottom:'1.8rem'}}>A single brushstroke. Drawn on one breath. Open — intentionally unfinished.</p>
+          <p style={{fontSize:'1.02rem',color:'rgba(215,230,226,0.82)',fontWeight:300,lineHeight:1.72,marginBottom:'1.3rem'}}>In Zen Buddhism, the ensō is not about drawing a perfect circle. It is about the quality of presence in the moment of creation — the rhythm, the balance, the movement. The hand follows the breath. The circle follows the hand. What appears on the page is not the goal. It is a record of where the mind was.</p>
+          <p style={{fontSize:'1.02rem',color:'rgba(215,230,226,0.82)',fontWeight:300,lineHeight:1.72,marginBottom:'1.3rem'}}>The open gap is not a mistake. It is the point. In Zen, it signifies the journey itself — open, ongoing, without a fixed end. The Japanese call it wabi-sabi — the beauty found in imperfection. The open circle is its purest expression.</p>
+          <p style={{fontSize:'1.02rem',color:'rgba(215,230,226,0.82)',fontWeight:300,lineHeight:1.72}}>This is the philosophy behind Free Flow Dynamics. The athletes I work with are not chasing perfection. They are building something more reliable — the awareness to perform under any conditions.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── CONNECT: Instagram + subscribe ── */
+function Connect() {
+  const onSub = (e) => {
+    e.preventDefault();
+    const email = (e.target.elements.email.value || '').trim();
+    if(!email) return;
+    window.location.href = 'mailto:info@freeflowdynamics.com?subject=' + encodeURIComponent('Subscribe to updates') + '&body=' + encodeURIComponent('Please add me to the Free Flow Dynamics updates list.\n\nEmail: ' + email);
+  };
+  const tiles = ['natalie-bruce-hero-line-hang-sunburst','natalie-bruce-atmosphere-cenote-descent','natalie-bruce-competition-aida-worlds-podium','natalie-bruce-social-usa-team-flag-underwater'];
+  const igLink = {fontFamily:'var(--ffd-font-metric)',fontSize:'1rem',color:'var(--ffd-deep-tide)',textDecoration:'none',borderBottom:'1.5px solid var(--ffd-clay)',paddingBottom:'2px'};
+  return (
+    <section style={{background:'var(--ffd-shell)',padding:'clamp(5rem,11vw,8rem) 0'}}>
+      <div style={{maxWidth:1180,margin:'0 auto',padding:'0 clamp(1.25rem,5vw,4rem)'}}>
+        <div style={{textAlign:'center',marginBottom:'2.6rem'}}>
+          <Eyebrow style={{marginBottom:'1rem',justifyContent:'center'}}>Follow along</Eyebrow>
+          <h2 style={{fontFamily:'var(--ffd-font-display)',fontWeight:500,fontSize:'clamp(2rem,4.5vw,3.1rem)',letterSpacing:'-0.02em',lineHeight:1.06,color:'var(--ffd-ink)',marginBottom:'1.2rem'}}>On Instagram.</h2>
+          <div style={{display:'flex',gap:'1.6rem',justifyContent:'center',flexWrap:'wrap'}}>
+            <a href="https://instagram.com/freeflowdynamics" style={igLink}>@freeflowdynamics</a>
+            <a href="https://instagram.com/natalie.freediver" style={igLink}>@natalie.freediver</a>
+          </div>
+        </div>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:'1rem',marginBottom:'clamp(3rem,7vw,4.5rem)'}}>
+          {tiles.map((t,i)=>(
+            <a key={i} href="https://instagram.com/freeflowdynamics" style={{display:'block',borderRadius:'var(--ffd-radius-lg)',overflow:'hidden'}}>
+              <img src={`${PHOTOS}/${t}.jpg`} alt="Freeflow Dynamics on Instagram" style={{width:'100%',aspectRatio:'1',objectFit:'cover',display:'block',transition:'transform 0.5s ease'}} onMouseEnter={e=>e.currentTarget.style.transform='scale(1.05)'} onMouseLeave={e=>e.currentTarget.style.transform='none'}/>
+            </a>
           ))}
+        </div>
+        <div style={{maxWidth:560,margin:'0 auto',textAlign:'center'}}>
+          <h3 style={{fontFamily:'var(--ffd-font-display)',fontWeight:500,fontSize:'clamp(1.5rem,3vw,2rem)',letterSpacing:'-0.01em',color:'var(--ffd-ink)',marginBottom:'0.8rem'}}>Updates on upcoming events</h3>
+          <p style={{fontSize:'1rem',color:'var(--ffd-stone)',fontWeight:300,lineHeight:1.65,marginBottom:'1.8rem'}}>Training blocks, workshops, and new dates — straight to your inbox.</p>
+          <form onSubmit={onSub} style={{display:'flex',gap:'0.6rem',flexWrap:'wrap',justifyContent:'center'}}>
+            <input name="email" type="email" required placeholder="you@email.com" style={{flex:'1 1 240px',minWidth:0,padding:'0.82rem 1.1rem',fontFamily:'var(--ffd-font-body)',fontSize:'1rem',color:'var(--ffd-ink)',background:'var(--ffd-foam)',border:'1.5px solid var(--ffd-line)',borderRadius:'var(--ffd-radius)'}}/>
+            <Btn variant="primary" size="lg">Subscribe</Btn>
+          </form>
         </div>
       </div>
     </section>
@@ -486,11 +522,9 @@ function App() {
       <main>
         <Hero/>
         <About/>
-        <InTheWater/>
-        <Programs/>
-        <PhotoStrip/>
+        <EnsoSection/>
         <Reviews/>
-        <Quotes/>
+        <Connect/>
         <Footer/>
       </main>
     </div>

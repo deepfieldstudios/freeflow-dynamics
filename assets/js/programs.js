@@ -225,7 +225,7 @@ function Nav() {
   const pActive = cur === 'partners.html';
   const ddItems = {
     Coaching: [{
-      l: 'Pool Only Trainings',
+      l: 'Pool Training Plan',
       sub: '$175 / month',
       h: 'programs.html'
     }, {
@@ -237,8 +237,8 @@ function Nav() {
       sub: '1:1 · Custom',
       h: 'programs.html'
     }],
-    'About Natalie': [{
-      l: 'About Natalie',
+    Story: [{
+      l: 'Story',
       sub: 'The person & the practice',
       h: 'about.html'
     }, {
@@ -359,10 +359,10 @@ function Nav() {
     l: 'Coaching',
     h: 'programs.html'
   }, {
-    l: 'About Natalie',
+    l: 'Story',
     h: 'about.html'
   }, {
-    l: 'Upcoming Events',
+    l: 'Schedule',
     h: 'events.html'
   }, {
     l: 'Media',
@@ -459,7 +459,7 @@ function Nav() {
     variant: onLight ? 'primary' : 'ghost',
     href: BOOKING_URL,
     onClick: openBooking
-  }, "Book a session"), /*#__PURE__*/React.createElement("div", {
+  }, "Get Started"), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 1,
       height: 22,
@@ -483,7 +483,7 @@ function Nav() {
       transition: 'all 0.2s',
       whiteSpace: 'nowrap'
     }
-  }, "Partners"))));
+  }, "Let's Collaborate"))));
 }
 function Footer() {
   return /*#__PURE__*/React.createElement("footer", {
@@ -576,7 +576,7 @@ function Footer() {
     style: {
       color: 'rgba(215,230,226,0.45)'
     }
-  }, "Colorado \xB7 USA"))), /*#__PURE__*/React.createElement("div", {
+  }, "Evergreen, Colorado"))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -586,7 +586,7 @@ function Footer() {
       color: 'rgba(148,143,129,0.65)',
       fontFamily: 'var(--ffd-font-body)'
     }
-  }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 Natalie Bruce / Freeflow Dynamics"), /*#__PURE__*/React.createElement("span", null, "Partners: Orca \xB7 USANA \xB7 CETMA"))));
+  }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 Natalie Bruce / Freeflow Dynamics"), /*#__PURE__*/React.createElement("span", null, "Partners: Orca \xB7 USANA \xB7 Lobster \xB7 Blue Element"))));
 }
 
 /* ── PROGRAMS PAGE ── */
@@ -651,7 +651,7 @@ function ProgramsHero() {
       marginTop: '1rem',
       lineHeight: 1.65
     }
-  }, "Flow isn't found. It's trained. All programs run online with Natalie, wherever you are.")));
+  }, "Flow isn't found. It's trained. All programs run online with Natalie.")));
 }
 function ProgramDetail({
   num,
@@ -667,7 +667,8 @@ function ProgramDetail({
   img,
   imgAlt,
   dark,
-  cta
+  cta,
+  ctaHref
 }) {
   return /*#__PURE__*/React.createElement("section", {
     id: `program-${num}`,
@@ -827,8 +828,8 @@ function ProgramDetail({
   }, "\u2014"), item))), /*#__PURE__*/React.createElement(Btn, {
     variant: dark ? 'secondary' : 'primary',
     size: "lg",
-    href: BOOKING_URL,
-    onClick: openBooking
+    href: ctaHref,
+    onClick: ctaHref === BOOKING_URL ? openBooking : undefined
   }, cta))));
 }
 function HowItWorks() {
@@ -919,7 +920,7 @@ function FAQ() {
   const [open, setOpen] = useState(null);
   const qs = [{
     q: 'Do I need to be an experienced freediver to join?',
-    a: 'No. Coaching is tailored from complete beginners through to competitive athletes. The Pool Only trainings suit anyone comfortable in the water; the Full Performance package adds dry and gym programming for divers chasing a measurable next level.'
+    a: 'No. Coaching is tailored from complete beginners through to competitive athletes. The Pool Training Plan suits anyone comfortable in the water; the Full Performance package adds dry and gym programming for divers chasing a measurable next level.'
   }, {
     q: 'Are the programs online only, or can I train with you in person?',
     a: 'All programs run online, which means you can train wherever you are in the world. If you\'d like in-water sessions, they can be arranged as an add-on — just mention it in your enquiry.'
@@ -928,7 +929,7 @@ function FAQ() {
     a: 'For the online programs, you need access to a pool or open water, a mask, snorkel, and fins. For depth work, a wetsuit is recommended. I\'ll give you a full kit list at the start.'
   }, {
     q: 'How much time commitment is involved each week?',
-    a: 'Pool Only trainings run 2–3 pool sessions a week plus breathwork. The Full Performance package adds dry and gym work, typically 5–8 hours total depending on your access. We build the plan around your schedule.'
+    a: 'The Pool Training Plan runs 2–3 pool sessions a week plus breathwork. The Full Performance package adds dry and gym work, typically 5–8 hours total depending on your access. We build the plan around your schedule.'
   }, {
     q: 'I\'m not sure which program is right for me.',
     a: 'That\'s what the initial call is for. Send me a message with a bit about where you are in your practice and we\'ll work it out together. There\'s no pressure to commit before we\'ve spoken.'
@@ -1058,32 +1059,34 @@ const PROGRAMS_DATA = [{
   num: 1,
   tag: 'Pool training',
   tagColor: 'rgba(89,174,195,0.22)',
-  title: 'Pool Only Trainings',
-  duration: 'Monthly · Online',
+  title: 'Pool Training Plan',
+  duration: 'Monthly · Remote',
   price: '$175',
   priceUnit: '/ month',
   who: 'For divers who want consistent, structured pool work to build breath-hold, technique, and confidence.',
-  desc: 'Personalised virtual coaching with a structured, performance-based approach — drawn from a background in Kinesiology and Molchanovs and NASM certification. Two to three guided pool sessions a week, programmed to keep moving you forward.',
+  desc: 'A fully remote training plan — personalised virtual coaching with a structured, performance-based approach drawn from a background in Kinesiology, Molchanovs, and NASM certification. Two to three guided pool sessions a week, programmed to keep moving you forward.',
   items: ['2–3 pool training sessions per week', 'Static, dynamic & swimming workouts', 'Structured weekly programming', 'WhatsApp support anytime'],
   img: `${P}/natalie-bruce-coaching-pool-dynamic-orca.jpg`,
   imgAlt: 'Natalie Bruce in dynamic pool freediving training, Orca wetsuit',
   dark: false,
-  cta: 'Book Pool Only'
+  cta: 'Book Pool Training',
+  ctaHref: '#start-coaching'
 }, {
   num: 2,
   tag: 'Full performance',
   tagColor: 'rgba(229,176,80,0.25)',
   title: 'Full Performance Package',
-  duration: 'Monthly · Online',
+  duration: 'Monthly · Remote',
   price: '$275',
   priceUnit: '/ month',
   who: 'For divers ready to train like an athlete — water, dryland, and gym, with direct coaching contact.',
-  desc: 'Everything in the pool trainings, plus dry and gym programming and a monthly video call to review progress and refine technique. A complete performance system built around your goals.',
-  items: ['Everything in Pool Only trainings', 'Dry & gym programming', '1 video call per month', 'WhatsApp support anytime'],
+  desc: 'A complete, fully remote performance system. Everything in the Pool Training Plan, plus dry and gym programming and a monthly video call to review progress and refine technique — built around your goals.',
+  items: ['Everything in the Pool Training Plan', 'Dry & gym programming', '1 video call per month', 'WhatsApp support anytime'],
   img: `${P}/natalie-bruce-competition-descent-safety-divers.jpg`,
   imgAlt: 'Natalie Bruce ascending the line between two safety divers in open water',
   dark: true,
-  cta: 'Book Full Performance'
+  cta: 'Book Full Performance',
+  ctaHref: '#start-coaching'
 }, {
   num: 3,
   tag: 'Private 1:1',
@@ -1093,17 +1096,282 @@ const PROGRAMS_DATA = [{
   price: 'Custom',
   priceUnit: '',
   who: 'For athletes with specific goals or timelines who want fully bespoke, one-to-one attention.',
-  desc: 'No fixed template — we build entirely around you, your schedule, and your level. If you can travel to a training location, we can combine online work with in-water sessions.',
-  items: ['Tailored plan from day one', 'Direct 1:1 access to Natalie', 'In-water option by arrangement', 'Ongoing feedback & adjustments'],
+  desc: 'No fixed template — we build entirely around you, your schedule, and your level. Based in Colorado, with regular blocks in Tenerife and Dominica — see the Schedule for upcoming dates in each location. Online coaching bridges the gaps between in-water sessions, wherever you are.',
+  items: ['Tailored plan from day one', 'Direct 1:1 access to Natalie', 'In-water option', 'Ongoing feedback & adjustments'],
   img: `${P}/natalie-bruce-competition-surface-recovery.jpg`,
   imgAlt: 'Natalie Bruce surfacing at the line smiling after a dive',
   dark: false,
-  cta: 'Enquire about Private'
+  cta: 'Book a call',
+  ctaHref: BOOKING_URL
 }];
+function MailForm({
+  id,
+  eyebrow,
+  title,
+  intro,
+  to,
+  subject,
+  fields,
+  submitLabel
+}) {
+  const onSubmit = e => {
+    e.preventDefault();
+    const lines = fields.map(f => `${f.label}: ${(e.target.elements[f.name].value || '').trim()}`);
+    window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+  };
+  const inp = {
+    width: '100%',
+    padding: '0.8rem 1rem',
+    fontFamily: 'var(--ffd-font-body)',
+    fontSize: '1rem',
+    color: 'var(--ffd-ink)',
+    background: 'var(--ffd-foam)',
+    border: '1.5px solid var(--ffd-line)',
+    borderRadius: 'var(--ffd-radius)'
+  };
+  const lbl = {
+    display: 'block',
+    fontSize: '0.72rem',
+    letterSpacing: '0.12em',
+    textTransform: 'uppercase',
+    color: 'var(--ffd-stone)',
+    marginBottom: '0.4rem',
+    fontFamily: 'var(--ffd-font-body)'
+  };
+  return /*#__PURE__*/React.createElement("section", {
+    id: id,
+    style: {
+      background: 'var(--ffd-shell)',
+      padding: 'clamp(4.5rem,9vw,7rem) 0',
+      borderTop: '1px solid var(--ffd-line)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 680,
+      margin: '0 auto',
+      padding: '0 clamp(1.25rem,5vw,4rem)'
+    }
+  }, /*#__PURE__*/React.createElement(Eyebrow, {
+    style: {
+      marginBottom: '1.2rem'
+    }
+  }, eyebrow), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontFamily: 'var(--ffd-font-display)',
+      fontWeight: 500,
+      fontSize: 'clamp(1.9rem,3.8vw,2.7rem)',
+      letterSpacing: '-0.02em',
+      lineHeight: 1.1,
+      color: 'var(--ffd-ink)',
+      marginBottom: '1rem'
+    }
+  }, title), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '1.02rem',
+      color: 'var(--ffd-stone)',
+      fontWeight: 300,
+      lineHeight: 1.68,
+      marginBottom: '2.2rem'
+    }
+  }, intro), /*#__PURE__*/React.createElement("form", {
+    onSubmit: onSubmit,
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '1.2rem'
+    }
+  }, fields.map((f, i) => /*#__PURE__*/React.createElement("div", {
+    key: i
+  }, /*#__PURE__*/React.createElement("label", {
+    style: lbl,
+    htmlFor: `${id}-${f.name}`
+  }, f.label, f.required && ' *'), f.type === 'textarea' ? /*#__PURE__*/React.createElement("textarea", {
+    id: `${id}-${f.name}`,
+    name: f.name,
+    rows: 4,
+    required: f.required,
+    placeholder: f.ph || '',
+    style: {
+      ...inp,
+      resize: 'vertical'
+    }
+  }) : /*#__PURE__*/React.createElement("input", {
+    id: `${id}-${f.name}`,
+    name: f.name,
+    type: f.type || 'text',
+    required: f.required,
+    placeholder: f.ph || '',
+    style: inp
+  }))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Btn, {
+    variant: "primary",
+    size: "lg"
+  }, submitLabel)), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '0.8rem',
+      color: 'var(--ffd-stone-soft)',
+      fontWeight: 300
+    }
+  }, "Opens your email app with the details ready to send."))));
+}
+function Courses() {
+  const courses = [{
+    code: 'Lap 1',
+    name: 'Molchanovs Lap 1',
+    sub: 'Pool freediving foundation'
+  }, {
+    code: 'Wave 1',
+    name: 'Molchanovs Wave 1',
+    sub: 'Entry freediving certification'
+  }, {
+    code: 'Lap 2',
+    name: 'Molchanovs Lap 2',
+    sub: 'Pool freediving progression'
+  }, {
+    code: 'Wave 2',
+    name: 'Molchanovs Wave 2',
+    sub: 'Advanced freediving certification'
+  }];
+  return /*#__PURE__*/React.createElement("section", {
+    id: "courses",
+    style: {
+      background: 'var(--ffd-foam)',
+      padding: 'clamp(5rem,10vw,8rem) 0'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 1180,
+      margin: '0 auto',
+      padding: '0 clamp(1.25rem,5vw,4rem)'
+    }
+  }, /*#__PURE__*/React.createElement(Eyebrow, {
+    style: {
+      marginBottom: '1.4rem'
+    }
+  }, "Certifications"), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontFamily: 'var(--ffd-font-display)',
+      fontWeight: 500,
+      fontSize: 'clamp(1.9rem,3.8vw,2.8rem)',
+      letterSpacing: '-0.02em',
+      lineHeight: 1.1,
+      color: 'var(--ffd-ink)',
+      marginBottom: '1rem'
+    }
+  }, "Courses"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '1.05rem',
+      color: 'var(--ffd-stone)',
+      fontWeight: 300,
+      lineHeight: 1.68,
+      maxWidth: '56ch'
+    }
+  }, "Molchanovs freediving certifications \u2014 from your first structured pool course through advanced depth levels."), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(4,1fr)',
+      gap: '1.2rem',
+      margin: '2.6rem 0'
+    }
+  }, courses.map((c, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      background: 'var(--ffd-shell)',
+      border: '1px solid var(--ffd-line)',
+      borderRadius: 'var(--ffd-radius-lg)',
+      padding: '1.8rem 1.5rem'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--ffd-font-metric)',
+      fontSize: '1.4rem',
+      color: 'var(--ffd-deep-tide)',
+      letterSpacing: '-0.02em',
+      marginBottom: '0.7rem'
+    }
+  }, c.code), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--ffd-font-display)',
+      fontWeight: 500,
+      fontSize: '1.05rem',
+      color: 'var(--ffd-ink)',
+      marginBottom: '0.3rem',
+      lineHeight: 1.2
+    }
+  }, c.name), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: '0.85rem',
+      color: 'var(--ffd-stone-soft)',
+      fontWeight: 300,
+      lineHeight: 1.4
+    }
+  }, c.sub)))), /*#__PURE__*/React.createElement(Btn, {
+    variant: "primary",
+    size: "lg",
+    href: "#course-enquiry"
+  }, "Enquire about a course")));
+}
 function App() {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(ProgramsHero, null), PROGRAMS_DATA.map(p => /*#__PURE__*/React.createElement(ProgramDetail, _extends({
     key: p.num
-  }, p))), /*#__PURE__*/React.createElement(HowItWorks, null), /*#__PURE__*/React.createElement(FAQ, null), /*#__PURE__*/React.createElement(ProgramsCTA, null)), /*#__PURE__*/React.createElement(Footer, null));
+  }, p))), /*#__PURE__*/React.createElement(HowItWorks, null), /*#__PURE__*/React.createElement(MailForm, {
+    id: "start-coaching",
+    eyebrow: "Start coaching",
+    title: "Start your training plan",
+    intro: "Tell me where you are and which plan fits. I'll be in touch to set things up.",
+    to: "nataliefreediverbruce@gmail.com",
+    subject: "Coaching enquiry \u2014 Free Flow Dynamics",
+    submitLabel: "Send enquiry",
+    fields: [{
+      name: 'name',
+      label: 'Name',
+      required: true
+    }, {
+      name: 'email',
+      label: 'Email',
+      type: 'email',
+      required: true
+    }, {
+      name: 'plan',
+      label: 'Which plan? (Pool Training Plan / Full Performance / Private)'
+    }, {
+      name: 'experience',
+      label: 'Your experience level'
+    }, {
+      name: 'notes',
+      label: "Anything you'd like me to know",
+      type: 'textarea',
+      ph: 'Goals, questions, scheduling…'
+    }]
+  }), /*#__PURE__*/React.createElement(Courses, null), /*#__PURE__*/React.createElement(MailForm, {
+    id: "course-enquiry",
+    eyebrow: "Certifications",
+    title: "Enquire about a course",
+    intro: "Which course and location are you interested in? Send the details and I'll get back to you.",
+    to: "nataliefreediverbruce@gmail.com",
+    subject: "Course enquiry \u2014 Free Flow Dynamics",
+    submitLabel: "Send enquiry",
+    fields: [{
+      name: 'name',
+      label: 'Name',
+      required: true
+    }, {
+      name: 'email',
+      label: 'Email',
+      type: 'email',
+      required: true
+    }, {
+      name: 'course',
+      label: 'Which course / location are you interested in?'
+    }, {
+      name: 'level',
+      label: 'Certification level (e.g. none yet / Wave 1)'
+    }, {
+      name: 'notes',
+      label: "Anything you'd like me to know",
+      type: 'textarea',
+      ph: 'Experience, questions, scheduling constraints…'
+    }]
+  }), /*#__PURE__*/React.createElement(FAQ, null), /*#__PURE__*/React.createElement(ProgramsCTA, null)), /*#__PURE__*/React.createElement(Footer, null));
 }
 ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(App));
 })();

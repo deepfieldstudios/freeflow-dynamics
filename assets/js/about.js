@@ -225,7 +225,7 @@ function Nav() {
   const pActive = cur === 'partners.html';
   const ddItems = {
     Coaching: [{
-      l: 'Pool Only Trainings',
+      l: 'Pool Training Plan',
       sub: '$175 / month',
       h: 'programs.html'
     }, {
@@ -237,8 +237,8 @@ function Nav() {
       sub: '1:1 · Custom',
       h: 'programs.html'
     }],
-    'About Natalie': [{
-      l: 'About Natalie',
+    Story: [{
+      l: 'Story',
       sub: 'The person & the practice',
       h: 'about.html'
     }, {
@@ -359,10 +359,10 @@ function Nav() {
     l: 'Coaching',
     h: 'programs.html'
   }, {
-    l: 'About Natalie',
+    l: 'Story',
     h: 'about.html'
   }, {
-    l: 'Upcoming Events',
+    l: 'Schedule',
     h: 'events.html'
   }, {
     l: 'Media',
@@ -459,7 +459,7 @@ function Nav() {
     variant: onLight ? 'primary' : 'ghost',
     href: BOOKING_URL,
     onClick: openBooking
-  }, "Book a session"), /*#__PURE__*/React.createElement("div", {
+  }, "Get Started"), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 1,
       height: 22,
@@ -483,7 +483,7 @@ function Nav() {
       transition: 'all 0.2s',
       whiteSpace: 'nowrap'
     }
-  }, "Partners"))));
+  }, "Let's Collaborate"))));
 }
 function Footer() {
   return /*#__PURE__*/React.createElement("footer", {
@@ -585,7 +585,7 @@ function Footer() {
     style: {
       color: 'rgba(215,230,226,0.45)'
     }
-  }, "Colorado \xB7 USA"))), /*#__PURE__*/React.createElement("div", {
+  }, "Evergreen, Colorado"))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -595,7 +595,7 @@ function Footer() {
       color: 'rgba(148,143,129,0.65)',
       fontFamily: 'var(--ffd-font-body)'
     }
-  }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 Natalie Bruce / Freeflow Dynamics"), /*#__PURE__*/React.createElement("span", null, "Partners: Orca \xB7 USANA \xB7 CETMA"))));
+  }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 Natalie Bruce / Freeflow Dynamics"), /*#__PURE__*/React.createElement("span", null, "Partners: Orca \xB7 USANA \xB7 Lobster \xB7 Blue Element"))));
 }
 
 /* ── ABOUT PAGE ── */
@@ -641,7 +641,7 @@ function AboutHero() {
     style: {
       marginBottom: '1rem'
     }
-  }, "About"), /*#__PURE__*/React.createElement("h1", {
+  }, "Story"), /*#__PURE__*/React.createElement("h1", {
     style: {
       fontFamily: 'var(--ffd-font-display)',
       fontWeight: 500,
@@ -659,7 +659,7 @@ function AboutHero() {
       color: 'var(--ffd-clay-glow)',
       marginTop: '0.5rem'
     }
-  }, "US professional freediver \xB7 Colorado, USA")));
+  }, "US professional freediver & performance coach")));
 }
 function Bio() {
   return /*#__PURE__*/React.createElement("section", {
@@ -691,7 +691,7 @@ function Bio() {
       color: 'var(--ffd-ink)',
       marginBottom: '2rem'
     }
-  }, "I started swimming at four, just outside Chicago. Breath-holding never came easily \u2014 even short underwater sets were a struggle \u2014 which is part of why freediving came to mean what it does."), /*#__PURE__*/React.createElement("p", {
+  }, "I started swimming at four, just outside Chicago. Underwater was where I first felt calm \u2014 long before I had a word for it. I think it was the quiet that pulled me in."), /*#__PURE__*/React.createElement("p", {
     style: {
       fontSize: '1.06rem',
       color: 'var(--ffd-stone)',
@@ -715,32 +715,7 @@ function Bio() {
       fontWeight: 300,
       marginBottom: '2rem'
     }
-  }, "What began as curiosity became a path. I entered my first major competition in 2023 at the CMAS Depth World Championship in Roat\xE1n, and in 2024 turned to indoor and depth freediving \u2014 becoming the first American woman past 200m in dynamic, now 257m, and rising into the top ten women in the world in two and a half years."), /*#__PURE__*/React.createElement(Waterline, {
-    style: {
-      margin: '2rem 0'
-    }
-  }), /*#__PURE__*/React.createElement("blockquote", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontStyle: 'italic',
-      fontSize: '1.35rem',
-      lineHeight: 1.42,
-      color: 'var(--ffd-deep-tide)',
-      borderLeft: '2px solid var(--ffd-clay)',
-      paddingLeft: '1.2rem'
-    }
-  }, "\"The sea always brings me back to a softer mind.\"", /*#__PURE__*/React.createElement("cite", {
-    style: {
-      display: 'block',
-      fontStyle: 'normal',
-      fontFamily: 'var(--ffd-font-body)',
-      fontSize: '0.68rem',
-      letterSpacing: '0.16em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-stone-soft)',
-      marginTop: '0.7rem'
-    }
-  }, "\u2014 @natalie.freediver"))), /*#__PURE__*/React.createElement("div", {
+  }, "What began as curiosity became a path. I entered my first major competition in 2023 at the CMAS Depth World Championship in Roat\xE1n, and in 2024 turned to indoor and depth freediving \u2014 becoming the first American woman past 200m in dynamic, now 257m, and rising into the top ten women in the world in two and a half years.")), /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'sticky',
       top: '6rem'
@@ -811,7 +786,7 @@ function Bio() {
       color: 'var(--ffd-deep-tide)',
       letterSpacing: '-0.03em'
     }
-  }, "USA"), /*#__PURE__*/React.createElement("div", {
+  }, "Top 10"), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: '0.65rem',
       letterSpacing: '0.16em',
@@ -819,7 +794,7 @@ function Bio() {
       color: 'var(--ffd-stone)',
       marginTop: '0.2rem'
     }
-  }, "Colorado"))))));
+  }, "In the world"))))));
 }
 function StatsBanner() {
   const records = [{
@@ -1201,7 +1176,7 @@ function Partners() {
       gap: 'clamp(2.5rem,8vw,6rem)',
       flexWrap: 'wrap'
     }
-  }, ['Orca', 'USANA', 'CETMA'].map(name => /*#__PURE__*/React.createElement("div", {
+  }, ['Orca', 'USANA', 'Lobster', 'Blue Element'].map(name => /*#__PURE__*/React.createElement("div", {
     key: name,
     style: {
       fontFamily: 'var(--ffd-font-display)',
@@ -1271,7 +1246,7 @@ function App() {
     style: {
       paddingTop: 0
     }
-  }, /*#__PURE__*/React.createElement(AboutHero, null), /*#__PURE__*/React.createElement(Bio, null), /*#__PURE__*/React.createElement(StatsBanner, null), /*#__PURE__*/React.createElement(ThePractice, null), /*#__PURE__*/React.createElement(MovementBanner, null), /*#__PURE__*/React.createElement(Gallery3, null), /*#__PURE__*/React.createElement(Partners, null), /*#__PURE__*/React.createElement(AboutQuote, null)), /*#__PURE__*/React.createElement(Footer, null));
+  }, /*#__PURE__*/React.createElement(AboutHero, null), /*#__PURE__*/React.createElement(Bio, null), /*#__PURE__*/React.createElement(StatsBanner, null), /*#__PURE__*/React.createElement(ThePractice, null), /*#__PURE__*/React.createElement(Gallery3, null), /*#__PURE__*/React.createElement(Partners, null)), /*#__PURE__*/React.createElement(Footer, null));
 }
 ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(App));
 })();

@@ -230,7 +230,7 @@ function Nav() {
   const pActive = cur === 'partners.html';
   const ddItems = {
     Coaching: [{
-      l: 'Pool Only Trainings',
+      l: 'Pool Training Plan',
       sub: '$175 / month',
       h: 'programs.html'
     }, {
@@ -242,8 +242,8 @@ function Nav() {
       sub: '1:1 · Custom',
       h: 'programs.html'
     }],
-    'About Natalie': [{
-      l: 'About Natalie',
+    Story: [{
+      l: 'Story',
       sub: 'The person & the practice',
       h: 'about.html'
     }, {
@@ -364,10 +364,10 @@ function Nav() {
     l: 'Coaching',
     h: 'programs.html'
   }, {
-    l: 'About Natalie',
+    l: 'Story',
     h: 'about.html'
   }, {
-    l: 'Upcoming Events',
+    l: 'Schedule',
     h: 'events.html'
   }, {
     l: 'Media',
@@ -464,7 +464,7 @@ function Nav() {
     variant: onLight ? 'primary' : 'ghost',
     href: BOOKING_URL,
     onClick: openBooking
-  }, "Book a session"), /*#__PURE__*/React.createElement("div", {
+  }, "Get Started"), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 1,
       height: 22,
@@ -488,7 +488,7 @@ function Nav() {
       transition: 'all 0.2s',
       whiteSpace: 'nowrap'
     }
-  }, "Partners"))));
+  }, "Let's Collaborate"))));
 }
 function Footer() {
   return /*#__PURE__*/React.createElement("footer", {
@@ -581,7 +581,7 @@ function Footer() {
     style: {
       color: 'rgba(215,230,226,0.45)'
     }
-  }, "Colorado \xB7 USA"))), /*#__PURE__*/React.createElement("div", {
+  }, "Evergreen, Colorado"))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -591,7 +591,7 @@ function Footer() {
       color: 'rgba(148,143,129,0.65)',
       fontFamily: 'var(--ffd-font-body)'
     }
-  }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 Natalie Bruce / Freeflow Dynamics"), /*#__PURE__*/React.createElement("span", null, "Partners: Orca \xB7 USANA \xB7 CETMA"))));
+  }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 Natalie Bruce / Freeflow Dynamics"), /*#__PURE__*/React.createElement("span", null, "Partners: Orca \xB7 USANA \xB7 Lobster \xB7 Blue Element"))));
 }
 
 /* ── PARTNERS PAGE ── */
@@ -839,9 +839,13 @@ function CurrentPartners() {
     cat: 'Nutrition & health',
     desc: 'Cellular nutrition and athlete wellness.'
   }, {
-    name: 'CETMA',
+    name: 'Lobster',
     cat: 'Freediving equipment',
-    desc: 'Masks, fins, and competition apparatus.'
+    desc: 'Monofins and bi-fins for pool and depth.'
+  }, {
+    name: 'Blue Element',
+    cat: 'Freediving travel',
+    desc: 'Freediving centre and depth training in Dominica.'
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
