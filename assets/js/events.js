@@ -225,7 +225,7 @@ function Nav() {
   const pActive = cur === 'partners.html';
   const ddItems = {
     Coaching: [{
-      l: 'Pool Only Trainings',
+      l: 'Pool Training Plan',
       sub: '$175 / month',
       h: 'programs.html'
     }, {
@@ -237,8 +237,8 @@ function Nav() {
       sub: '1:1 · Custom',
       h: 'programs.html'
     }],
-    'About Natalie': [{
-      l: 'About Natalie',
+    Story: [{
+      l: 'Story',
       sub: 'The person & the practice',
       h: 'about.html'
     }, {
@@ -359,10 +359,10 @@ function Nav() {
     l: 'Coaching',
     h: 'programs.html'
   }, {
-    l: 'About Natalie',
+    l: 'Story',
     h: 'about.html'
   }, {
-    l: 'Upcoming Events',
+    l: 'Schedule',
     h: 'events.html'
   }, {
     l: 'Media',
@@ -459,7 +459,7 @@ function Nav() {
     variant: onLight ? 'primary' : 'ghost',
     href: BOOKING_URL,
     onClick: openBooking
-  }, "Book a session"), /*#__PURE__*/React.createElement("div", {
+  }, "Get Started"), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 1,
       height: 22,
@@ -483,7 +483,7 @@ function Nav() {
       transition: 'all 0.2s',
       whiteSpace: 'nowrap'
     }
-  }, "Partners"))));
+  }, "Let's Collaborate"))));
 }
 function Footer() {
   return /*#__PURE__*/React.createElement("footer", {
@@ -585,7 +585,7 @@ function Footer() {
     style: {
       color: 'rgba(215,230,226,0.45)'
     }
-  }, "Colorado \xB7 USA"))), /*#__PURE__*/React.createElement("div", {
+  }, "Evergreen, Colorado"))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -595,7 +595,7 @@ function Footer() {
       color: 'rgba(148,143,129,0.65)',
       fontFamily: 'var(--ffd-font-body)'
     }
-  }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 Natalie Bruce / Freeflow Dynamics"), /*#__PURE__*/React.createElement("span", null, "Partners: Orca \xB7 USANA \xB7 CETMA"))));
+  }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 Natalie Bruce / Freeflow Dynamics"), /*#__PURE__*/React.createElement("span", null, "Partners: Orca \xB7 USANA \xB7 Lobster \xB7 Blue Element"))));
 }
 
 /* ── EVENTS PAGE ── */
@@ -641,7 +641,7 @@ function EventsHero() {
     style: {
       marginBottom: '1rem'
     }
-  }, "Upcoming Events"), /*#__PURE__*/React.createElement("h1", {
+  }, "Schedule"), /*#__PURE__*/React.createElement("h1", {
     style: {
       fontFamily: 'var(--ffd-font-display)',
       fontWeight: 500,
@@ -651,7 +651,7 @@ function EventsHero() {
       color: 'var(--ffd-foam)',
       maxWidth: '16ch'
     }
-  }, "Workshops & events"), /*#__PURE__*/React.createElement("p", {
+  }, "Training blocks & workshops"), /*#__PURE__*/React.createElement("p", {
     style: {
       fontFamily: 'var(--ffd-font-display)',
       fontStyle: 'italic',
@@ -659,141 +659,259 @@ function EventsHero() {
       color: 'var(--ffd-clay-glow)',
       marginTop: '0.5rem'
     }
-  }, "Trainings, trips, and competitions \u2014 soon.")));
+  }, "Where I'll be \u2014 and where you can train with me.")));
 }
-function EventsBody() {
-  const kinds = [{
-    t: 'Freedive workshops',
-    d: 'Small-group sessions on breath, technique, and the mental side of the dive — held across the US and beyond.'
+function Schedule() {
+  const groups = [{
+    label: 'Training blocks',
+    items: [{
+      title: 'Tenerife — Depth Block',
+      when: 'Sep 24 – Dec 1, 2026',
+      where: 'Tenerife, Canary Islands',
+      desc: 'In-water depth training on the volcanic coast — line work, technique, and personal-best progression.'
+    }, {
+      title: 'Dominica — Depth Block',
+      when: 'Dates TBA',
+      where: 'Dominica',
+      desc: 'Warm, deep-water training blocks. Join the list to hear the dates first.'
+    }]
   }, {
-    t: 'Depth training trips',
-    d: 'Focused blocks in warm, clear water for divers building toward a personal best or a first competition.'
+    label: 'Workshops',
+    items: [{
+      title: 'Dynamic Apnea Workshop',
+      when: 'Dates TBA',
+      where: 'Idaho Springs, CO',
+      desc: 'Altitude dynamic apnea — technique, breath, and the mental side of the dive.'
+    }]
   }, {
-    t: 'Competition coaching',
-    d: 'On-site preparation and support for athletes heading into AIDA and CMAS events.'
+    label: 'Competitions',
+    items: [{
+      title: 'AIDA Altitude Apnea Challenge',
+      when: 'Feb 13 – 14, 2027',
+      where: 'Idaho Springs, CO',
+      desc: 'High-altitude pool apnea competition in the Colorado mountains.'
+    }]
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
       background: 'var(--ffd-shell)',
-      padding: 'clamp(6rem,12vw,10rem) 0'
+      padding: 'clamp(5rem,10vw,8rem) 0'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      maxWidth: 1280,
+      maxWidth: 1000,
       margin: '0 auto',
       padding: '0 clamp(1.25rem,5vw,4rem)'
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, groups.map((g, gi) => /*#__PURE__*/React.createElement("div", {
+    key: gi,
     style: {
-      maxWidth: 680,
-      margin: '0 auto',
-      textAlign: 'center'
+      marginBottom: gi < groups.length - 1 ? 'clamp(3rem,6vw,4.5rem)' : 0
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement(Eyebrow, {
     style: {
-      display: 'flex',
-      justifyContent: 'center',
-      marginBottom: '2rem'
+      marginBottom: '1.8rem'
     }
-  }, /*#__PURE__*/React.createElement(Enso, {
-    size: 70,
-    color: "var(--ffd-line)"
-  })), /*#__PURE__*/React.createElement(Eyebrow, {
-    style: {
-      marginBottom: '1.2rem',
-      justifyContent: 'center'
-    }
-  }, "On the horizon"), /*#__PURE__*/React.createElement("h2", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: 'clamp(2rem,4.5vw,3.1rem)',
-      letterSpacing: '-0.02em',
-      lineHeight: 1.08,
-      color: 'var(--ffd-ink)',
-      marginBottom: '1.4rem'
-    }
-  }, "The calendar is being set."), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '1.08rem',
-      color: 'var(--ffd-stone)',
-      fontWeight: 300,
-      lineHeight: 1.72,
-      marginBottom: '2.2rem'
-    }
-  }, "I'm planning the season ahead \u2014 workshops, depth trips, and clinics. Nothing's on the books just yet. The best way to hear first is to book an intro call or follow along on Instagram."), /*#__PURE__*/React.createElement("div", {
+  }, g.label), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
-      gap: '0.85rem',
-      justifyContent: 'center',
-      flexWrap: 'wrap'
+      flexDirection: 'column',
+      gap: '1rem'
     }
-  }, /*#__PURE__*/React.createElement(Btn, {
-    variant: "primary",
-    size: "lg",
-    href: BOOKING_URL,
-    onClick: openBooking
-  }, "Book a free call"), /*#__PURE__*/React.createElement(Btn, {
-    variant: "outline",
-    size: "lg",
-    href: "https://instagram.com/natalie.freediver"
-  }, "Follow @natalie.freediver"))), /*#__PURE__*/React.createElement(Waterline, {
-    style: {
-      maxWidth: 520,
-      margin: 'clamp(3.5rem,7vw,5.5rem) auto clamp(3rem,6vw,4.5rem)'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(3,1fr)',
-      gap: '1.4rem'
-    }
-  }, kinds.map((k, i) => /*#__PURE__*/React.createElement("div", {
+  }, g.items.map((it, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      gap: '1.2rem',
+      justifyContent: 'space-between',
+      alignItems: 'center',
       background: 'var(--ffd-foam)',
       border: '1px solid var(--ffd-line)',
       borderRadius: 'var(--ffd-radius-lg)',
-      padding: '2rem 1.8rem',
+      padding: 'clamp(1.4rem,3vw,2rem)',
       boxShadow: 'var(--ffd-shadow)'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      fontFamily: 'var(--ffd-font-metric)',
-      fontSize: '0.8rem',
-      color: 'var(--ffd-tide-deep)',
-      marginBottom: '1rem'
+      flex: '1 1 320px'
     }
-  }, String(i + 1).padStart(2, '0')), /*#__PURE__*/React.createElement("h3", {
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--ffd-font-metric)',
+      fontSize: '0.82rem',
+      color: 'var(--ffd-tide-deep)',
+      marginBottom: '0.5rem'
+    }
+  }, it.when, " \xB7 ", it.where), /*#__PURE__*/React.createElement("h3", {
     style: {
       fontFamily: 'var(--ffd-font-display)',
       fontWeight: 500,
-      fontSize: '1.3rem',
+      fontSize: 'clamp(1.3rem,2.6vw,1.7rem)',
       letterSpacing: '-0.01em',
       color: 'var(--ffd-ink)',
-      marginBottom: '0.7rem',
-      lineHeight: 1.2
+      marginBottom: '0.5rem',
+      lineHeight: 1.15
     }
-  }, k.t), /*#__PURE__*/React.createElement("p", {
+  }, it.title), /*#__PURE__*/React.createElement("p", {
     style: {
-      fontSize: '0.92rem',
+      fontSize: '0.95rem',
       color: 'var(--ffd-stone)',
       fontWeight: 300,
-      lineHeight: 1.62
+      lineHeight: 1.6,
+      maxWidth: '56ch'
     }
-  }, k.d)))), /*#__PURE__*/React.createElement("p", {
+  }, it.desc)), /*#__PURE__*/React.createElement(Btn, {
+    variant: "primary",
+    href: "#event-enquiry"
+  }, "Enquire")))))), /*#__PURE__*/React.createElement("p", {
     style: {
       textAlign: 'center',
-      marginTop: '2.5rem',
+      marginTop: 'clamp(3rem,6vw,4.5rem)',
       fontFamily: 'var(--ffd-font-display)',
       fontStyle: 'italic',
       fontSize: '1.1rem',
       color: 'var(--ffd-stone-soft)'
     }
-  }, "Dates announced here first.")));
+  }, "New dates announced here first.")));
+}
+function MailForm({
+  id,
+  eyebrow,
+  title,
+  intro,
+  to,
+  subject,
+  fields,
+  submitLabel
+}) {
+  const onSubmit = e => {
+    e.preventDefault();
+    const lines = fields.map(f => `${f.label}: ${(e.target.elements[f.name].value || '').trim()}`);
+    window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+  };
+  const inp = {
+    width: '100%',
+    padding: '0.8rem 1rem',
+    fontFamily: 'var(--ffd-font-body)',
+    fontSize: '1rem',
+    color: 'var(--ffd-ink)',
+    background: 'var(--ffd-foam)',
+    border: '1.5px solid var(--ffd-line)',
+    borderRadius: 'var(--ffd-radius)'
+  };
+  const lbl = {
+    display: 'block',
+    fontSize: '0.72rem',
+    letterSpacing: '0.12em',
+    textTransform: 'uppercase',
+    color: 'var(--ffd-stone)',
+    marginBottom: '0.4rem',
+    fontFamily: 'var(--ffd-font-body)'
+  };
+  return /*#__PURE__*/React.createElement("section", {
+    id: id,
+    style: {
+      background: 'var(--ffd-foam)',
+      padding: 'clamp(4.5rem,9vw,7rem) 0',
+      borderTop: '1px solid var(--ffd-line)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 680,
+      margin: '0 auto',
+      padding: '0 clamp(1.25rem,5vw,4rem)'
+    }
+  }, /*#__PURE__*/React.createElement(Eyebrow, {
+    style: {
+      marginBottom: '1.2rem'
+    }
+  }, eyebrow), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontFamily: 'var(--ffd-font-display)',
+      fontWeight: 500,
+      fontSize: 'clamp(1.9rem,3.8vw,2.7rem)',
+      letterSpacing: '-0.02em',
+      lineHeight: 1.1,
+      color: 'var(--ffd-ink)',
+      marginBottom: '1rem'
+    }
+  }, title), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '1.02rem',
+      color: 'var(--ffd-stone)',
+      fontWeight: 300,
+      lineHeight: 1.68,
+      marginBottom: '2.2rem'
+    }
+  }, intro), /*#__PURE__*/React.createElement("form", {
+    onSubmit: onSubmit,
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '1.2rem'
+    }
+  }, fields.map((f, i) => /*#__PURE__*/React.createElement("div", {
+    key: i
+  }, /*#__PURE__*/React.createElement("label", {
+    style: lbl,
+    htmlFor: `${id}-${f.name}`
+  }, f.label, f.required && ' *'), f.type === 'textarea' ? /*#__PURE__*/React.createElement("textarea", {
+    id: `${id}-${f.name}`,
+    name: f.name,
+    rows: 4,
+    required: f.required,
+    placeholder: f.ph || '',
+    style: {
+      ...inp,
+      resize: 'vertical'
+    }
+  }) : /*#__PURE__*/React.createElement("input", {
+    id: `${id}-${f.name}`,
+    name: f.name,
+    type: f.type || 'text',
+    required: f.required,
+    placeholder: f.ph || '',
+    style: inp
+  }))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Btn, {
+    variant: "primary",
+    size: "lg"
+  }, submitLabel)), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '0.8rem',
+      color: 'var(--ffd-stone-soft)',
+      fontWeight: 300
+    }
+  }, "Opens your email app with the details ready to send."))));
 }
 function App() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(EventsHero, null), /*#__PURE__*/React.createElement(EventsBody, null)), /*#__PURE__*/React.createElement(Footer, null));
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(EventsHero, null), /*#__PURE__*/React.createElement(Schedule, null), /*#__PURE__*/React.createElement(MailForm, {
+    id: "event-enquiry",
+    eyebrow: "Reserve your spot",
+    title: "Enquire about a date",
+    intro: "Let me know which block, workshop, or event you're interested in and I'll be in touch with the details.",
+    to: "nataliefreediverbruce@gmail.com",
+    subject: "Schedule enquiry \u2014 Free Flow Dynamics",
+    submitLabel: "Send enquiry",
+    fields: [{
+      name: 'name',
+      label: 'Name',
+      required: true
+    }, {
+      name: 'email',
+      label: 'Email',
+      type: 'email',
+      required: true
+    }, {
+      name: 'event',
+      label: 'Which block / workshop / location?'
+    }, {
+      name: 'notes',
+      label: "Anything you'd like me to know",
+      type: 'textarea',
+      ph: 'Experience, goals, questions…'
+    }]
+  })), /*#__PURE__*/React.createElement(Footer, null));
 }
 ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(App));
 })();

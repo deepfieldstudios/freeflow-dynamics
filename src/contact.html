@@ -94,12 +94,12 @@ function Nav(){
   const pActive=cur==='partners.html';
   const ddItems={
     Coaching:[
-      {l:'Pool Only Trainings',sub:'$175 / month',h:'programs.html'},
+      {l:'Pool Training Plan',sub:'$175 / month',h:'programs.html'},
       {l:'Full Performance Package',sub:'$275 / month',h:'programs.html'},
       {l:'Private Coaching',sub:'1:1 · Custom',h:'programs.html'},
     ],
-    'About Natalie':[
-      {l:'About Natalie',sub:'The person & the practice',h:'about.html'},
+    Story:[
+      {l:'Story',sub:'The person & the practice',h:'about.html'},
       {l:'Competition Records',sub:'AIDA · World No. 7',h:'competition.html'},
     ],
   };
@@ -119,7 +119,7 @@ function Nav(){
           </div>
         </a>
         <button className="ffd-burger" aria-label="Toggle menu" onClick={()=>setMobileOpen(o=>!o)} style={{background:'none',border:'none',cursor:'pointer',padding:'0.4rem',flexShrink:0}}><span style={{display:'block',width:24,height:2,borderRadius:2,background:logoColor,margin:'5px 0',transition:'transform .25s,opacity .25s',transform:mobileOpen?'translateY(7px) rotate(45deg)':'none'}}/><span style={{display:'block',width:24,height:2,borderRadius:2,background:logoColor,margin:'5px 0',transition:'opacity .2s',opacity:mobileOpen?0:1}}/><span style={{display:'block',width:24,height:2,borderRadius:2,background:logoColor,margin:'5px 0',transition:'transform .25s',transform:mobileOpen?'translateY(-7px) rotate(-45deg)':'none'}}/></button><div className="ffd-navlinks" data-open={mobileOpen?'true':'false'} style={{display:'flex',alignItems:'center',gap:'1.4rem',flexShrink:0}}>
-          {[{l:'Coaching',h:'programs.html'},{l:'About Natalie',h:'about.html'},{l:'Upcoming Events',h:'events.html'},{l:'Media',h:'media.html'},{l:'Contact',h:'contact.html'}].map(({l,h})=>{
+          {[{l:'Coaching',h:'programs.html'},{l:'Story',h:'about.html'},{l:'Schedule',h:'events.html'},{l:'Media',h:'media.html'},{l:'Contact',h:'contact.html'}].map(({l,h})=>{
             const hasDd=l in ddItems;const active=cur===h;
             return(
               <div key={l} style={{position:'relative'}} onMouseEnter={()=>setDd(l)} onMouseLeave={()=>setDd(null)}>
@@ -139,9 +139,9 @@ function Nav(){
               </div>
             );
           })}
-          <Btn size="sm" variant={onLight?'primary':'ghost'} href={BOOKING_URL} onClick={openBooking}>Book a session</Btn>
+          <Btn size="sm" variant={onLight?'primary':'ghost'} href={BOOKING_URL} onClick={openBooking}>Get Started</Btn>
           <div style={{width:1,height:22,background:onLight?'var(--ffd-line)':'rgba(242,235,220,0.3)'}}/>
-          <a href="partners.html" onMouseEnter={()=>setPhov(true)} onMouseLeave={()=>setPhov(false)} style={{fontFamily:'var(--ffd-font-body)',fontWeight:500,fontSize:'0.82rem',letterSpacing:'0.04em',color:(pActive||phov)?(onLight?'var(--ffd-foam)':'var(--ffd-deep-tide)'):(onLight?'var(--ffd-cocoa)':'var(--ffd-foam)'),background:(pActive||phov)?(onLight?'var(--ffd-cocoa)':'var(--ffd-foam)'):'transparent',border:'1.5px solid '+(onLight?'var(--ffd-cocoa)':'rgba(242,235,220,0.6)'),borderRadius:'var(--ffd-radius-sm)',padding:'0.4rem 0.85rem',textDecoration:'none',transition:'all 0.2s',whiteSpace:'nowrap'}}>Partners</a>
+          <a href="partners.html" onMouseEnter={()=>setPhov(true)} onMouseLeave={()=>setPhov(false)} style={{fontFamily:'var(--ffd-font-body)',fontWeight:500,fontSize:'0.82rem',letterSpacing:'0.04em',color:(pActive||phov)?(onLight?'var(--ffd-foam)':'var(--ffd-deep-tide)'):(onLight?'var(--ffd-cocoa)':'var(--ffd-foam)'),background:(pActive||phov)?(onLight?'var(--ffd-cocoa)':'var(--ffd-foam)'):'transparent',border:'1.5px solid '+(onLight?'var(--ffd-cocoa)':'rgba(242,235,220,0.6)'),borderRadius:'var(--ffd-radius-sm)',padding:'0.4rem 0.85rem',textDecoration:'none',transition:'all 0.2s',whiteSpace:'nowrap'}}>Let's Collaborate</a>
         </div>
       </div>
     </nav>
@@ -165,12 +165,12 @@ function Footer() {
           <div style={{fontFamily:'var(--ffd-font-metric)',fontSize:'0.85rem',lineHeight:2.1,color:'var(--ffd-sand)'}}>
             <div>@freeflowdynamics</div><div>@natalie.freediver</div>
             <a href="mailto:info@freeflowdynamics.com" style={{color:'var(--ffd-tide-light)',textDecoration:'none',display:'block'}}>info@freeflowdynamics.com</a>
-            <div style={{color:'rgba(215,230,226,0.45)'}}>Colorado · USA</div>
+            <div style={{color:'rgba(215,230,226,0.45)'}}>Evergreen, Colorado</div>
           </div>
         </div>
         <div style={{display:'flex',justifyContent:'space-between',gap:'1rem',flexWrap:'wrap',fontSize:'0.7rem',color:'rgba(148,143,129,0.65)',fontFamily:'var(--ffd-font-body)'}}>
           <span>© 2026 Natalie Bruce / Freeflow Dynamics</span>
-          <span>Partners: Orca · USANA · CETMA</span>
+          <span>Partners: Orca · USANA · Lobster · Blue Element</span>
         </div>
       </div>
     </footer>

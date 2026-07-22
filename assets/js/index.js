@@ -222,7 +222,7 @@ function Nav() {
   const pActive = cur === 'partners.html';
   const ddItems = {
     Coaching: [{
-      l: 'Pool Only Trainings',
+      l: 'Pool Training Plan',
       sub: '$175 / month',
       h: 'programs.html'
     }, {
@@ -234,8 +234,8 @@ function Nav() {
       sub: '1:1 · Custom',
       h: 'programs.html'
     }],
-    'About Natalie': [{
-      l: 'About Natalie',
+    Story: [{
+      l: 'Story',
       sub: 'The person & the practice',
       h: 'about.html'
     }, {
@@ -356,10 +356,10 @@ function Nav() {
     l: 'Coaching',
     h: 'programs.html'
   }, {
-    l: 'About Natalie',
+    l: 'Story',
     h: 'about.html'
   }, {
-    l: 'Upcoming Events',
+    l: 'Schedule',
     h: 'events.html'
   }, {
     l: 'Media',
@@ -456,7 +456,7 @@ function Nav() {
     variant: "primary",
     href: BOOKING_URL,
     onClick: openBooking
-  }, "Book a session"), /*#__PURE__*/React.createElement("div", {
+  }, "Get Started"), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 1,
       height: 22,
@@ -480,7 +480,7 @@ function Nav() {
       transition: 'all 0.2s',
       whiteSpace: 'nowrap'
     }
-  }, "Partners"))));
+  }, "Let's Collaborate"))));
 }
 /* ── HERO ── */
 function Hero() {
@@ -491,8 +491,8 @@ function Hero() {
     v: '17×',
     l: 'US national records'
   }, {
-    v: 'USA',
-    l: 'Colorado'
+    v: '102m',
+    l: 'Down the line'
   }, {
     v: '1 breath',
     l: 'The whole practice'
@@ -559,20 +559,20 @@ function Hero() {
       fontFamily: 'var(--ffd-font-display)',
       fontStyle: 'italic',
       color: 'var(--ffd-clay-glow)',
-      fontSize: 'clamp(1.05rem,2vw,1.45rem)',
-      marginBottom: '2.2rem',
+      fontSize: 'clamp(1.15rem,2.2vw,1.6rem)',
+      marginBottom: '1.6rem',
       letterSpacing: '-0.01em'
     }
-  }, "by Natalie Bruce"), /*#__PURE__*/React.createElement("p", {
+  }, "The breath is where performance begins."), /*#__PURE__*/React.createElement("p", {
     style: {
       fontSize: '1.06rem',
       color: 'rgba(215,230,226,0.85)',
       fontWeight: 300,
-      maxWidth: '38ch',
+      maxWidth: '42ch',
       marginBottom: '2rem',
       lineHeight: 1.65
     }
-  }, "A coaching practice drawn from the water \u2014 calm, control, and clarity, one breath at a time."), /*#__PURE__*/React.createElement("div", {
+  }, "I coach freedivers, athletes, and everyday people to apply the relaxation tools behind my success as a top athlete \u2014 improving performance under pressure, in and out of the water."), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       gap: '0.85rem',
@@ -734,91 +734,29 @@ function About() {
     style: {
       marginBottom: '1.4rem'
     }
-  }, "The person"), /*#__PURE__*/React.createElement("h2", {
+  }, "The coach"), /*#__PURE__*/React.createElement("h2", {
     style: {
       fontFamily: 'var(--ffd-font-display)',
       fontWeight: 500,
-      fontSize: 'clamp(2rem,4vw,3.1rem)',
+      fontSize: 'clamp(2.2rem,4.5vw,3.4rem)',
       lineHeight: 1.08,
       letterSpacing: '-0.02em',
       color: 'var(--ffd-ink)',
       marginBottom: '1.6rem'
     }
-  }, "Freediving is a practice of stillness. The water teaches the rest."), /*#__PURE__*/React.createElement("p", {
+  }, "Stillness is a skill."), /*#__PURE__*/React.createElement("p", {
     style: {
-      fontSize: '1.08rem',
+      fontSize: '1.12rem',
       color: 'var(--ffd-stone)',
       fontWeight: 300,
-      lineHeight: 1.7,
-      marginBottom: '1.4rem'
-    }
-  }, "Natalie Bruce is a US professional freediver and human-performance coach based in Colorado, USA. She holds 12 continental and 17 US national records in AIDA competition \u2014 depth, static apnea, and dynamic disciplines."), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '1.08rem',
-      color: 'var(--ffd-stone)',
-      fontWeight: 300,
-      lineHeight: 1.7,
+      lineHeight: 1.72,
       marginBottom: '2rem'
     }
-  }, "The brand carries two truths: the calm of breath-hold, and the discipline of elite performance. Her practice asks the same question each session \u2014 can you meet the water with a softer mind?"), /*#__PURE__*/React.createElement(Waterline, {
-    style: {
-      margin: '1.6rem 0'
-    }
-  }), /*#__PURE__*/React.createElement("blockquote", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontStyle: 'italic',
-      fontSize: '1.3rem',
-      lineHeight: 1.4,
-      color: 'var(--ffd-deep-tide)',
-      borderLeft: '2px solid var(--ffd-clay)',
-      paddingLeft: '1.2rem',
-      marginBottom: '2rem'
-    }
-  }, "\"The sea always brings me back to a softer mind.\"", /*#__PURE__*/React.createElement("cite", {
-    style: {
-      display: 'block',
-      fontStyle: 'normal',
-      fontFamily: 'var(--ffd-font-body)',
-      fontSize: '0.7rem',
-      letterSpacing: '0.16em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-stone-soft)',
-      marginTop: '0.7rem'
-    }
-  }, "\u2014 @natalie.freediver")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      gap: '2rem'
-    }
-  }, [{
-    v: '12×',
-    l: 'Continental'
-  }, {
-    v: '17×',
-    l: 'US National'
-  }, {
-    v: 'AIDA',
-    l: 'Competitor'
-  }].map((s, i) => /*#__PURE__*/React.createElement("div", {
-    key: i
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-metric)',
-      fontSize: '1.8rem',
-      color: 'var(--ffd-deep-tide)',
-      letterSpacing: '-0.03em',
-      lineHeight: 1
-    }
-  }, s.v), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.68rem',
-      letterSpacing: '0.18em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-stone)',
-      marginTop: '0.25rem'
-    }
-  }, s.l)))))));
+  }, "Natalie Bruce is a US professional freediver and performance coach with a foundation in kinesiology, yoga, and meditation. The answer starts with the breath."), /*#__PURE__*/React.createElement(Btn, {
+    variant: "outline",
+    size: "lg",
+    href: "about.html"
+  }, "Read her story"))));
 }
 
 /* ── FEATURE / IN THE WATER ── */
@@ -1364,7 +1302,7 @@ function Footer() {
     style: {
       color: 'rgba(215,230,226,0.5)'
     }
-  }, "Colorado \xB7 USA"))), /*#__PURE__*/React.createElement("div", {
+  }, "Evergreen, Colorado"))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -1374,24 +1312,11 @@ function Footer() {
       color: 'rgba(148,143,129,0.7)',
       fontFamily: 'var(--ffd-font-body)'
     }
-  }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 Natalie Bruce / Freeflow Dynamics"), /*#__PURE__*/React.createElement("span", null, "Partners: Orca \xB7 USANA \xB7 CETMA"))));
+  }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 Natalie Bruce / Freeflow Dynamics"), /*#__PURE__*/React.createElement("span", null, "Partners: Orca \xB7 USANA \xB7 Lobster \xB7 Blue Element"))));
 }
 
 /* ── REVIEWS (placeholder — swap items[] for real testimonials) ── */
 function Reviews() {
-  const items = [{
-    q: 'Add a short testimonial from a diver here \u2014 what shifted in their breath, their depth, or their mind.',
-    who: 'Client name',
-    role: 'Program \u00b7 Location'
-  }, {
-    q: 'Two or three sentences read best. Send these over and they drop straight into these cards.',
-    who: 'Client name',
-    role: 'Program \u00b7 Location'
-  }, {
-    q: 'A third review keeps the row balanced. Replace this placeholder with the real words.',
-    who: 'Client name',
-    role: 'Program \u00b7 Location'
-  }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
       background: 'var(--ffd-foam)',
@@ -1399,21 +1324,15 @@ function Reviews() {
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      maxWidth: 1280,
+      maxWidth: 820,
       margin: '0 auto',
-      padding: '0 clamp(1.25rem,5vw,4rem)'
+      padding: '0 clamp(1.25rem,5vw,4rem)',
+      textAlign: 'center'
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement(Eyebrow, {
     style: {
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '1rem',
-      alignItems: 'end',
-      marginBottom: '3.5rem'
-    }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Eyebrow, {
-    style: {
-      marginBottom: '1rem'
+      marginBottom: '1rem',
+      justifyContent: 'center'
     }
   }, "Reviews"), /*#__PURE__*/React.createElement("h2", {
     style: {
@@ -1422,52 +1341,36 @@ function Reviews() {
       fontSize: 'clamp(2.1rem,4.5vw,3.2rem)',
       letterSpacing: '-0.02em',
       lineHeight: 1.06,
-      color: 'var(--ffd-ink)'
+      color: 'var(--ffd-ink)',
+      marginBottom: '2.8rem'
     }
-  }, "In their words.")), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '1.05rem',
-      color: 'var(--ffd-stone)',
-      fontWeight: 300,
-      lineHeight: 1.65,
-      maxWidth: '46ch'
-    }
-  }, "A few words from divers I've worked with \\u2014 more coming soon.")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(3,1fr)',
-      gap: '1.4rem'
-    }
-  }, items.map((r, i) => /*#__PURE__*/React.createElement("div", {
-    key: i,
+  }, "In their words."), /*#__PURE__*/React.createElement("div", {
     style: {
       background: 'var(--ffd-shell)',
       border: '1px solid var(--ffd-line)',
       borderRadius: 'var(--ffd-radius-lg)',
-      padding: '2rem 1.9rem',
-      display: 'flex',
-      flexDirection: 'column',
-      boxShadow: 'var(--ffd-shadow)'
+      padding: 'clamp(2.2rem,5vw,3.4rem)',
+      boxShadow: 'var(--ffd-shadow)',
+      textAlign: 'left'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       fontFamily: 'var(--ffd-font-display)',
-      fontSize: '2.6rem',
-      lineHeight: 0.7,
+      fontSize: '3rem',
+      lineHeight: 0.6,
       color: 'var(--ffd-clay)',
-      marginBottom: '0.8rem'
+      marginBottom: '1rem'
     }
   }, "\\u201C"), /*#__PURE__*/React.createElement("p", {
     style: {
       fontFamily: 'var(--ffd-font-display)',
       fontStyle: 'italic',
-      fontSize: '1.2rem',
-      lineHeight: 1.45,
+      fontSize: 'clamp(1.15rem,2.2vw,1.4rem)',
+      lineHeight: 1.5,
       color: 'var(--ffd-deep-tide)',
-      marginBottom: '1.6rem',
-      flex: 1
+      marginBottom: '1.8rem'
     }
-  }, r.q), /*#__PURE__*/React.createElement(Waterline, {
+  }, "After obtaining my AIDA 3 certification, I plateaued with my depth PBs for a couple of years living in a landlocked state. Structured, consistent training with Natalie improved my dynamic performance tremendously \\u2014 including dynamic PBs I had never considered achievable \\u2014 and it translated into comfort at depth and very consistent improvement and new PBs in my depth performances. Highly recommend!"), /*#__PURE__*/React.createElement(Waterline, {
     style: {
       marginBottom: '1.2rem'
     }
@@ -1475,10 +1378,10 @@ function Reviews() {
     style: {
       fontFamily: 'var(--ffd-font-body)',
       fontWeight: 500,
-      fontSize: '0.9rem',
+      fontSize: '0.95rem',
       color: 'var(--ffd-ink)'
     }
-  }, r.who), /*#__PURE__*/React.createElement("div", {
+  }, "Rafal"), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: '0.7rem',
       letterSpacing: '0.14em',
@@ -1486,12 +1389,237 @@ function Reviews() {
       color: 'var(--ffd-stone-soft)',
       marginTop: '0.25rem'
     }
-  }, r.role))))));
+  }, "Coaching client \\u00b7 Idaho Springs, CO")), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '0.95rem',
+      color: 'var(--ffd-stone-soft)',
+      fontWeight: 300,
+      marginTop: '1.8rem'
+    }
+  }, "More words from divers I've worked with \\u2014 coming soon.")));
+}
+
+/* ── ENSŌ / BRAND ── */
+function EnsoSection() {
+  return /*#__PURE__*/React.createElement("section", {
+    style: {
+      background: 'var(--ffd-deep-tide)',
+      padding: 'clamp(5rem,11vw,9rem) 0',
+      position: 'relative',
+      overflow: 'hidden'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 1180,
+      margin: '0 auto',
+      padding: '0 clamp(1.25rem,5vw,4rem)',
+      display: 'grid',
+      gridTemplateColumns: '0.8fr 1.2fr',
+      gap: 'clamp(3rem,7vw,6rem)',
+      alignItems: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      justifyContent: 'center'
+    }
+  }, /*#__PURE__*/React.createElement(Enso, {
+    size: 320,
+    color: "var(--ffd-tide-light)"
+  })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Eyebrow, {
+    dark: true,
+    style: {
+      marginBottom: '1.4rem'
+    }
+  }, "The symbol"), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontFamily: 'var(--ffd-font-display)',
+      fontWeight: 500,
+      fontSize: 'clamp(2rem,4.5vw,3.1rem)',
+      letterSpacing: '-0.02em',
+      lineHeight: 1.06,
+      color: 'var(--ffd-foam)',
+      marginBottom: '1.6rem'
+    }
+  }, "The ens\u014D circle"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontFamily: 'var(--ffd-font-display)',
+      fontStyle: 'italic',
+      fontSize: 'clamp(1.15rem,2.2vw,1.45rem)',
+      lineHeight: 1.4,
+      color: 'var(--ffd-clay-glow)',
+      marginBottom: '1.8rem'
+    }
+  }, "A single brushstroke. Drawn on one breath. Open \u2014 intentionally unfinished."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '1.02rem',
+      color: 'rgba(215,230,226,0.82)',
+      fontWeight: 300,
+      lineHeight: 1.72,
+      marginBottom: '1.3rem'
+    }
+  }, "In Zen Buddhism, the ens\u014D is not about drawing a perfect circle. It is about the quality of presence in the moment of creation \u2014 the rhythm, the balance, the movement. The hand follows the breath. The circle follows the hand. What appears on the page is not the goal. It is a record of where the mind was."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '1.02rem',
+      color: 'rgba(215,230,226,0.82)',
+      fontWeight: 300,
+      lineHeight: 1.72,
+      marginBottom: '1.3rem'
+    }
+  }, "The open gap is not a mistake. It is the point. In Zen, it signifies the journey itself \u2014 open, ongoing, without a fixed end. The Japanese call it wabi-sabi \u2014 the beauty found in imperfection. The open circle is its purest expression."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '1.02rem',
+      color: 'rgba(215,230,226,0.82)',
+      fontWeight: 300,
+      lineHeight: 1.72
+    }
+  }, "This is the philosophy behind Free Flow Dynamics. The athletes I work with are not chasing perfection. They are building something more reliable \u2014 the awareness to perform under any conditions."))));
+}
+
+/* ── CONNECT: Instagram + subscribe ── */
+function Connect() {
+  const onSub = e => {
+    e.preventDefault();
+    const email = (e.target.elements.email.value || '').trim();
+    if (!email) return;
+    window.location.href = 'mailto:info@freeflowdynamics.com?subject=' + encodeURIComponent('Subscribe to updates') + '&body=' + encodeURIComponent('Please add me to the Free Flow Dynamics updates list.\n\nEmail: ' + email);
+  };
+  const tiles = ['natalie-bruce-hero-line-hang-sunburst', 'natalie-bruce-atmosphere-cenote-descent', 'natalie-bruce-competition-aida-worlds-podium', 'natalie-bruce-social-usa-team-flag-underwater'];
+  const igLink = {
+    fontFamily: 'var(--ffd-font-metric)',
+    fontSize: '1rem',
+    color: 'var(--ffd-deep-tide)',
+    textDecoration: 'none',
+    borderBottom: '1.5px solid var(--ffd-clay)',
+    paddingBottom: '2px'
+  };
+  return /*#__PURE__*/React.createElement("section", {
+    style: {
+      background: 'var(--ffd-shell)',
+      padding: 'clamp(5rem,11vw,8rem) 0'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 1180,
+      margin: '0 auto',
+      padding: '0 clamp(1.25rem,5vw,4rem)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: 'center',
+      marginBottom: '2.6rem'
+    }
+  }, /*#__PURE__*/React.createElement(Eyebrow, {
+    style: {
+      marginBottom: '1rem',
+      justifyContent: 'center'
+    }
+  }, "Follow along"), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontFamily: 'var(--ffd-font-display)',
+      fontWeight: 500,
+      fontSize: 'clamp(2rem,4.5vw,3.1rem)',
+      letterSpacing: '-0.02em',
+      lineHeight: 1.06,
+      color: 'var(--ffd-ink)',
+      marginBottom: '1.2rem'
+    }
+  }, "On Instagram."), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: '1.6rem',
+      justifyContent: 'center',
+      flexWrap: 'wrap'
+    }
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "https://instagram.com/freeflowdynamics",
+    style: igLink
+  }, "@freeflowdynamics"), /*#__PURE__*/React.createElement("a", {
+    href: "https://instagram.com/natalie.freediver",
+    style: igLink
+  }, "@natalie.freediver"))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(4,1fr)',
+      gap: '1rem',
+      marginBottom: 'clamp(3rem,7vw,4.5rem)'
+    }
+  }, tiles.map((t, i) => /*#__PURE__*/React.createElement("a", {
+    key: i,
+    href: "https://instagram.com/freeflowdynamics",
+    style: {
+      display: 'block',
+      borderRadius: 'var(--ffd-radius-lg)',
+      overflow: 'hidden'
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: `${PHOTOS}/${t}.jpg`,
+    alt: "Freeflow Dynamics on Instagram",
+    style: {
+      width: '100%',
+      aspectRatio: '1',
+      objectFit: 'cover',
+      display: 'block',
+      transition: 'transform 0.5s ease'
+    },
+    onMouseEnter: e => e.currentTarget.style.transform = 'scale(1.05)',
+    onMouseLeave: e => e.currentTarget.style.transform = 'none'
+  })))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 560,
+      margin: '0 auto',
+      textAlign: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("h3", {
+    style: {
+      fontFamily: 'var(--ffd-font-display)',
+      fontWeight: 500,
+      fontSize: 'clamp(1.5rem,3vw,2rem)',
+      letterSpacing: '-0.01em',
+      color: 'var(--ffd-ink)',
+      marginBottom: '0.8rem'
+    }
+  }, "Updates on upcoming events"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '1rem',
+      color: 'var(--ffd-stone)',
+      fontWeight: 300,
+      lineHeight: 1.65,
+      marginBottom: '1.8rem'
+    }
+  }, "Training blocks, workshops, and new dates \u2014 straight to your inbox."), /*#__PURE__*/React.createElement("form", {
+    onSubmit: onSub,
+    style: {
+      display: 'flex',
+      gap: '0.6rem',
+      flexWrap: 'wrap',
+      justifyContent: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("input", {
+    name: "email",
+    type: "email",
+    required: true,
+    placeholder: "you@email.com",
+    style: {
+      flex: '1 1 240px',
+      minWidth: 0,
+      padding: '0.82rem 1.1rem',
+      fontFamily: 'var(--ffd-font-body)',
+      fontSize: '1rem',
+      color: 'var(--ffd-ink)',
+      background: 'var(--ffd-foam)',
+      border: '1.5px solid var(--ffd-line)',
+      borderRadius: 'var(--ffd-radius)'
+    }
+  }), /*#__PURE__*/React.createElement(Btn, {
+    variant: "primary",
+    size: "lg"
+  }, "Subscribe")))));
 }
 
 /* ── APP ── */
 function App() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(About, null), /*#__PURE__*/React.createElement(InTheWater, null), /*#__PURE__*/React.createElement(Programs, null), /*#__PURE__*/React.createElement(PhotoStrip, null), /*#__PURE__*/React.createElement(Reviews, null), /*#__PURE__*/React.createElement(Quotes, null), /*#__PURE__*/React.createElement(Footer, null)));
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(About, null), /*#__PURE__*/React.createElement(EnsoSection, null), /*#__PURE__*/React.createElement(Reviews, null), /*#__PURE__*/React.createElement(Connect, null), /*#__PURE__*/React.createElement(Footer, null)));
 }
 ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(App));
 })();
