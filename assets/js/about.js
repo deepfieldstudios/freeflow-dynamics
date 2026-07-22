@@ -1109,6 +1109,18 @@ function Gallery3() {
     src: `${P}/natalie-bruce-about-rest-volcanic-rock.jpg`,
     alt: 'Natalie Bruce resting against warm volcanic rock, Tenerife',
     cap: '@monalisa.fiedler · Tenerife'
+  }, {
+    src: `${P}/natalie-bruce-about-portrait-orca-wetsuit-goggles.jpg`,
+    alt: 'Natalie Bruce adjusting her goggles in an Orca wetsuit at sunrise on a rocky beach',
+    cap: 'Suited up'
+  }, {
+    src: `${P}/natalie-bruce-about-portrait-orca-swimsuit-beach.jpg`,
+    alt: 'Portrait of Natalie Bruce in an Orca swimsuit on a rocky shoreline at dusk',
+    cap: 'Shoreline'
+  }, {
+    src: `${P}/natalie-bruce-coaching-pool-surface-portrait.jpg`,
+    alt: 'Natalie Bruce at the surface in the pool wearing a training cap',
+    cap: 'In the pool'
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {

@@ -963,6 +963,30 @@ function Gallery() {
     s: P + "/natalie-bruce-social-team-boat-candid.jpg",
     a: "Candid moment with the freediving team on the dive boat",
     c: "Team \u00b7 candid"
+  }, {
+    s: P + "/natalie-bruce-competition-aida-worlds-podium.jpg",
+    a: "Natalie Bruce on the podium with a medal at the 2025 AIDA World Championships in Wakayama, Japan",
+    c: "Podium \u00b7 AIDA Worlds 2025"
+  }, {
+    s: P + "/natalie-bruce-social-usa-team-flag-underwater.jpg",
+    a: "US freediving national team holding the American flag underwater",
+    c: "Team USA \u00b7 Worlds"
+  }, {
+    s: P + "/natalie-bruce-atmosphere-cenote-descent.jpg",
+    a: "Natalie Bruce freediving down into a cenote opening with reef and sunlight above",
+    c: "Cenote \u00b7 descent"
+  }, {
+    s: P + "/natalie-bruce-atmosphere-freefall-lightbeam.jpg",
+    a: "Natalie Bruce in freefall through a beam of light in dark open water",
+    c: "Freefall \u00b7 light"
+  }, {
+    s: P + "/natalie-bruce-atmosphere-freefall-particles.jpg",
+    a: "Natalie Bruce freefalling through a cloud of particles in the deep",
+    c: "Freefall \u00b7 the deep"
+  }, {
+    s: P + "/natalie-bruce-hero-line-hang-sunburst.jpg",
+    a: "Natalie Bruce hanging at the line beneath a sunburst with a diver above",
+    c: "At the line \u00b7 sunburst"
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
