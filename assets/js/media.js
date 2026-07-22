@@ -224,20 +224,20 @@ function Nav() {
   const onLight = scrolled || lightHero;
   const pActive = cur === 'partners.html';
   const ddItems = {
-    Programs: [{
-      l: 'Freedive Foundations',
-      sub: '8 weeks · Beginner',
+    Coaching: [{
+      l: 'Pool Only Trainings',
+      sub: '$175 / month',
       h: 'programs.html'
     }, {
-      l: 'Performance Freediving',
-      sub: '12 weeks · Intermediate',
+      l: 'Full Performance Package',
+      sub: '$275 / month',
       h: 'programs.html'
     }, {
       l: 'Private Coaching',
-      sub: '1:1 · Flexible',
+      sub: '1:1 · Custom',
       h: 'programs.html'
     }],
-    About: [{
+    'About Natalie': [{
       l: 'About Natalie',
       sub: 'The person & the practice',
       h: 'about.html'
@@ -356,17 +356,20 @@ function Nav() {
       flexShrink: 0
     }
   }, [{
-    l: 'Programs',
+    l: 'Coaching',
     h: 'programs.html'
   }, {
-    l: 'About',
+    l: 'About Natalie',
     h: 'about.html'
   }, {
-    l: 'Events',
+    l: 'Upcoming Events',
     h: 'events.html'
   }, {
     l: 'Media',
     h: 'media.html'
+  }, {
+    l: 'Contact',
+    h: 'contact.html'
   }].map(({
     l,
     h
@@ -582,7 +585,7 @@ function Footer() {
     style: {
       color: 'rgba(215,230,226,0.45)'
     }
-  }, "Tenerife \xB7 Canary Islands"))), /*#__PURE__*/React.createElement("div", {
+  }, "Colorado \xB7 USA"))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -960,6 +963,30 @@ function Gallery() {
     s: P + "/natalie-bruce-social-team-boat-candid.jpg",
     a: "Candid moment with the freediving team on the dive boat",
     c: "Team \u00b7 candid"
+  }, {
+    s: P + "/natalie-bruce-competition-aida-worlds-podium.jpg",
+    a: "Natalie Bruce on the podium with a medal at the 2025 AIDA World Championships in Wakayama, Japan",
+    c: "Podium \u00b7 AIDA Worlds 2025"
+  }, {
+    s: P + "/natalie-bruce-social-usa-team-flag-underwater.jpg",
+    a: "US freediving national team holding the American flag underwater",
+    c: "Team USA \u00b7 Worlds"
+  }, {
+    s: P + "/natalie-bruce-atmosphere-cenote-descent.jpg",
+    a: "Natalie Bruce freediving down into a cenote opening with reef and sunlight above",
+    c: "Cenote \u00b7 descent"
+  }, {
+    s: P + "/natalie-bruce-atmosphere-freefall-lightbeam.jpg",
+    a: "Natalie Bruce in freefall through a beam of light in dark open water",
+    c: "Freefall \u00b7 light"
+  }, {
+    s: P + "/natalie-bruce-atmosphere-freefall-particles.jpg",
+    a: "Natalie Bruce freefalling through a cloud of particles in the deep",
+    c: "Freefall \u00b7 the deep"
+  }, {
+    s: P + "/natalie-bruce-hero-line-hang-sunburst.jpg",
+    a: "Natalie Bruce hanging at the line beneath a sunburst with a diver above",
+    c: "At the line \u00b7 sunburst"
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
@@ -1059,7 +1086,7 @@ function PressKit() {
     href: 'https://instagram.com/natalie.freediver'
   }, {
     l: 'Based in',
-    v: 'Tenerife \u00b7 Canary Islands'
+    v: 'Colorado \u00b7 USA'
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
@@ -1098,7 +1125,7 @@ function PressKit() {
       fontWeight: 300,
       marginBottom: '2rem'
     }
-  }, "I'm glad to share the work \\u2014 freediving, breath-hold performance, and life on the water in Tenerife. For features, interviews, or partnership enquiries, email is the best way to reach me. Photography here may be used editorially with credit to the photographer."), /*#__PURE__*/React.createElement(Waterline, {
+  }, "I'm glad to share the work \\u2014 freediving, breath-hold performance, and life on the water. For features, interviews, or partnership enquiries, email is the best way to reach me. Photography here may be used editorially with credit to the photographer."), /*#__PURE__*/React.createElement(Waterline, {
     style: {
       margin: '1.8rem 0'
     }

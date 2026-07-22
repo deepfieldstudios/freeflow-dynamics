@@ -69,7 +69,7 @@
 
 /* ---- Mobile navigation (hamburger) ---- */
 .ffd-burger{ display: none; }
-@media (max-width: 760px){
+@media (max-width: 1120px){
   .ffd-burger{ display: inline-block; }
   .ffd-navlinks{
     display: none !important;

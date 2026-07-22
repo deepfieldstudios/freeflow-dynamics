@@ -224,20 +224,20 @@ function Nav() {
   const onLight = scrolled || lightHero;
   const pActive = cur === 'partners.html';
   const ddItems = {
-    Programs: [{
-      l: 'Freedive Foundations',
-      sub: '8 weeks · Beginner',
+    Coaching: [{
+      l: 'Pool Only Trainings',
+      sub: '$175 / month',
       h: 'programs.html'
     }, {
-      l: 'Performance Freediving',
-      sub: '12 weeks · Intermediate',
+      l: 'Full Performance Package',
+      sub: '$275 / month',
       h: 'programs.html'
     }, {
       l: 'Private Coaching',
-      sub: '1:1 · Flexible',
+      sub: '1:1 · Custom',
       h: 'programs.html'
     }],
-    About: [{
+    'About Natalie': [{
       l: 'About Natalie',
       sub: 'The person & the practice',
       h: 'about.html'
@@ -356,17 +356,20 @@ function Nav() {
       flexShrink: 0
     }
   }, [{
-    l: 'Programs',
+    l: 'Coaching',
     h: 'programs.html'
   }, {
-    l: 'About',
+    l: 'About Natalie',
     h: 'about.html'
   }, {
-    l: 'Events',
+    l: 'Upcoming Events',
     h: 'events.html'
   }, {
     l: 'Media',
     h: 'media.html'
+  }, {
+    l: 'Contact',
+    h: 'contact.html'
   }].map(({
     l,
     h
@@ -582,7 +585,7 @@ function Footer() {
     style: {
       color: 'rgba(215,230,226,0.45)'
     }
-  }, "Tenerife \xB7 Canary Islands"))), /*#__PURE__*/React.createElement("div", {
+  }, "Colorado \xB7 USA"))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -656,7 +659,7 @@ function AboutHero() {
       color: 'var(--ffd-clay-glow)',
       marginTop: '0.5rem'
     }
-  }, "US professional freediver \xB7 Tenerife, Canary Islands")));
+  }, "US professional freediver \xB7 Colorado, USA")));
 }
 function Bio() {
   return /*#__PURE__*/React.createElement("section", {
@@ -808,7 +811,7 @@ function Bio() {
       color: 'var(--ffd-deep-tide)',
       letterSpacing: '-0.03em'
     }
-  }, "28\xB0N"), /*#__PURE__*/React.createElement("div", {
+  }, "USA"), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: '0.65rem',
       letterSpacing: '0.16em',
@@ -816,7 +819,7 @@ function Bio() {
       color: 'var(--ffd-stone)',
       marginTop: '0.2rem'
     }
-  }, "Tenerife"))))));
+  }, "Colorado"))))));
 }
 function StatsBanner() {
   const records = [{
@@ -1106,6 +1109,18 @@ function Gallery3() {
     src: `${P}/natalie-bruce-about-rest-volcanic-rock.jpg`,
     alt: 'Natalie Bruce resting against warm volcanic rock, Tenerife',
     cap: '@monalisa.fiedler · Tenerife'
+  }, {
+    src: `${P}/natalie-bruce-about-portrait-orca-wetsuit-goggles.jpg`,
+    alt: 'Natalie Bruce adjusting her goggles in an Orca wetsuit at sunrise on a rocky beach',
+    cap: 'Suited up'
+  }, {
+    src: `${P}/natalie-bruce-about-portrait-orca-swimsuit-beach.jpg`,
+    alt: 'Portrait of Natalie Bruce in an Orca swimsuit on a rocky shoreline at dusk',
+    cap: 'Shoreline'
+  }, {
+    src: `${P}/natalie-bruce-coaching-pool-surface-portrait.jpg`,
+    alt: 'Natalie Bruce at the surface in the pool wearing a training cap',
+    cap: 'In the pool'
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {

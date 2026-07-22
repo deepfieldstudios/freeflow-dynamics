@@ -224,20 +224,20 @@ function Nav() {
   const onLight = scrolled || lightHero;
   const pActive = cur === 'partners.html';
   const ddItems = {
-    Programs: [{
-      l: 'Freedive Foundations',
-      sub: '8 weeks · Beginner',
+    Coaching: [{
+      l: 'Pool Only Trainings',
+      sub: '$175 / month',
       h: 'programs.html'
     }, {
-      l: 'Performance Freediving',
-      sub: '12 weeks · Intermediate',
+      l: 'Full Performance Package',
+      sub: '$275 / month',
       h: 'programs.html'
     }, {
       l: 'Private Coaching',
-      sub: '1:1 · Flexible',
+      sub: '1:1 · Custom',
       h: 'programs.html'
     }],
-    About: [{
+    'About Natalie': [{
       l: 'About Natalie',
       sub: 'The person & the practice',
       h: 'about.html'
@@ -356,17 +356,20 @@ function Nav() {
       flexShrink: 0
     }
   }, [{
-    l: 'Programs',
+    l: 'Coaching',
     h: 'programs.html'
   }, {
-    l: 'About',
+    l: 'About Natalie',
     h: 'about.html'
   }, {
-    l: 'Events',
+    l: 'Upcoming Events',
     h: 'events.html'
   }, {
     l: 'Media',
     h: 'media.html'
+  }, {
+    l: 'Contact',
+    h: 'contact.html'
   }].map(({
     l,
     h
@@ -573,7 +576,7 @@ function Footer() {
     style: {
       color: 'rgba(215,230,226,0.45)'
     }
-  }, "Tenerife \xB7 Canary Islands"))), /*#__PURE__*/React.createElement("div", {
+  }, "Colorado \xB7 USA"))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -647,7 +650,7 @@ function CompHero() {
       maxWidth: '44ch',
       lineHeight: 1.65
     }
-  }, "AIDA competition across depth, static, and dynamic disciplines. Competing worldwide, training from Tenerife.")));
+  }, "AIDA competition across depth, static, and dynamic disciplines. Competing worldwide, training year-round.")));
 }
 function Bar({
   code,
@@ -1248,6 +1251,18 @@ function EventGallery() {
     src: `${P}/natalie-bruce-competition-surface-recovery.jpg`,
     alt: 'Natalie Bruce surfacing at the rope after a competition dive, coastline behind',
     cap: 'Surface and recovery'
+  }, {
+    src: `${P}/natalie-bruce-competition-aida-worlds-249m-board.jpg`,
+    alt: 'Natalie Bruce holding the 249 m result board at the 2025 AIDA World Championships in Wakayama, Japan',
+    cap: 'World Championships — 249 m'
+  }, {
+    src: `${P}/natalie-bruce-competition-line-two-divers.jpg`,
+    alt: 'Two freedivers descending the competition line together in deep blue water',
+    cap: 'Down the line'
+  }, {
+    src: `${P}/natalie-bruce-competition-line-descent-blue.jpg`,
+    alt: 'Natalie Bruce descending headfirst on the line in a blue wetsuit',
+    cap: 'Freefall on the line'
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {

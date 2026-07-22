@@ -224,7 +224,7 @@ function Nav() {
   const onLight = scrolled || lightHero;
   const pActive = cur === 'partners.html';
   const ddItems = {
-    Programs: [{
+    Coaching: [{
       l: 'Pool Only Trainings',
       sub: '$175 / month',
       h: 'programs.html'
@@ -237,7 +237,7 @@ function Nav() {
       sub: '1:1 · Custom',
       h: 'programs.html'
     }],
-    About: [{
+    'About Natalie': [{
       l: 'About Natalie',
       sub: 'The person & the practice',
       h: 'about.html'
@@ -356,17 +356,20 @@ function Nav() {
       flexShrink: 0
     }
   }, [{
-    l: 'Programs',
+    l: 'Coaching',
     h: 'programs.html'
   }, {
-    l: 'About',
+    l: 'About Natalie',
     h: 'about.html'
   }, {
-    l: 'Events',
+    l: 'Upcoming Events',
     h: 'events.html'
   }, {
     l: 'Media',
     h: 'media.html'
+  }, {
+    l: 'Contact',
+    h: 'contact.html'
   }].map(({
     l,
     h
@@ -573,7 +576,7 @@ function Footer() {
     style: {
       color: 'rgba(215,230,226,0.45)'
     }
-  }, "Tenerife \xB7 Canary Islands"))), /*#__PURE__*/React.createElement("div", {
+  }, "Colorado \xB7 USA"))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -648,7 +651,7 @@ function ProgramsHero() {
       marginTop: '1rem',
       lineHeight: 1.65
     }
-  }, "Flow isn't found. It's trained. All programs run online with Natalie from Tenerife.")));
+  }, "Flow isn't found. It's trained. All programs run online with Natalie, wherever you are.")));
 }
 function ProgramDetail({
   num,
@@ -919,7 +922,7 @@ function FAQ() {
     a: 'No. Coaching is tailored from complete beginners through to competitive athletes. The Pool Only trainings suit anyone comfortable in the water; the Full Performance package adds dry and gym programming for divers chasing a measurable next level.'
   }, {
     q: 'Are the programs online only, or can I train with you in person?',
-    a: 'All programs run online, which means you can train wherever you are in the world. If you\'re based in or visiting Tenerife, in-water sessions are available as an add-on — just mention it in your enquiry.'
+    a: 'All programs run online, which means you can train wherever you are in the world. If you\'d like in-water sessions, they can be arranged as an add-on — just mention it in your enquiry.'
   }, {
     q: 'What equipment do I need?',
     a: 'For the online programs, you need access to a pool or open water, a mask, snorkel, and fins. For depth work, a wetsuit is recommended. I\'ll give you a full kit list at the start.'
@@ -1049,7 +1052,7 @@ function ProgramsCTA() {
     size: "lg",
     href: BOOKING_URL,
     onClick: openBooking
-  }, "Get in touch")));
+  }, "Book a free coaching call")));
 }
 const PROGRAMS_DATA = [{
   num: 1,
@@ -1090,8 +1093,8 @@ const PROGRAMS_DATA = [{
   price: 'Custom',
   priceUnit: '',
   who: 'For athletes with specific goals or timelines who want fully bespoke, one-to-one attention.',
-  desc: 'No fixed template — we build entirely around you, your schedule, and your level. If you are in Tenerife or passing through, we can combine online work with in-water sessions.',
-  items: ['Tailored plan from day one', 'Direct 1:1 access to Natalie', 'In-water option in Tenerife', 'Ongoing feedback & adjustments'],
+  desc: 'No fixed template — we build entirely around you, your schedule, and your level. If you can travel to a training location, we can combine online work with in-water sessions.',
+  items: ['Tailored plan from day one', 'Direct 1:1 access to Natalie', 'In-water option by arrangement', 'Ongoing feedback & adjustments'],
   img: `${P}/natalie-bruce-competition-surface-recovery.jpg`,
   imgAlt: 'Natalie Bruce surfacing at the line smiling after a dive',
   dark: false,

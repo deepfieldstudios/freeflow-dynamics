@@ -221,7 +221,7 @@ function Nav() {
   const onLight = scrolled || lightHero;
   const pActive = cur === 'partners.html';
   const ddItems = {
-    Programs: [{
+    Coaching: [{
       l: 'Pool Only Trainings',
       sub: '$175 / month',
       h: 'programs.html'
@@ -234,7 +234,7 @@ function Nav() {
       sub: '1:1 · Custom',
       h: 'programs.html'
     }],
-    About: [{
+    'About Natalie': [{
       l: 'About Natalie',
       sub: 'The person & the practice',
       h: 'about.html'
@@ -353,17 +353,20 @@ function Nav() {
       flexShrink: 0
     }
   }, [{
-    l: 'Programs',
+    l: 'Coaching',
     h: 'programs.html'
   }, {
-    l: 'About',
+    l: 'About Natalie',
     h: 'about.html'
   }, {
-    l: 'Events',
+    l: 'Upcoming Events',
     h: 'events.html'
   }, {
     l: 'Media',
     h: 'media.html'
+  }, {
+    l: 'Contact',
+    h: 'contact.html'
   }].map(({
     l,
     h
@@ -488,8 +491,8 @@ function Hero() {
     v: '17×',
     l: 'US national records'
   }, {
-    v: '28°N',
-    l: 'Tenerife'
+    v: 'USA',
+    l: 'Colorado'
   }, {
     v: '1 breath',
     l: 'The whole practice'
@@ -569,7 +572,7 @@ function Hero() {
       marginBottom: '2rem',
       lineHeight: 1.65
     }
-  }, "A coaching practice drawn from one place \u2014 the line where volcanic coast meets open ocean."), /*#__PURE__*/React.createElement("div", {
+  }, "A coaching practice drawn from the water \u2014 calm, control, and clarity, one breath at a time."), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       gap: '0.85rem',
@@ -749,7 +752,7 @@ function About() {
       lineHeight: 1.7,
       marginBottom: '1.4rem'
     }
-  }, "Natalie Bruce is a US professional freediver and human-performance coach based in Tenerife, Canary Islands. She holds 12 continental and 17 US national records in AIDA competition \u2014 depth, static apnea, and dynamic disciplines."), /*#__PURE__*/React.createElement("p", {
+  }, "Natalie Bruce is a US professional freediver and human-performance coach based in Colorado, USA. She holds 12 continental and 17 US national records in AIDA competition \u2014 depth, static apnea, and dynamic disciplines."), /*#__PURE__*/React.createElement("p", {
     style: {
       fontSize: '1.08rem',
       color: 'var(--ffd-stone)',
@@ -971,7 +974,7 @@ function Programs() {
       lineHeight: 1.65,
       maxWidth: '46ch'
     }
-  }, "Flow isn't found. It's trained. All programs run online with Natalie from Tenerife, with in-water options available.")), /*#__PURE__*/React.createElement("div", {
+  }, "Flow isn't found. It's trained. All programs run online, with in-water options available by arrangement.")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(3,1fr)',
@@ -1361,7 +1364,7 @@ function Footer() {
     style: {
       color: 'rgba(215,230,226,0.5)'
     }
-  }, "Tenerife \xB7 Canary Islands"))), /*#__PURE__*/React.createElement("div", {
+  }, "Colorado \xB7 USA"))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'space-between',

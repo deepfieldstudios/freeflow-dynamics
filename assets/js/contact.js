@@ -1,4 +1,4 @@
-/* Auto-generated from src/partners.html by build/build.mjs — do not edit directly. */
+/* Auto-generated from src/contact.html by build/build.mjs — do not edit directly. */
 (function () {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 const {
@@ -33,25 +33,6 @@ const NAV_LINKS = [{
 function Enso({
   size = 64,
   color = 'var(--ffd-ink)'
-}) {
-  return /*#__PURE__*/React.createElement("svg", {
-    viewBox: "0 0 592 606",
-    width: size,
-    height: size,
-    style: {
-      display: 'block',
-      flexShrink: 0
-    },
-    "aria-hidden": "true"
-  }, /*#__PURE__*/React.createElement("path", {
-    fillRule: "evenodd",
-    fill: color,
-    d: ENSO_D
-  }));
-}
-function EnsoMark({
-  size = 38,
-  color = 'var(--ffd-deep-tide)'
 }) {
   return /*#__PURE__*/React.createElement("svg", {
     viewBox: "0 0 592 606",
@@ -171,11 +152,6 @@ function Btn({
       color: 'var(--ffd-foam)',
       border: '1.5px solid rgba(242,235,220,0.35)'
     },
-    warm: {
-      background: hov ? 'var(--ffd-clay-glow)' : 'var(--ffd-clay)',
-      color: 'var(--ffd-foam)',
-      border: 'none'
-    },
     outline: {
       background: hov ? 'rgba(51,50,44,0.06)' : 'transparent',
       color: 'var(--ffd-ink)',
@@ -210,6 +186,25 @@ function Btn({
     style: base,
     onClick: onClick
   }, h), children);
+}
+function EnsoMark({
+  size = 38,
+  color = 'var(--ffd-deep-tide)'
+}) {
+  return /*#__PURE__*/React.createElement("svg", {
+    viewBox: "0 0 592 606",
+    width: size,
+    height: size,
+    style: {
+      display: 'block',
+      flexShrink: 0
+    },
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("path", {
+    fillRule: "evenodd",
+    fill: color,
+    d: ENSO_D
+  }));
 }
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -498,7 +493,7 @@ function Footer() {
     }
   }, /*#__PURE__*/React.createElement("img", {
     src: `${P}/natalie-bruce-atmosphere-sunset-coast.jpg`,
-    alt: "Sunset over volcanic rock and Atlantic, Tenerife",
+    alt: "Sunset over volcanic rock and Atlantic ocean, Tenerife",
     style: {
       position: 'absolute',
       inset: 0,
@@ -563,7 +558,16 @@ function Footer() {
       color: 'var(--ffd-clay-glow)',
       fontSize: '0.95rem'
     }
-  }, "by Natalie Bruce")), /*#__PURE__*/React.createElement("div", {
+  }, "by Natalie Bruce"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--ffd-font-body)',
+      fontSize: '0.66rem',
+      letterSpacing: '0.22em',
+      textTransform: 'uppercase',
+      color: 'rgba(215,230,226,0.4)',
+      marginTop: '0.35rem'
+    }
+  }, "Human Performance \xB7 Freediving Coach")), /*#__PURE__*/React.createElement("div", {
     style: {
       fontFamily: 'var(--ffd-font-metric)',
       fontSize: '0.85rem',
@@ -594,790 +598,152 @@ function Footer() {
   }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 Natalie Bruce / Freeflow Dynamics"), /*#__PURE__*/React.createElement("span", null, "Partners: Orca \xB7 USANA \xB7 CETMA"))));
 }
 
-/* ── PARTNERS PAGE ── */
-
-function PartnersHero() {
+/* ── CONTACT PAGE ── */
+function Channel({
+  k,
+  v,
+  href,
+  note
+}) {
+  const [hov, setHov] = useState(false);
+  return /*#__PURE__*/React.createElement("a", {
+    href: href,
+    onMouseEnter: () => setHov(true),
+    onMouseLeave: () => setHov(false),
+    style: {
+      display: 'block',
+      background: 'var(--ffd-foam)',
+      border: '1px solid var(--ffd-line)',
+      borderRadius: 'var(--ffd-radius-lg)',
+      padding: '2rem 1.9rem',
+      boxShadow: hov ? '0 20px 44px -16px rgba(35,60,58,0.26)' : 'var(--ffd-shadow)',
+      textDecoration: 'none',
+      transform: hov ? 'translateY(-3px)' : 'none',
+      transition: 'transform 0.22s ease, box-shadow 0.22s ease'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--ffd-font-body)',
+      fontWeight: 500,
+      fontSize: '0.72rem',
+      letterSpacing: '0.22em',
+      textTransform: 'uppercase',
+      color: 'var(--ffd-tide-deep)',
+      marginBottom: '0.9rem'
+    }
+  }, k), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--ffd-font-metric)',
+      fontSize: '1.12rem',
+      color: 'var(--ffd-ink)',
+      marginBottom: '0.7rem',
+      wordBreak: 'break-word'
+    }
+  }, v), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '0.9rem',
+      color: 'var(--ffd-stone)',
+      fontWeight: 300,
+      lineHeight: 1.6
+    }
+  }, note));
+}
+function ContactPage() {
+  const channels = [{
+    k: 'Email',
+    v: 'info@freeflowdynamics.com',
+    href: 'mailto:info@freeflowdynamics.com',
+    note: 'For coaching enquiries, workshops, and collaborations. I read every message.'
+  }, {
+    k: 'Instagram · Freeflow Dynamics',
+    v: '@freeflowdynamics',
+    href: 'https://instagram.com/freeflowdynamics',
+    note: 'Training, events, and behind the scenes of the coaching practice.'
+  }, {
+    k: 'Instagram · Natalie',
+    v: '@natalie.freediver',
+    href: 'https://instagram.com/natalie.freediver',
+    note: 'Natalie’s personal page — competitions, records, and daily practice.'
+  }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
-      position: 'relative',
-      minHeight: '88vh',
-      display: 'flex',
-      alignItems: 'flex-end',
-      overflow: 'hidden'
+      background: 'var(--ffd-shell)',
+      padding: 'clamp(9rem,15vw,12rem) 0 clamp(5rem,10vw,8rem)'
     }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: `${P}/natalie-bruce-competition-descent-safety-divers.jpg`,
-    alt: "Natalie Bruce ascending the competition line between two safety divers in open water",
+  }, /*#__PURE__*/React.createElement("div", {
     style: {
-      position: 'absolute',
-      inset: 0,
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      objectPosition: 'center 25%'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'absolute',
-      inset: 0,
-      background: 'linear-gradient(to top, rgba(35,60,58,0.94) 0%, rgba(35,60,58,0.45) 55%, rgba(35,60,58,0.2) 100%)'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'relative',
-      zIndex: 2,
-      maxWidth: 1280,
+      maxWidth: 1100,
       margin: '0 auto',
-      width: '100%',
-      padding: '0 clamp(1.25rem,5vw,4rem) clamp(3.5rem,7vw,6rem)'
+      padding: '0 clamp(1.25rem,5vw,4rem)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 720
     }
   }, /*#__PURE__*/React.createElement(Eyebrow, {
-    dark: true,
     style: {
-      marginBottom: '1.2rem'
+      marginBottom: '1.4rem'
     }
-  }, "Brand Partnerships"), /*#__PURE__*/React.createElement("h1", {
+  }, "Contact"), /*#__PURE__*/React.createElement("h1", {
     style: {
       fontFamily: 'var(--ffd-font-display)',
       fontWeight: 500,
-      fontSize: 'clamp(2.8rem,6.5vw,5.2rem)',
-      lineHeight: 0.99,
+      fontSize: 'clamp(2.8rem,6.5vw,4.8rem)',
+      lineHeight: 1.0,
       letterSpacing: '-0.02em',
-      color: 'var(--ffd-foam)',
-      marginBottom: '1.2rem',
-      maxWidth: '16ch'
+      color: 'var(--ffd-ink)',
+      marginBottom: '1.4rem'
     }
-  }, "Partner with ", /*#__PURE__*/React.createElement("em", {
+  }, "Let\u2019s talk."), /*#__PURE__*/React.createElement("p", {
     style: {
-      fontStyle: 'italic',
-      color: 'var(--ffd-tide-light)'
-    }
-  }, "Freeflow"), "."), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '1.12rem',
-      color: 'rgba(215,230,226,0.85)',
+      fontSize: '1.1rem',
+      color: 'var(--ffd-stone)',
       fontWeight: 300,
-      maxWidth: '46ch',
-      lineHeight: 1.65,
-      marginBottom: '2rem'
+      lineHeight: 1.72,
+      maxWidth: '52ch',
+      marginBottom: '2.2rem'
     }
-  }, "A brand built on discipline, calm, and the open ocean. This is the kit \u2014 who Natalie is, what the brand stands for, and how we can work together."), /*#__PURE__*/React.createElement("div", {
+  }, "Whether you\u2019re chasing a first personal best or preparing for competition, the best place to start is a free call. Reach out any time \u2014 by email, on Instagram, or book a time below."), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       gap: '0.85rem',
       flexWrap: 'wrap'
     }
   }, /*#__PURE__*/React.createElement(Btn, {
-    variant: "warm",
+    variant: "primary",
     size: "lg",
-    href: "#collaborate"
-  }, "Ways to collaborate"), /*#__PURE__*/React.createElement(Btn, {
-    variant: "secondary",
+    href: BOOKING_URL,
+    onClick: openBooking
+  }, "Book a free coaching call"), /*#__PURE__*/React.createElement(Btn, {
+    variant: "outline",
     size: "lg",
-    href: "#assets"
-  }, "Brand assets"))));
-}
-function Reach() {
-  const stats = [{
-    v: '17×',
-    l: 'US national records'
-  }, {
-    v: '12×',
-    l: 'Continental records'
-  }, {
-    v: 'AIDA',
-    l: 'World competitor'
-  }, {
-    v: 'USA',
-    l: 'Colorado home base'
-  }];
-  return /*#__PURE__*/React.createElement("section", {
+    href: "mailto:info@freeflowdynamics.com"
+  }, "Email Natalie"))), /*#__PURE__*/React.createElement(Waterline, {
     style: {
-      background: 'var(--ffd-deep-tide-2)',
-      padding: 'clamp(4rem,9vw,7rem) 0'
+      maxWidth: 520,
+      margin: 'clamp(3.5rem,7vw,5.5rem) 0 clamp(3rem,6vw,4.5rem)'
     }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      maxWidth: 1280,
-      margin: '0 auto',
-      padding: '0 clamp(1.25rem,5vw,4rem)'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: '0.9fr 1.1fr',
-      gap: 'clamp(2.5rem,6vw,6rem)',
-      alignItems: 'center'
-    }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Eyebrow, {
-    dark: true,
-    style: {
-      marginBottom: '1.2rem'
-    }
-  }, "The athlete"), /*#__PURE__*/React.createElement("h2", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: 'clamp(1.9rem,4vw,2.9rem)',
-      letterSpacing: '-0.02em',
-      lineHeight: 1.08,
-      color: 'var(--ffd-foam)'
-    }
-  }, "A record-holding freediver with a story worth telling.")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '0',
-      borderTop: '1px solid var(--ffd-line-dark)',
-      borderLeft: '1px solid var(--ffd-line-dark)'
-    }
-  }, stats.map((s, i) => /*#__PURE__*/React.createElement("div", {
-    key: i,
-    style: {
-      borderRight: '1px solid var(--ffd-line-dark)',
-      borderBottom: '1px solid var(--ffd-line-dark)',
-      padding: '1.6rem'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-metric)',
-      fontSize: '2rem',
-      color: 'var(--ffd-tide-light)',
-      letterSpacing: '-0.03em',
-      lineHeight: 1
-    }
-  }, s.v), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.66rem',
-      letterSpacing: '0.16em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-stone-soft)',
-      marginTop: '0.5rem'
-    }
-  }, s.l)))))));
-}
-function BrandStory() {
-  return /*#__PURE__*/React.createElement("section", {
-    style: {
-      background: 'var(--ffd-shell)',
-      padding: 'clamp(5rem,11vw,9rem) 0'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      maxWidth: 1280,
-      margin: '0 auto',
-      padding: '0 clamp(1.25rem,5vw,4rem)',
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: 'clamp(3rem,7vw,7rem)',
-      alignItems: 'center'
-    }
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Eyebrow, {
-    style: {
-      marginBottom: '1.4rem'
-    }
-  }, "The brand"), /*#__PURE__*/React.createElement("h2", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: 'clamp(1.9rem,3.8vw,2.8rem)',
-      letterSpacing: '-0.02em',
-      lineHeight: 1.1,
-      color: 'var(--ffd-ink)',
-      marginBottom: '1.6rem'
-    }
-  }, "Grounded, not hyped.", /*#__PURE__*/React.createElement("br", null), "Strong and soft."), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '1.06rem',
-      color: 'var(--ffd-stone)',
-      lineHeight: 1.72,
-      fontWeight: 300,
-      marginBottom: '1.4rem'
-    }
-  }, "Freeflow Dynamics is built on a single feeling \u2014 the calm of one breath in open water. It's a brand about discipline without aggression, performance without noise. Calm as a trained capacity."), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '1.06rem',
-      color: 'var(--ffd-stone)',
-      lineHeight: 1.72,
-      fontWeight: 300,
-      marginBottom: '2rem'
-    }
-  }, "For partners, that means an authentic, premium voice that resonates with an audience drawn to wellness, human performance, mindfulness, and the natural world. No hype. Real experience, honestly told."), /*#__PURE__*/React.createElement(Waterline, {
-    style: {
-      marginBottom: '2rem'
-    }
-  }), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontStyle: 'italic',
-      fontSize: '1.3rem',
-      color: 'var(--ffd-deep-tide)',
-      lineHeight: 1.4
-    }
-  }, "\"Drawn in one breath.\"")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'relative'
-    }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: `${P}/natalie-bruce-about-portrait-orca-coast.jpg`,
-    alt: "Natalie Bruce in an Orca wetsuit on a tropical coastline",
-    style: {
-      width: '100%',
-      aspectRatio: '4/5',
-      objectFit: 'cover',
-      borderRadius: 'var(--ffd-radius-lg)'
-    }
-  }))));
-}
-function CurrentPartners() {
-  const partners = [{
-    name: 'Orca',
-    cat: 'Wetsuits & swim',
-    desc: 'Performance wetsuits and open-water gear.'
-  }, {
-    name: 'USANA',
-    cat: 'Nutrition & health',
-    desc: 'Cellular nutrition and athlete wellness.'
-  }, {
-    name: 'CETMA',
-    cat: 'Freediving equipment',
-    desc: 'Masks, fins, and competition apparatus.'
-  }];
-  return /*#__PURE__*/React.createElement("section", {
-    style: {
-      background: 'var(--ffd-foam)',
-      padding: 'clamp(5rem,11vw,9rem) 0'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      maxWidth: 1280,
-      margin: '0 auto',
-      padding: '0 clamp(1.25rem,5vw,4rem)'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      textAlign: 'center',
-      marginBottom: '3rem'
-    }
-  }, /*#__PURE__*/React.createElement(Eyebrow, {
-    style: {
-      marginBottom: '1.2rem',
-      justifyContent: 'center'
-    }
-  }, "Current partners"), /*#__PURE__*/React.createElement("h2", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: 'clamp(1.9rem,3.8vw,2.8rem)',
-      letterSpacing: '-0.02em',
-      lineHeight: 1.08,
-      color: 'var(--ffd-ink)'
-    }
-  }, "In good company.")), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "ffd-contact-grid",
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(3,1fr)',
       gap: '1.4rem'
     }
-  }, partners.map((p, i) => /*#__PURE__*/React.createElement("div", {
-    key: i,
+  }, channels.map((c, i) => /*#__PURE__*/React.createElement(Channel, _extends({
+    key: i
+  }, c)))), /*#__PURE__*/React.createElement("p", {
     style: {
-      background: 'var(--ffd-shell)',
-      border: '1px solid var(--ffd-line)',
-      borderRadius: 'var(--ffd-radius-lg)',
-      padding: '2.2rem 2rem',
-      textAlign: 'center'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
+      marginTop: '2.6rem',
       fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: '2rem',
-      letterSpacing: '0.03em',
-      color: 'var(--ffd-deep-tide)',
-      marginBottom: '0.8rem'
-    }
-  }, p.name), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.66rem',
-      letterSpacing: '0.18em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-tide-deep)',
-      marginBottom: '0.8rem'
-    }
-  }, p.cat), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '0.9rem',
-      color: 'var(--ffd-stone)',
-      lineHeight: 1.6,
-      fontWeight: 300
-    }
-  }, p.desc))))));
-}
-function Collaborate() {
-  const ways = [{
-    n: '01',
-    title: 'Sponsored athlete',
-    desc: 'Long-term ambassador relationships with kit, competition support, and ongoing brand representation across platforms.'
-  }, {
-    n: '02',
-    title: 'Product collaboration',
-    desc: 'Co-developed or tested gear — wetsuits, fins, freediving equipment, nutrition. Honest field testing in real conditions.'
-  }, {
-    n: '03',
-    title: 'Content & storytelling',
-    desc: 'Photography, film, and editorial from training and competition worldwide. Premium natural-light imagery, authentically captured.'
-  }, {
-    n: '04',
-    title: 'Events & appearances',
-    desc: 'Workshops, retreats, talks, and brand events. Breathwork and freediving experiences for teams and communities.'
-  }];
-  return /*#__PURE__*/React.createElement("section", {
-    id: "collaborate",
-    style: {
-      background: 'var(--ffd-deep-tide)',
-      padding: 'clamp(5rem,11vw,9rem) 0'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      maxWidth: 1280,
-      margin: '0 auto',
-      padding: '0 clamp(1.25rem,5vw,4rem)'
-    }
-  }, /*#__PURE__*/React.createElement(Eyebrow, {
-    dark: true,
-    style: {
-      marginBottom: '1.2rem'
-    }
-  }, "Ways to collaborate"), /*#__PURE__*/React.createElement("h2", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: 'clamp(2rem,4.5vw,3.2rem)',
-      letterSpacing: '-0.02em',
-      lineHeight: 1.06,
-      color: 'var(--ffd-foam)',
-      marginBottom: '3.5rem',
-      maxWidth: '20ch'
-    }
-  }, "Four ways to work together."), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '1px',
-      background: 'var(--ffd-line-dark)',
-      borderRadius: 'var(--ffd-radius-lg)',
-      overflow: 'hidden',
-      border: '1px solid var(--ffd-line-dark)'
-    }
-  }, ways.map((w, i) => /*#__PURE__*/React.createElement("div", {
-    key: i,
-    style: {
-      background: 'var(--ffd-deep-tide)',
-      padding: '2.4rem 2.2rem'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-metric)',
-      fontSize: '2rem',
-      color: 'rgba(89,174,195,0.25)',
-      letterSpacing: '-0.04em',
-      marginBottom: '1rem'
-    }
-  }, w.n), /*#__PURE__*/React.createElement("h3", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: '1.4rem',
-      color: 'var(--ffd-foam)',
-      marginBottom: '0.8rem'
-    }
-  }, w.title), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '0.92rem',
-      color: 'rgba(183,205,203,0.78)',
-      lineHeight: 1.68,
-      fontWeight: 300
-    }
-  }, w.desc))))));
-}
-function BrandAssets() {
-  const ocean = [['Deep Tide', '#2f4f4d'], ['Slate', '#5e7a78'], ['Tide', '#59aec3'], ['Mist', '#b6cdcb']];
-  const earth = [['Ink', '#33322c'], ['Cocoa', '#6e4f43'], ['Clay', '#bc9177'], ['Shell', '#f2ebdc']];
-  return /*#__PURE__*/React.createElement("section", {
-    id: "assets",
-    style: {
-      background: 'var(--ffd-shell)',
-      padding: 'clamp(5rem,11vw,9rem) 0'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      maxWidth: 1280,
-      margin: '0 auto',
-      padding: '0 clamp(1.25rem,5vw,4rem)'
-    }
-  }, /*#__PURE__*/React.createElement(Eyebrow, {
-    style: {
-      marginBottom: '1.2rem'
-    }
-  }, "Brand assets"), /*#__PURE__*/React.createElement("h2", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: 'clamp(1.9rem,3.8vw,2.8rem)',
-      letterSpacing: '-0.02em',
-      lineHeight: 1.08,
-      color: 'var(--ffd-ink)',
-      marginBottom: '3rem',
-      maxWidth: '24ch'
-    }
-  }, "The visual identity, ready to use."), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '1.4rem',
-      marginBottom: '1.4rem'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      background: 'var(--ffd-foam)',
-      border: '1px solid var(--ffd-line)',
-      borderRadius: 'var(--ffd-radius-lg)',
-      padding: '2.5rem',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: '1.2rem',
-      minHeight: 200
-    }
-  }, /*#__PURE__*/React.createElement(Enso, {
-    size: 64,
-    color: "var(--ffd-deep-tide)"
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: '1.5rem',
-      letterSpacing: '0.02em',
-      color: 'var(--ffd-deep-tide)'
-    }
-  }, "FREE", /*#__PURE__*/React.createElement("em", {
-    style: {
       fontStyle: 'italic',
-      fontWeight: 400,
-      color: 'var(--ffd-tide-deep)'
-    }
-  }, "FLOW"), '\u00A0', "DYNAMICS"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.62rem',
-      letterSpacing: '0.18em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-stone-soft)'
-    }
-  }, "Primary \xB7 on light")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      background: 'var(--ffd-deep-tide)',
-      borderRadius: 'var(--ffd-radius-lg)',
-      padding: '2.5rem',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: '1.2rem',
-      minHeight: 200
-    }
-  }, /*#__PURE__*/React.createElement(Enso, {
-    size: 64,
-    color: "var(--ffd-foam)"
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: '1.5rem',
-      letterSpacing: '0.02em',
-      color: 'var(--ffd-foam)'
-    }
-  }, "FREE", /*#__PURE__*/React.createElement("em", {
-    style: {
-      fontStyle: 'italic',
-      fontWeight: 400,
-      color: 'var(--ffd-tide-light)'
-    }
-  }, "FLOW"), '\u00A0', "DYNAMICS"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.62rem',
-      letterSpacing: '0.18em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-stone-soft)'
-    }
-  }, "Reversed \xB7 on deep tide"))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '1.4rem'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      background: 'var(--ffd-foam)',
-      border: '1px solid var(--ffd-line)',
-      borderRadius: 'var(--ffd-radius-lg)',
-      padding: '2rem'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.62rem',
-      letterSpacing: '0.18em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-stone-soft)',
-      marginBottom: '1.2rem'
-    }
-  }, "Colour \xB7 Ocean & Earth"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      gap: '0.5rem',
-      marginBottom: '0.6rem'
-    }
-  }, ocean.map(([n, c]) => /*#__PURE__*/React.createElement("div", {
-    key: n,
-    style: {
-      flex: 1
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      height: 48,
-      background: c,
-      borderRadius: 6,
-      marginBottom: '0.4rem'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.6rem',
-      color: 'var(--ffd-stone)'
-    }
-  }, n), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-metric)',
-      fontSize: '0.58rem',
-      color: 'var(--ffd-stone-soft)'
-    }
-  }, c)))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      gap: '0.5rem'
-    }
-  }, earth.map(([n, c]) => /*#__PURE__*/React.createElement("div", {
-    key: n,
-    style: {
-      flex: 1
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      height: 48,
-      background: c,
-      borderRadius: 6,
-      marginBottom: '0.4rem',
-      boxShadow: c === '#f2ebdc' ? 'inset 0 0 0 1px var(--ffd-line)' : 'none'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.6rem',
-      color: 'var(--ffd-stone)'
-    }
-  }, n), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-metric)',
-      fontSize: '0.58rem',
-      color: 'var(--ffd-stone-soft)'
-    }
-  }, c))))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      background: 'var(--ffd-foam)',
-      border: '1px solid var(--ffd-line)',
-      borderRadius: 'var(--ffd-radius-lg)',
-      padding: '2rem'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.62rem',
-      letterSpacing: '0.18em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-stone-soft)',
-      marginBottom: '1.2rem'
-    }
-  }, "Typography"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontSize: '1.8rem',
-      color: 'var(--ffd-ink)',
-      lineHeight: 1.1,
-      marginBottom: '0.3rem'
-    }
-  }, "Bodoni Moda"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.7rem',
-      color: 'var(--ffd-stone-soft)',
-      marginBottom: '1.1rem'
-    }
-  }, "Display \xB7 headlines & wordmark"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-body)',
       fontSize: '1.1rem',
-      color: 'var(--ffd-ink)',
-      marginBottom: '0.3rem'
-    }
-  }, "Outfit \u2014 body & UI"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.7rem',
-      color: 'var(--ffd-stone-soft)',
-      marginBottom: '1.1rem'
-    }
-  }, "Paragraphs, labels, navigation"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-metric)',
-      fontSize: '1.05rem',
-      color: 'var(--ffd-ink)',
-      marginBottom: '0.3rem'
-    }
-  }, "JetBrains Mono \xB7 \u2212102m"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.7rem',
       color: 'var(--ffd-stone-soft)'
     }
-  }, "Metrics, records, depths"))), /*#__PURE__*/React.createElement("p", {
-    style: {
-      marginTop: '1.4rem',
-      fontSize: '0.8rem',
-      color: 'var(--ffd-stone-soft)',
-      fontStyle: 'italic',
-      fontFamily: 'var(--ffd-font-body)'
-    }
-  }, "Full asset pack (logo files, fonts, photography library) available on request.")));
-}
-function ImageryShowcase() {
-  const photos = [{
-    src: `${P}/natalie-bruce-social-baitball-boat-silhouette.jpg`,
-    alt: 'Underwater silhouette of the dive boat ringed by a baitball'
-  }, {
-    src: `${P}/natalie-bruce-coaching-pool-dynamic-orca.jpg`,
-    alt: 'Natalie Bruce in dynamic pool training in an Orca wetsuit'
-  }, {
-    src: `${P}/natalie-bruce-atmosphere-rockpool-reflection.jpg`,
-    alt: 'Natalie Bruce reflected in a still tide pool, Tenerife'
-  }, {
-    src: `${P}/natalie-bruce-about-yoga-coast-tenerife.jpg`,
-    alt: 'Natalie Bruce in a yoga pose on volcanic rock by the sea'
-  }];
-  return /*#__PURE__*/React.createElement("section", {
-    style: {
-      background: 'var(--ffd-ink)',
-      padding: 0,
-      overflow: 'hidden'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(4,1fr)',
-      height: 300
-    }
-  }, photos.map((ph, i) => /*#__PURE__*/React.createElement("div", {
-    key: i,
-    style: {
-      position: 'relative',
-      overflow: 'hidden'
-    }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: ph.src,
-    alt: ph.alt,
-    style: {
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      transition: 'transform 0.6s cubic-bezier(.16,1,.3,1)'
-    },
-    onMouseEnter: e => e.currentTarget.style.transform = 'scale(1.05)',
-    onMouseLeave: e => e.currentTarget.style.transform = 'none'
-  })))));
-}
-function PartnerCTA() {
-  return /*#__PURE__*/React.createElement("section", {
-    style: {
-      position: 'relative',
-      overflow: 'hidden',
-      padding: 'clamp(5rem,11vw,9rem) 0'
-    }
-  }, /*#__PURE__*/React.createElement("img", {
-    src: `${P}/natalie-bruce-atmosphere-coastline-tenerife.jpg`,
-    alt: "Volcanic coastline and open Atlantic, Tenerife",
-    style: {
-      position: 'absolute',
-      inset: 0,
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      objectPosition: 'center 50%'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'absolute',
-      inset: 0,
-      background: 'rgba(35,60,58,0.88)'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'relative',
-      zIndex: 2,
-      maxWidth: 680,
-      margin: '0 auto',
-      padding: '0 clamp(1.25rem,5vw,4rem)',
-      textAlign: 'center'
-    }
-  }, /*#__PURE__*/React.createElement(Enso, {
-    size: 64,
-    color: "rgba(142,205,217,0.2)",
-    style: {
-      margin: '0 auto 2rem'
-    }
-  }), /*#__PURE__*/React.createElement("h2", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontWeight: 500,
-      fontSize: 'clamp(2rem,4.5vw,3.2rem)',
-      letterSpacing: '-0.02em',
-      lineHeight: 1.08,
-      color: 'var(--ffd-foam)',
-      marginBottom: '1.2rem'
-    }
-  }, "Let's build something together."), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '1.08rem',
-      color: 'rgba(215,230,226,0.82)',
-      fontWeight: 300,
-      lineHeight: 1.65,
-      marginBottom: '2.2rem'
-    }
-  }, "For partnership enquiries, media requests, or the full brand kit, get in touch directly. I read every message myself."), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      gap: '0.85rem',
-      justifyContent: 'center',
-      flexWrap: 'wrap',
-      marginBottom: '2rem'
-    }
-  }, /*#__PURE__*/React.createElement(Btn, {
-    variant: "warm",
-    size: "lg",
-    href: "mailto:info@freeflowdynamics.com"
-  }, "Email for partnership")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-metric)',
-      fontSize: '0.9rem',
-      color: 'var(--ffd-tide-light)'
-    }
-  }, "info@freeflowdynamics.com \xB7 @natalie.freediver")));
+  }, "One breath at a time.")));
 }
 function App() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(PartnersHero, null), /*#__PURE__*/React.createElement(Reach, null), /*#__PURE__*/React.createElement(BrandStory, null), /*#__PURE__*/React.createElement(CurrentPartners, null), /*#__PURE__*/React.createElement(Collaborate, null), /*#__PURE__*/React.createElement(BrandAssets, null), /*#__PURE__*/React.createElement(ImageryShowcase, null), /*#__PURE__*/React.createElement(PartnerCTA, null)), /*#__PURE__*/React.createElement(Footer, null));
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(ContactPage, null)), /*#__PURE__*/React.createElement(Footer, null));
 }
 ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(App));
 })();
