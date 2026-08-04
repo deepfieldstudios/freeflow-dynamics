@@ -668,7 +668,7 @@ function Hero() {
       letterSpacing: '0.08em',
       color: 'rgba(242,235,220,0.55)'
     }
-  }, "@samudraflow \xB7 Dominica")));
+  }, "Allie Reilly \xB7 Dominica")));
 }
 
 /* ── ABOUT ── */
