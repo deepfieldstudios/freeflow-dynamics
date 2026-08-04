@@ -981,7 +981,7 @@ function ThePractice() {
       marginTop: '0.7rem',
       fontFamily: 'var(--ffd-font-body)'
     }
-  }, "Tenerife, 2023")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Eyebrow, {
+  }, "@pavolivanov \xB7 Tenerife")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Eyebrow, {
     style: {
       marginBottom: '1.4rem'
     }
