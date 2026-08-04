@@ -720,17 +720,37 @@ function Bio() {
       position: 'sticky',
       top: '6rem'
     }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'relative',
+      borderRadius: 'var(--ffd-radius-lg)',
+      overflow: 'hidden'
+    }
   }, /*#__PURE__*/React.createElement("img", {
     src: `${P}/natalie-bruce-about-portrait-orca-coast.jpg`,
     alt: "Natalie Bruce, US professional freediver, smiling in an Orca wetsuit on the coast after a swim",
     style: {
       width: '100%',
-      borderRadius: 'var(--ffd-radius-lg)',
       objectFit: 'cover',
       objectPosition: 'center 28%',
-      aspectRatio: '3/4'
+      aspectRatio: '3/4',
+      display: 'block'
     }
   }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      bottom: '0.9rem',
+      right: '1rem',
+      fontFamily: 'var(--ffd-font-body)',
+      fontSize: '0.62rem',
+      letterSpacing: '0.06em',
+      color: 'rgba(242,235,220,0.85)',
+      background: 'rgba(51,50,44,0.5)',
+      backdropFilter: 'blur(6px)',
+      borderRadius: 4,
+      padding: '0.2rem 0.55rem'
+    }
+  }, "Photo: Allie Reilly")), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: '1.2rem',
       display: 'flex',
@@ -1075,11 +1095,11 @@ function Gallery3() {
   const photos = [{
     src: `${P}/natalie-bruce-about-portrait-usana-wetsuit.jpg`,
     alt: 'Natalie Bruce standing in USANA wetsuit on a quiet shoreline',
-    cap: 'Before the session'
+    cap: '@asul.lusa.films · Philippines'
   }, {
     src: `${P}/natalie-bruce-about-portrait-usana-fins.jpg`,
     alt: 'Natalie Bruce holding USANA freediving fins by the water',
-    cap: 'Kit ready'
+    cap: '@asul.lusa.films · Philippines'
   }, {
     src: `${P}/natalie-bruce-about-rest-volcanic-rock.jpg`,
     alt: 'Natalie Bruce resting against warm volcanic rock, Tenerife',
@@ -1087,15 +1107,15 @@ function Gallery3() {
   }, {
     src: `${P}/natalie-bruce-about-portrait-orca-wetsuit-goggles.jpg`,
     alt: 'Natalie Bruce adjusting her goggles in an Orca wetsuit at sunrise on a rocky beach',
-    cap: 'Suited up'
+    cap: 'Allie Reilly · Dominica'
   }, {
     src: `${P}/natalie-bruce-about-portrait-orca-swimsuit-beach.jpg`,
     alt: 'Portrait of Natalie Bruce in an Orca swimsuit on a rocky shoreline at dusk',
-    cap: 'Shoreline'
+    cap: '@asul.lusa.films · Philippines'
   }, {
     src: `${P}/natalie-bruce-coaching-pool-surface-portrait.jpg`,
     alt: 'Natalie Bruce at the surface in the pool wearing a training cap',
-    cap: 'In the pool'
+    cap: '@srta__brown · Gran Canaria'
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
