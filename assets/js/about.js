@@ -1196,15 +1196,22 @@ function Partners() {
       gap: 'clamp(2.5rem,8vw,6rem)',
       flexWrap: 'wrap'
     }
-  }, ['Orca', 'USANA', 'Lobster', 'Blue Element'].map(name => /*#__PURE__*/React.createElement("div", {
+  }, [['Orca', 'https://www.orca.com'], ['USANA', 'https://www.usana.com'], ['Lobster', 'https://lobsterneckweight.com'], ['Blue Element', 'https://blueelementfreediving.com']].map(([name, url]) => /*#__PURE__*/React.createElement("a", {
     key: name,
+    href: url,
+    target: "_blank",
+    rel: "noopener",
+    onMouseEnter: e => e.currentTarget.style.opacity = 1,
+    onMouseLeave: e => e.currentTarget.style.opacity = 0.55,
     style: {
       fontFamily: 'var(--ffd-font-display)',
       fontWeight: 500,
       fontSize: 'clamp(1.4rem,3vw,2.2rem)',
       letterSpacing: '0.04em',
       color: 'var(--ffd-deep-tide)',
-      opacity: 0.55
+      opacity: 0.55,
+      textDecoration: 'none',
+      transition: 'opacity 0.2s ease'
     }
   }, name)))));
 }
