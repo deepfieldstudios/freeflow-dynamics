@@ -833,19 +833,23 @@ function CurrentPartners() {
   const partners = [{
     name: 'Orca',
     cat: 'Wetsuits & swim',
-    desc: 'Performance wetsuits and open-water gear.'
+    desc: 'Performance wetsuits and open-water gear.',
+    url: 'https://www.orca.com'
   }, {
     name: 'USANA',
     cat: 'Nutrition & health',
-    desc: 'Cellular nutrition and athlete wellness.'
+    desc: 'Cellular nutrition and athlete wellness.',
+    url: 'https://www.usana.com'
   }, {
     name: 'Lobster',
     cat: 'Freediving equipment',
-    desc: 'Monofins and bi-fins for pool and depth.'
+    desc: 'Monofins and bi-fins for pool and depth.',
+    url: 'https://www.facebook.com/lobsterweight'
   }, {
     name: 'Blue Element',
     cat: 'Freediving travel',
-    desc: 'Freediving centre and depth training in Dominica.'
+    desc: 'Freediving centre and depth training in Dominica.',
+    url: 'https://blueelementfreediving.com'
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
@@ -883,14 +887,28 @@ function CurrentPartners() {
       gridTemplateColumns: 'repeat(3,1fr)',
       gap: '1.4rem'
     }
-  }, partners.map((p, i) => /*#__PURE__*/React.createElement("div", {
+  }, partners.map((p, i) => /*#__PURE__*/React.createElement("a", {
     key: i,
+    href: p.url,
+    target: "_blank",
+    rel: "noopener",
+    onMouseEnter: e => {
+      e.currentTarget.style.transform = 'translateY(-3px)';
+      e.currentTarget.style.boxShadow = '0 20px 44px -16px rgba(35,60,58,0.26)';
+    },
+    onMouseLeave: e => {
+      e.currentTarget.style.transform = 'none';
+      e.currentTarget.style.boxShadow = 'none';
+    },
     style: {
+      display: 'block',
       background: 'var(--ffd-shell)',
       border: '1px solid var(--ffd-line)',
       borderRadius: 'var(--ffd-radius-lg)',
       padding: '2.2rem 2rem',
-      textAlign: 'center'
+      textAlign: 'center',
+      textDecoration: 'none',
+      transition: 'transform 0.22s ease, box-shadow 0.22s ease'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
