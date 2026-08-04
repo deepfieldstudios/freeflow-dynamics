@@ -973,16 +973,16 @@ function Gallery() {
     c: "Team USA · Worlds"
   }, {
     s: P + "/natalie-bruce-atmosphere-cenote-descent.jpg",
-    a: "Natalie Bruce freediving down into a cenote opening with reef and sunlight above",
-    c: "Cenote · descent"
+    a: "Natalie Bruce freediving down into the mouth of Dean's Blue Hole with reef and sunlight above",
+    c: "Daan Verhoeven · Dean's Blue Hole"
   }, {
     s: P + "/natalie-bruce-atmosphere-freefall-lightbeam.jpg",
-    a: "Natalie Bruce in freefall through a beam of light in dark open water",
-    c: "Freefall · light"
+    a: "Natalie Bruce in freefall through a beam of light in the deep at Dean's Blue Hole",
+    c: "Daan Verhoeven · Dean's Blue Hole"
   }, {
     s: P + "/natalie-bruce-atmosphere-freefall-particles.jpg",
-    a: "Natalie Bruce freefalling through a cloud of particles in the deep",
-    c: "Freefall · the deep"
+    a: "Natalie Bruce freefalling through a cloud of particles in the deep at Dean's Blue Hole",
+    c: "Daan Verhoeven · Dean's Blue Hole"
   }, {
     s: P + "/natalie-bruce-hero-line-hang-sunburst.jpg",
     a: "Natalie Bruce hanging at the line beneath a sunburst with a diver above",
