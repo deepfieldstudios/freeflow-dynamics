@@ -1082,8 +1082,8 @@ const PROGRAMS_DATA = [{
   who: 'For divers ready to train like an athlete — water, dryland, and gym, with direct coaching contact.',
   desc: 'A complete, fully remote performance system. Everything in the Pool Training Plan, plus dry and gym programming and a monthly video call to review progress and refine technique — built around your goals.',
   items: ['Everything in the Pool Training Plan', 'Dry & gym programming', '1 video call per month', 'WhatsApp support anytime'],
-  img: `${P}/natalie-bruce-competition-descent-safety-divers.jpg`,
-  imgAlt: 'Natalie Bruce ascending the line between two safety divers in open water',
+  img: `${P}/natalie-bruce-coaching-pool-dynamic-lanes.jpg`,
+  imgAlt: 'Natalie Bruce and training partners doing dynamic apnea in the pool',
   dark: true,
   cta: 'Book Full Performance',
   ctaHref: '#start-coaching'
