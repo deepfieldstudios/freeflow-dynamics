@@ -671,9 +671,9 @@ function Schedule() {
       desc: 'In-water depth training on the volcanic coast — line work, technique, and personal-best progression.'
     }, {
       title: 'Dominica — Depth Block',
-      when: 'Dates TBA',
+      when: 'Sep 1 – Dec 1, 2027',
       where: 'Dominica',
-      desc: 'Warm, deep-water training blocks. Join the list to hear the dates first.'
+      desc: 'Warm, deep-water depth training blocks in Dominica — line work and personal-best progression.'
     }]
   }, {
     label: 'Workshops',
