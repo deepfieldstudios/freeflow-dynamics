@@ -658,7 +658,17 @@ function Hero() {
       color: 'rgba(242,235,220,0.65)',
       letterSpacing: '0.01em'
     }
-  }, "\"Drawn in one breath.\"")));
+  }, "\"Drawn in one breath.\""), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      bottom: '2.6rem',
+      left: '2rem',
+      fontFamily: 'var(--ffd-font-body)',
+      fontSize: '0.62rem',
+      letterSpacing: '0.08em',
+      color: 'rgba(242,235,220,0.55)'
+    }
+  }, "@samudraflow \xB7 Dominica")));
 }
 
 /* ── ABOUT ── */
