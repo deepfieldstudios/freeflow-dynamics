@@ -844,7 +844,7 @@ function CurrentPartners() {
     name: 'Lobster',
     cat: 'Freediving equipment',
     desc: 'Monofins and bi-fins for pool and depth.',
-    url: 'https://www.facebook.com/lobsterweight'
+    url: 'https://lobsterneckweight.com'
   }, {
     name: 'Blue Element',
     cat: 'Freediving travel',
