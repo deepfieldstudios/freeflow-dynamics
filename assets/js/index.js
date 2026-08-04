@@ -1327,6 +1327,39 @@ function Footer() {
 
 /* ── REVIEWS (placeholder — swap items[] for real testimonials) ── */
 function Reviews() {
+  const items = [{
+    q: 'Natalie is a major reason why pool training interests me, because her approach to freediving goes far beyond training and performance — it’s about sharing her knowledge and optimism with her students in a caring, practical way. Natalie is one of those rare leaders who truly cares, and she is just as vulnerable as she is hardcore. I will absolutely sign up for every opportunity I have to train with her.',
+    who: 'Chris Weidner',
+    role: 'Coaching client'
+  }, {
+    q: 'After obtaining my AIDA 3 certification, I plateaued with my depth PBs for a couple of years living in a landlocked state. Structured, consistent training with Natalie improved my dynamic performance tremendously — including dynamic PBs I had never considered achievable — and it translated into comfort at depth and very consistent improvement and new PBs in my depth performances. Highly recommend!',
+    who: 'Rafal',
+    role: 'Coaching client · Idaho Springs, CO'
+  }, {
+    q: 'I really loved the no-fins workshop I took with Natalie! She really broke down all elements of the technique, from dry training to in the water, and helped me understand how I can apply this to my training.',
+    who: 'Hannah Hartz',
+    role: 'No-fins workshop'
+  }, {
+    q: 'Natalie is an incredible coach and has had a huge impact on my freediving progress. I came into her coaching as a newer diver with limited experience. I have a tendency to overthink, compare myself to others, and push to force performance. Natalie has helped me slow down, relax, trust what I’m doing, and develop a much better relationship with the uncomfortable parts of breath-hold and dynamic work. The progress has been very real — not just in distance and time, but in confidence, awareness, and my ability to stay calm when things get challenging. Natalie brings a ton of technical knowledge, but what makes her special is how well she reads each diver and adjusts her coaching to what they actually need. Her feedback is clear, practical, and personal. She creates a supportive and fun environment while still encouraging you to stretch and grow, and she is genuinely invested in the people she coaches — you can feel that. I would strongly recommend Natalie and Freeflow Dynamics to anyone interested in becoming a better, more confident freediver.',
+    who: 'Ryan Ramsey',
+    role: 'Coaching client'
+  }, {
+    q: 'Natalie has hosted multiple amazing clinics that I was fortunate to attend. She is very knowledgeable and patient, and she ensured that everyone was learning and understanding the techniques. The clinics were very well organized, and she cared for folks with injuries. I would highly recommend Natalie’s clinics to anyone. It doesn’t matter if you are a beginner or an advanced competitor — you can still learn and benefit from Natalie.',
+    who: 'Nicholas Aguon',
+    role: 'Clinic attendee'
+  }, {
+    q: 'Natalie has been an incredible freediving coach. She’s helped me merge my weightlifting training with pool training and prepare for competitions. I’ve attended a few of her workshops, where she dives deeper into each discipline — DYNF has been my favorite so far. What really impresses me is her ability to split a class by experience level: newcomers with little to no freediving background never feel left behind and still walk away feeling like the sport is accessible to them. Beyond her technical skill, Natalie is a genuinely warm, thoughtful person, and her yoga background carries over into her coaching style.',
+    who: 'Teodora Luna',
+    role: 'Coaching client'
+  }, {
+    q: 'I think I benefitted most from the equalizing workshop. I’ve known for years about the balloon exercises but tried them once, found them impossible, and didn’t feel motivated to try them again until the workshop. The workshop demystified the exercises and I can actually kinda do them now! The best thing about the workshops is making things that seem out of reach more accessible — something I can do with practice.',
+    who: 'Frances Wong',
+    role: 'Equalizing workshop'
+  }, {
+    q: 'Being a relatively new freediver, I jumped at the chance to attend freediving workshops, especially those held here in Colorado (Idaho Springs). I was nervous to be the inexperienced one in the class, worried I would hold everyone up. Natalie immediately removed my concerns with her easy-going and clearly experienced demeanor. She not only had a permanent smile on her face but endless depth of knowledge of the techniques and the important physiology involved with freediving, easily shifting between attendees with varied experience. Regardless of the questions or individual needs of the students, Natalie teaches freediving with an easy confidence grown from experience, as well as a passion for sharing knowledge. I cannot recommend her classes enough.',
+    who: 'Murphy Anderson',
+    role: 'Workshop · Idaho Springs, CO'
+  }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
       background: 'var(--ffd-foam)',
@@ -1334,10 +1367,14 @@ function Reviews() {
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      maxWidth: 820,
+      maxWidth: 1280,
       margin: '0 auto',
-      padding: '0 clamp(1.25rem,5vw,4rem)',
-      textAlign: 'center'
+      padding: '0 clamp(1.25rem,5vw,4rem)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: 'center',
+      marginBottom: 'clamp(2.6rem,5vw,3.6rem)'
     }
   }, /*#__PURE__*/React.createElement(Eyebrow, {
     style: {
@@ -1352,46 +1389,63 @@ function Reviews() {
       letterSpacing: '-0.02em',
       lineHeight: 1.06,
       color: 'var(--ffd-ink)',
-      marginBottom: '2.8rem'
+      marginBottom: '1rem'
     }
-  }, "In their words."), /*#__PURE__*/React.createElement("div", {
+  }, "In their words."), /*#__PURE__*/React.createElement("p", {
     style: {
+      fontSize: '1.05rem',
+      color: 'var(--ffd-stone)',
+      fontWeight: 300,
+      lineHeight: 1.65,
+      maxWidth: '52ch',
+      margin: '0 auto'
+    }
+  }, "A few words from divers I\u2019ve worked with.")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      columnWidth: '360px',
+      columnGap: '1.4rem'
+    }
+  }, items.map((r, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      breakInside: 'avoid',
+      WebkitColumnBreakInside: 'avoid',
+      marginBottom: '1.4rem',
       background: 'var(--ffd-shell)',
       border: '1px solid var(--ffd-line)',
       borderRadius: 'var(--ffd-radius-lg)',
-      padding: 'clamp(2.2rem,5vw,3.4rem)',
-      boxShadow: 'var(--ffd-shadow)',
-      textAlign: 'left'
+      padding: '2rem 1.9rem',
+      boxShadow: 'var(--ffd-shadow)'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       fontFamily: 'var(--ffd-font-display)',
-      fontSize: '3rem',
+      fontSize: '2.4rem',
       lineHeight: 0.6,
       color: 'var(--ffd-clay)',
-      marginBottom: '1rem'
+      marginBottom: '0.8rem'
     }
   }, "\u201C"), /*#__PURE__*/React.createElement("p", {
     style: {
       fontFamily: 'var(--ffd-font-display)',
       fontStyle: 'italic',
-      fontSize: 'clamp(1.15rem,2.2vw,1.4rem)',
-      lineHeight: 1.5,
+      fontSize: '1.08rem',
+      lineHeight: 1.55,
       color: 'var(--ffd-deep-tide)',
-      marginBottom: '1.8rem'
+      marginBottom: '1.4rem'
     }
-  }, "After obtaining my AIDA 3 certification, I plateaued with my depth PBs for a couple of years living in a landlocked state. Structured, consistent training with Natalie improved my dynamic performance tremendously \u2014 including dynamic PBs I had never considered achievable \u2014 and it translated into comfort at depth and very consistent improvement and new PBs in my depth performances. Highly recommend!"), /*#__PURE__*/React.createElement(Waterline, {
+  }, r.q), /*#__PURE__*/React.createElement(Waterline, {
     style: {
-      marginBottom: '1.2rem'
+      marginBottom: '1rem'
     }
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       fontFamily: 'var(--ffd-font-body)',
       fontWeight: 500,
-      fontSize: '0.95rem',
+      fontSize: '0.9rem',
       color: 'var(--ffd-ink)'
     }
-  }, "Rafal"), /*#__PURE__*/React.createElement("div", {
+  }, r.who), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: '0.7rem',
       letterSpacing: '0.14em',
@@ -1399,14 +1453,7 @@ function Reviews() {
       color: 'var(--ffd-stone-soft)',
       marginTop: '0.25rem'
     }
-  }, "Coaching client \xB7 Idaho Springs, CO")), /*#__PURE__*/React.createElement("p", {
-    style: {
-      fontSize: '0.95rem',
-      color: 'var(--ffd-stone-soft)',
-      fontWeight: 300,
-      marginTop: '1.8rem'
-    }
-  }, "More words from divers I've worked with \u2014 coming soon.")));
+  }, r.role))))));
 }
 
 /* ── ENSŌ / BRAND ── */
