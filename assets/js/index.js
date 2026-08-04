@@ -1414,7 +1414,7 @@ function EnsoSection() {
       margin: '0 auto',
       padding: '0 clamp(1.25rem,5vw,4rem)',
       display: 'grid',
-      gridTemplateColumns: '0.8fr 1.2fr',
+      gridTemplateColumns: '0.85fr 1.15fr',
       gap: 'clamp(3rem,7vw,6rem)',
       alignItems: 'center'
     }
