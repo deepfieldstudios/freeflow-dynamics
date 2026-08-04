@@ -1125,7 +1125,7 @@ function PressKit() {
       fontWeight: 300,
       marginBottom: '2rem'
     }
-  }, "I'm glad to share the work \\u2014 freediving, breath-hold performance, and life on the water. For features, interviews, or partnership enquiries, email is the best way to reach me. Photography here may be used editorially with credit to the photographer."), /*#__PURE__*/React.createElement(Waterline, {
+  }, "I'm glad to share the work \\u2014 freediving, breath-hold performance, and life on the water. For features, interviews, or partnership inquiries, email is the best way to reach me. Photography here may be used editorially with credit to the photographer."), /*#__PURE__*/React.createElement(Waterline, {
     style: {
       margin: '1.8rem 0'
     }

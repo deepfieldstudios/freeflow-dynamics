@@ -865,7 +865,7 @@ function Programs() {
     dur: 'Custom',
     desc: 'Personalised sessions directly with Natalie. Wherever you are in your practice, we work together toward your specific goals.',
     items: ['Tailored training plan', 'Direct access to Natalie', 'Pool or open water sessions', 'Ongoing feedback'],
-    cta: 'Enquire now',
+    cta: 'Inquire now',
     dark: false,
     img: `${PHOTOS}/natalie-bruce-coaching-athlete-coach-boat.jpg`,
     imgAlt: 'Natalie Bruce preparing with teammates on the boat before a dive',
