@@ -920,7 +920,7 @@ function FAQ() {
   const [open, setOpen] = useState(null);
   const qs = [{
     q: 'Do I need to be an experienced freediver to join?',
-    a: 'No. Coaching is tailored from complete beginners through to competitive athletes. The Pool Training Plan suits anyone comfortable in the water; the Full Performance package adds dry and gym programming for divers chasing a measurable next level.'
+    a: 'You\'ll want at least a Molchanovs Wave 1 certification (or equivalent) to start, so you\'re safe and comfortable in the water. From there, coaching is tailored from newly certified divers through to competitive athletes. The Pool Training Plan suits anyone comfortable in the water — and it\'s excellent base training for divers looking to improve their depth, too. The Full Performance package adds dry and gym programming for divers chasing a measurable next level.'
   }, {
     q: 'Are the programs online only, or can I train with you in person?',
     a: 'All programs run online, which means you can train wherever you are in the world. If you\'d like in-water sessions, they can be arranged as an add-on — just mention it in your enquiry.'
