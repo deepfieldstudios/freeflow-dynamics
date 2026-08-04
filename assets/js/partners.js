@@ -1050,10 +1050,62 @@ function BrandAssets() {
       letterSpacing: '-0.02em',
       lineHeight: 1.08,
       color: 'var(--ffd-ink)',
-      marginBottom: '3rem',
+      marginBottom: '2.4rem',
       maxWidth: '24ch'
     }
-  }, "The visual identity, ready to use."), /*#__PURE__*/React.createElement("div", {
+  }, "The visual identity, ready to use."), /*#__PURE__*/React.createElement("a", {
+    href: "assets/freeflow-dynamics-partnership-kit.pdf",
+    download: true,
+    onMouseEnter: e => e.currentTarget.style.transform = 'translateY(-2px)',
+    onMouseLeave: e => e.currentTarget.style.transform = 'none',
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: '1.5rem',
+      flexWrap: 'wrap',
+      background: 'var(--ffd-deep-tide)',
+      borderRadius: 'var(--ffd-radius-lg)',
+      padding: '1.6rem 2rem',
+      marginBottom: '1.4rem',
+      textDecoration: 'none',
+      transition: 'transform 0.2s ease'
+    }
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: '0.62rem',
+      letterSpacing: '0.18em',
+      textTransform: 'uppercase',
+      color: 'var(--ffd-tide-light)',
+      marginBottom: '0.45rem'
+    }
+  }, "Partnership kit \xB7 PDF"), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--ffd-font-display)',
+      fontWeight: 500,
+      fontSize: '1.4rem',
+      color: 'var(--ffd-foam)',
+      lineHeight: 1.15
+    }
+  }, "The full kit \u2014 bio, records & how to collaborate")), /*#__PURE__*/React.createElement("span", {
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: '0.5rem',
+      background: 'var(--ffd-foam)',
+      color: 'var(--ffd-deep-tide)',
+      fontFamily: 'var(--ffd-font-body)',
+      fontWeight: 500,
+      fontSize: '0.9rem',
+      borderRadius: 'var(--ffd-radius)',
+      padding: '0.62rem 1.35rem',
+      whiteSpace: 'nowrap'
+    }
+  }, "Download PDF ", /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: '1rem'
+    }
+  }, "\u2193"))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: '1fr 1fr',
