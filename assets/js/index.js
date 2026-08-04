@@ -1361,7 +1361,7 @@ function Reviews() {
       color: 'var(--ffd-clay)',
       marginBottom: '1rem'
     }
-  }, "\\u201C"), /*#__PURE__*/React.createElement("p", {
+  }, "\u201C"), /*#__PURE__*/React.createElement("p", {
     style: {
       fontFamily: 'var(--ffd-font-display)',
       fontStyle: 'italic',
@@ -1370,7 +1370,7 @@ function Reviews() {
       color: 'var(--ffd-deep-tide)',
       marginBottom: '1.8rem'
     }
-  }, "After obtaining my AIDA 3 certification, I plateaued with my depth PBs for a couple of years living in a landlocked state. Structured, consistent training with Natalie improved my dynamic performance tremendously \\u2014 including dynamic PBs I had never considered achievable \\u2014 and it translated into comfort at depth and very consistent improvement and new PBs in my depth performances. Highly recommend!"), /*#__PURE__*/React.createElement(Waterline, {
+  }, "After obtaining my AIDA 3 certification, I plateaued with my depth PBs for a couple of years living in a landlocked state. Structured, consistent training with Natalie improved my dynamic performance tremendously \u2014 including dynamic PBs I had never considered achievable \u2014 and it translated into comfort at depth and very consistent improvement and new PBs in my depth performances. Highly recommend!"), /*#__PURE__*/React.createElement(Waterline, {
     style: {
       marginBottom: '1.2rem'
     }
@@ -1389,14 +1389,14 @@ function Reviews() {
       color: 'var(--ffd-stone-soft)',
       marginTop: '0.25rem'
     }
-  }, "Coaching client \\u00b7 Idaho Springs, CO")), /*#__PURE__*/React.createElement("p", {
+  }, "Coaching client \xB7 Idaho Springs, CO")), /*#__PURE__*/React.createElement("p", {
     style: {
       fontSize: '0.95rem',
       color: 'var(--ffd-stone-soft)',
       fontWeight: 300,
       marginTop: '1.8rem'
     }
-  }, "More words from divers I've worked with \\u2014 coming soon.")));
+  }, "More words from divers I've worked with \u2014 coming soon.")));
 }
 
 /* ── ENSŌ / BRAND ── */

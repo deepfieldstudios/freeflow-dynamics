@@ -667,7 +667,7 @@ function Watch() {
     cap: 'On the line'
   }, {
     id: 'hlYuwxwtd3M',
-    cap: 'First 200m \u2014 Dynamic'
+    cap: 'First 200m — Dynamic'
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
@@ -840,16 +840,16 @@ function LinkRow({
       color: 'var(--ffd-tide-deep)',
       flexShrink: 0
     }
-  }, "\\u2197")))));
+  }, '↗')))));
 }
 function ListenRead() {
   const podcasts = [{
     title: 'Competitive Free Diver, USA National Team',
-    src: 'Apple Podcasts \u00b7 This Ocean Life',
+    src: 'Apple Podcasts · This Ocean Life',
     href: 'https://podcasts.apple.com/us/podcast/natalie-bruce-competitive-free-diver-usa-national-team/id1429840036?i=1000687271681'
   }, {
     title: 'Inside elite freediving',
-    src: 'Spotify \u00b7 podcast episode',
+    src: 'Spotify · podcast episode',
     href: 'https://open.spotify.com/episode/2llwhaWOOpp57WRvcXLjpz'
   }];
   const articles = [{
@@ -858,11 +858,11 @@ function ListenRead() {
     href: 'https://medium.com/authority-magazine/american-freediver-natalie-bruce-on-how-athletes-optimize-their-mind-body-for-peak-performance-8cc6616f6a9c'
   }, {
     title: 'How to create lasting change',
-    src: 'Cheryl Lock \u00b7 Episode 11',
+    src: 'Cheryl Lock · Episode 11',
     href: 'https://cheryllock.substack.com/p/episode-11-how-to-create-lasting'
   }, {
     title: 'One breath, total stillness: inside elite freediving',
-    src: 'Vita Magazine \u00b7 2026',
+    src: 'Vita Magazine · 2026',
     href: 'https://vitamagazine.com/2026/01/19/one-breath-total-stillness-inside-the-world-of-elite-freediving-with-natalie-bruce/'
   }];
   const press = [{
@@ -908,7 +908,7 @@ function ListenRead() {
   }), /*#__PURE__*/React.createElement(LinkRow, {
     label: "Competition coverage",
     items: [{
-      title: 'Natalie Bruce \u2014 athlete profile & results',
+      title: 'Natalie Bruce — athlete profile & results',
       src: 'The Freedive Ranking',
       href: 'https://freedivingranking.com/athlete/Natalie-Bruce'
     }]
@@ -918,19 +918,19 @@ function Gallery() {
   const shots = [{
     s: P + "/natalie-bruce-hero-descent-lightrays.jpg",
     a: "Natalie Bruce freediving on a deep descent with light rays, Tenerife",
-    c: "Descent \u00b7 light rays"
+    c: "Descent · light rays"
   }, {
     s: P + "/natalie-bruce-social-baitball-silhouette-light.jpg",
     a: "Freediver silhouetted near a baitball of fish in clear Atlantic water",
-    c: "Baitball \u00b7 open water"
+    c: "Baitball · open water"
   }, {
     s: P + "/natalie-bruce-competition-line-rigging.jpg",
     a: "Rigging the competition line before an AIDA freediving dive",
-    c: "Line rigging \u00b7 AIDA"
+    c: "Line rigging · AIDA"
   }, {
     s: P + "/natalie-bruce-atmosphere-waves-volcanic-rock.jpg",
     a: "Atlantic waves breaking over volcanic rock on the Tenerife coast",
-    c: "@monalisa.fiedler \u00b7 Tenerife"
+    c: "@monalisa.fiedler · Tenerife"
   }, {
     s: P + "/natalie-bruce-about-portrait-orca-bw.jpg",
     a: "Black and white portrait of Natalie Bruce in an Orca wetsuit",
@@ -938,15 +938,15 @@ function Gallery() {
   }, {
     s: P + "/natalie-bruce-social-divers-boat-edge.jpg",
     a: "Freedivers sitting on the edge of the dive boat in open water",
-    c: "Team \u00b7 boat edge"
+    c: "Team · boat edge"
   }, {
     s: P + "/natalie-bruce-atmosphere-rockpool-reflection.jpg",
     a: "Reflection in a still volcanic rock pool, Tenerife",
-    c: "@monalisa.fiedler \u00b7 Tenerife"
+    c: "@monalisa.fiedler · Tenerife"
   }, {
     s: P + "/natalie-bruce-competition-descent-platform.jpg",
     a: "Natalie Bruce on the competition platform before a descent",
-    c: "Platform \u00b7 competition"
+    c: "Platform · competition"
   }, {
     s: P + "/natalie-bruce-social-surface-recovery-smile.jpg",
     a: "Natalie Bruce smiling at the surface after a dive with safety divers",
@@ -954,39 +954,39 @@ function Gallery() {
   }, {
     s: P + "/natalie-bruce-atmosphere-coastline-tenerife.jpg",
     a: "Volcanic coastline of Tenerife meeting the Atlantic Ocean",
-    c: "@monalisa.fiedler \u00b7 Tenerife"
+    c: "@monalisa.fiedler · Tenerife"
   }, {
     s: P + "/natalie-bruce-about-yoga-coast-tenerife.jpg",
     a: "Natalie Bruce in a yoga pose on volcanic rock by the sea, Tenerife",
-    c: "Dryland \u00b7 Tenerife"
+    c: "Dryland · Tenerife"
   }, {
     s: P + "/natalie-bruce-social-team-boat-candid.jpg",
     a: "Candid moment with the freediving team on the dive boat",
-    c: "Team \u00b7 candid"
+    c: "Team · candid"
   }, {
     s: P + "/natalie-bruce-competition-aida-worlds-podium.jpg",
     a: "Natalie Bruce on the podium with a medal at the 2025 AIDA World Championships in Wakayama, Japan",
-    c: "Podium \u00b7 AIDA Worlds 2025"
+    c: "Podium · AIDA Worlds 2025"
   }, {
     s: P + "/natalie-bruce-social-usa-team-flag-underwater.jpg",
     a: "US freediving national team holding the American flag underwater",
-    c: "Team USA \u00b7 Worlds"
+    c: "Team USA · Worlds"
   }, {
     s: P + "/natalie-bruce-atmosphere-cenote-descent.jpg",
     a: "Natalie Bruce freediving down into a cenote opening with reef and sunlight above",
-    c: "Cenote \u00b7 descent"
+    c: "Cenote · descent"
   }, {
     s: P + "/natalie-bruce-atmosphere-freefall-lightbeam.jpg",
     a: "Natalie Bruce in freefall through a beam of light in dark open water",
-    c: "Freefall \u00b7 light"
+    c: "Freefall · light"
   }, {
     s: P + "/natalie-bruce-atmosphere-freefall-particles.jpg",
     a: "Natalie Bruce freefalling through a cloud of particles in the deep",
-    c: "Freefall \u00b7 the deep"
+    c: "Freefall · the deep"
   }, {
     s: P + "/natalie-bruce-hero-line-hang-sunburst.jpg",
     a: "Natalie Bruce hanging at the line beneath a sunburst with a diver above",
-    c: "At the line \u00b7 sunburst"
+    c: "At the line · sunburst"
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
@@ -1060,20 +1060,20 @@ function Gallery() {
 function PressKit() {
   const [hov, setHov] = React.useState(null);
   const assets = [{
-    label: 'Ens\u014d mark',
-    sub: 'SVG \u00b7 primary symbol',
+    label: 'Ensō mark',
+    sub: 'SVG · primary symbol',
     href: 'assets/enso-mark.svg'
   }, {
     label: 'Horizontal lockup',
-    sub: 'SVG \u00b7 name + mark',
+    sub: 'SVG · name + mark',
     href: 'assets/lockup-horizontal.svg'
   }, {
     label: 'Stacked lockup',
-    sub: 'SVG \u00b7 centred',
+    sub: 'SVG · centred',
     href: 'assets/lockup-stacked.svg'
   }, {
     label: 'Monogram (dark)',
-    sub: 'SVG \u00b7 FFD',
+    sub: 'SVG · FFD',
     href: 'assets/monogram-ffd-dark.svg'
   }];
   const detail = [{
@@ -1082,11 +1082,11 @@ function PressKit() {
     href: 'mailto:info@freeflowdynamics.com'
   }, {
     l: 'Instagram',
-    v: '@freeflowdynamics \u00b7 @natalie.freediver',
+    v: '@freeflowdynamics · @natalie.freediver',
     href: 'https://instagram.com/natalie.freediver'
   }, {
     l: 'Based in',
-    v: 'Colorado \u00b7 USA'
+    v: 'Colorado · USA'
   }];
   return /*#__PURE__*/React.createElement("section", {
     style: {
@@ -1125,7 +1125,7 @@ function PressKit() {
       fontWeight: 300,
       marginBottom: '2rem'
     }
-  }, "I'm glad to share the work \\u2014 freediving, breath-hold performance, and life on the water. For features, interviews, or partnership inquiries, email is the best way to reach me. Photography here may be used editorially with credit to the photographer."), /*#__PURE__*/React.createElement(Waterline, {
+  }, "I'm glad to share the work \u2014 freediving, breath-hold performance, and life on the water. For features, interviews, or partnership inquiries, email is the best way to reach me. Photography here may be used editorially with credit to the photographer."), /*#__PURE__*/React.createElement(Waterline, {
     style: {
       margin: '1.8rem 0'
     }
@@ -1183,7 +1183,7 @@ function PressKit() {
       fontWeight: 300,
       marginBottom: '1.6rem'
     }
-  }, "Logo files for editorial use. Please keep the marks unaltered \\u2014 and never close the ens\\u014d."), /*#__PURE__*/React.createElement("div", {
+  }, "Logo files for editorial use. Please keep the marks unaltered \u2014 and never close the ens\u014D."), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       flexDirection: 'column',
@@ -1233,7 +1233,7 @@ function PressKit() {
       color: 'var(--ffd-tide-deep)',
       flexShrink: 0
     }
-  }, "\\u2193")))))));
+  }, "\u2193")))))));
 }
 function App() {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(MediaHero, null), /*#__PURE__*/React.createElement(Watch, null), /*#__PURE__*/React.createElement(ListenRead, null), /*#__PURE__*/React.createElement(Gallery, null), /*#__PURE__*/React.createElement(PressKit, null)), /*#__PURE__*/React.createElement(Footer, null));
