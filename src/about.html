@@ -215,7 +215,10 @@ function Bio() {
           </p>
         </div>
         <div style={{position:'sticky',top:'6rem'}}>
-          <img src={`${P}/natalie-bruce-about-portrait-orca-coast.jpg`} alt="Natalie Bruce, US professional freediver, smiling in an Orca wetsuit on the coast after a swim" style={{width:'100%',borderRadius:'var(--ffd-radius-lg)',objectFit:'cover',objectPosition:'center 28%',aspectRatio:'3/4'}}/>
+          <div style={{position:'relative',borderRadius:'var(--ffd-radius-lg)',overflow:'hidden'}}>
+            <img src={`${P}/natalie-bruce-about-portrait-orca-coast.jpg`} alt="Natalie Bruce, US professional freediver, smiling in an Orca wetsuit on the coast after a swim" style={{width:'100%',objectFit:'cover',objectPosition:'center 28%',aspectRatio:'3/4',display:'block'}}/>
+            <div style={{position:'absolute',bottom:'0.9rem',right:'1rem',fontFamily:'var(--ffd-font-body)',fontSize:'0.62rem',letterSpacing:'0.06em',color:'rgba(242,235,220,0.85)',background:'rgba(51,50,44,0.5)',backdropFilter:'blur(6px)',borderRadius:4,padding:'0.2rem 0.55rem'}}>Photo: Allie Reilly</div>
+          </div>
           <div style={{marginTop:'1.2rem',display:'flex',justifyContent:'space-between',padding:'0 0.2rem'}}>
             <div style={{textAlign:'center'}}>
               <div style={{fontFamily:'var(--ffd-font-metric)',fontSize:'1.6rem',color:'var(--ffd-deep-tide)',letterSpacing:'-0.03em'}}>12×</div>
@@ -325,12 +328,12 @@ function MovementBanner() {
 
 function Gallery3() {
   const photos = [
-    {src:`${P}/natalie-bruce-about-portrait-usana-wetsuit.jpg`, alt:'Natalie Bruce standing in USANA wetsuit on a quiet shoreline', cap:'Before the session'},
-    {src:`${P}/natalie-bruce-about-portrait-usana-fins.jpg`, alt:'Natalie Bruce holding USANA freediving fins by the water', cap:'Kit ready'},
+    {src:`${P}/natalie-bruce-about-portrait-usana-wetsuit.jpg`, alt:'Natalie Bruce standing in USANA wetsuit on a quiet shoreline', cap:'@asul.lusa.films · Philippines'},
+    {src:`${P}/natalie-bruce-about-portrait-usana-fins.jpg`, alt:'Natalie Bruce holding USANA freediving fins by the water', cap:'@asul.lusa.films · Philippines'},
     {src:`${P}/natalie-bruce-about-rest-volcanic-rock.jpg`, alt:'Natalie Bruce resting against warm volcanic rock, Tenerife', cap:'@monalisa.fiedler · Tenerife'},
-    {src:`${P}/natalie-bruce-about-portrait-orca-wetsuit-goggles.jpg`, alt:'Natalie Bruce adjusting her goggles in an Orca wetsuit at sunrise on a rocky beach', cap:'Suited up'},
-    {src:`${P}/natalie-bruce-about-portrait-orca-swimsuit-beach.jpg`, alt:'Portrait of Natalie Bruce in an Orca swimsuit on a rocky shoreline at dusk', cap:'Shoreline'},
-    {src:`${P}/natalie-bruce-coaching-pool-surface-portrait.jpg`, alt:'Natalie Bruce at the surface in the pool wearing a training cap', cap:'In the pool'},
+    {src:`${P}/natalie-bruce-about-portrait-orca-wetsuit-goggles.jpg`, alt:'Natalie Bruce adjusting her goggles in an Orca wetsuit at sunrise on a rocky beach', cap:'Allie Reilly · Dominica'},
+    {src:`${P}/natalie-bruce-about-portrait-orca-swimsuit-beach.jpg`, alt:'Portrait of Natalie Bruce in an Orca swimsuit on a rocky shoreline at dusk', cap:'@asul.lusa.films · Philippines'},
+    {src:`${P}/natalie-bruce-coaching-pool-surface-portrait.jpg`, alt:'Natalie Bruce at the surface in the pool wearing a training cap', cap:'@srta__brown · Gran Canaria'},
   ];
   return (
     <section style={{background:'var(--ffd-shell)',padding:'clamp(4rem,8vw,7rem) 0'}}>

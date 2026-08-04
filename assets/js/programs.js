@@ -668,7 +668,8 @@ function ProgramDetail({
   imgAlt,
   dark,
   cta,
-  ctaHref
+  ctaHref,
+  credit
 }) {
   return /*#__PURE__*/React.createElement("section", {
     id: `program-${num}`,
@@ -720,7 +721,21 @@ function ProgramDetail({
       padding: '0.25rem 0.7rem',
       backdropFilter: 'blur(8px)'
     }
-  }, tag))), /*#__PURE__*/React.createElement("div", {
+  }, tag)), credit && /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      bottom: '0.9rem',
+      right: '1rem',
+      fontFamily: 'var(--ffd-font-body)',
+      fontSize: '0.62rem',
+      letterSpacing: '0.06em',
+      color: 'rgba(242,235,220,0.85)',
+      background: 'rgba(51,50,44,0.5)',
+      backdropFilter: 'blur(6px)',
+      borderRadius: 4,
+      padding: '0.2rem 0.55rem'
+    }
+  }, "Photo: ", credit)), /*#__PURE__*/React.createElement("div", {
     style: {
       direction: 'ltr'
     }
@@ -928,9 +943,6 @@ function FAQ() {
     q: 'What equipment do I need?',
     a: 'For the online programs, you need access to a pool or open water, a mask, snorkel, and fins. For depth work, a wetsuit is recommended. I\'ll give you a full kit list at the start.'
   }, {
-    q: 'How much time commitment is involved each week?',
-    a: 'The Pool Training Plan runs 2–3 pool sessions a week plus breathwork. The Full Performance package adds dry and gym work, typically 5–8 hours total depending on your access. We build the plan around your schedule.'
-  }, {
     q: 'I\'m not sure which program is right for me.',
     a: 'That\'s what the initial call is for. Send me a message with a bit about where you are in your practice and we\'ll work it out together. There\'s no pressure to commit before we\'ve spoken.'
   }];
@@ -1070,7 +1082,8 @@ const PROGRAMS_DATA = [{
   imgAlt: 'Natalie Bruce in dynamic pool freediving training, Orca wetsuit',
   dark: false,
   cta: 'Book Pool Training',
-  ctaHref: '#start-coaching'
+  ctaHref: '#start-coaching',
+  credit: 'Drew Herrick'
 }, {
   num: 2,
   tag: 'Full performance',
@@ -1098,8 +1111,8 @@ const PROGRAMS_DATA = [{
   who: 'For athletes with specific goals or timelines who want fully bespoke, one-to-one attention.',
   desc: 'No fixed template — we build entirely around you, your schedule, and your level. Based in Colorado, with regular blocks in Tenerife and Dominica — see the Schedule for upcoming dates in each location. Online coaching bridges the gaps between in-water sessions, wherever you are.',
   items: ['Tailored plan from day one', 'Direct 1:1 access to Natalie', 'In-water option', 'Ongoing feedback & adjustments'],
-  img: `${P}/natalie-bruce-competition-surface-recovery.jpg`,
-  imgAlt: 'Natalie Bruce surfacing at the line smiling after a dive',
+  img: `${P}/natalie-bruce-competition-line-two-divers.jpg`,
+  imgAlt: 'Two freedivers ascending the line together in deep blue water, one with blue Cressi fins',
   dark: false,
   cta: 'Book a call',
   ctaHref: BOOKING_URL
