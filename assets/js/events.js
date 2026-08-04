@@ -763,8 +763,8 @@ function Schedule() {
     }
   }, it.desc)), /*#__PURE__*/React.createElement(Btn, {
     variant: "primary",
-    href: "#event-enquiry"
-  }, "Enquire")))))), /*#__PURE__*/React.createElement("p", {
+    href: "#event-inquiry"
+  }, "Inquire")))))), /*#__PURE__*/React.createElement("p", {
     style: {
       textAlign: 'center',
       marginTop: 'clamp(3rem,6vw,4.5rem)',
@@ -886,13 +886,13 @@ function MailForm({
 }
 function App() {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(EventsHero, null), /*#__PURE__*/React.createElement(Schedule, null), /*#__PURE__*/React.createElement(MailForm, {
-    id: "event-enquiry",
+    id: "event-inquiry",
     eyebrow: "Reserve your spot",
-    title: "Enquire about a date",
+    title: "Inquire about a date",
     intro: "Let me know which block, workshop, or event you're interested in and I'll be in touch with the details.",
     to: "nataliefreediverbruce@gmail.com",
-    subject: "Schedule enquiry \u2014 Free Flow Dynamics",
-    submitLabel: "Send enquiry",
+    subject: "Schedule inquiry \u2014 Free Flow Dynamics",
+    submitLabel: "Send inquiry",
     fields: [{
       name: 'name',
       label: 'Name',

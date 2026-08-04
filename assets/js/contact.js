@@ -653,7 +653,7 @@ function ContactPage() {
     k: 'Email',
     v: 'info@freeflowdynamics.com',
     href: 'mailto:info@freeflowdynamics.com',
-    note: 'For coaching enquiries, workshops, and collaborations. I read every message.'
+    note: 'For coaching inquiries, workshops, and collaborations. I read every message.'
   }, {
     k: 'Instagram · Freeflow Dynamics',
     v: '@freeflowdynamics',

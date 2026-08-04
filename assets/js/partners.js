@@ -1378,7 +1378,7 @@ function PartnerCTA() {
       lineHeight: 1.65,
       marginBottom: '2.2rem'
     }
-  }, "For partnership enquiries, media requests, or the full brand kit, get in touch directly. I read every message myself."), /*#__PURE__*/React.createElement("div", {
+  }, "For partnership inquiries, media requests, or the full brand kit, get in touch directly. I read every message myself."), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       gap: '0.85rem',

@@ -850,7 +850,7 @@ function ProgramDetail({
 function HowItWorks() {
   const steps = [{
     n: '01',
-    title: 'Enquire',
+    title: 'Inquire',
     desc: 'Fill in the contact form or drop me an email. Tell me where you are in your practice and what you\'re hoping to work toward.'
   }, {
     n: '02',
@@ -938,7 +938,7 @@ function FAQ() {
     a: 'You\'ll want at least a Molchanovs Wave 1 certification (or equivalent) to start, so you\'re safe and comfortable in the water. From there, coaching is tailored from newly certified divers through to competitive athletes. The Pool Training Plan suits anyone comfortable in the water — and it\'s excellent base training for divers looking to improve their depth, too. The Full Performance package adds dry and gym programming for divers chasing a measurable next level.'
   }, {
     q: 'Are the programs online only, or can I train with you in person?',
-    a: 'All programs run online, which means you can train wherever you are in the world. If you\'d like in-water sessions, they can be arranged as an add-on — just mention it in your enquiry.'
+    a: 'All programs run online, which means you can train wherever you are in the world. If you\'d like in-water sessions, they can be arranged as an add-on — just mention it in your inquiry.'
   }, {
     q: 'What equipment do I need?',
     a: 'For the online programs, you need access to a pool or open water, a mask, snorkel, and fins. For depth work, a wetsuit is recommended. I\'ll give you a full kit list at the start.'
@@ -1320,8 +1320,8 @@ function Courses() {
   }, c.sub)))), /*#__PURE__*/React.createElement(Btn, {
     variant: "primary",
     size: "lg",
-    href: "#course-enquiry"
-  }, "Enquire about a course")));
+    href: "#course-inquiry"
+  }, "Inquire about a course")));
 }
 function App() {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(ProgramsHero, null), PROGRAMS_DATA.map(p => /*#__PURE__*/React.createElement(ProgramDetail, _extends({
@@ -1332,8 +1332,8 @@ function App() {
     title: "Start your training plan",
     intro: "Tell me where you are and which plan fits. I'll be in touch to set things up.",
     to: "nataliefreediverbruce@gmail.com",
-    subject: "Coaching enquiry \u2014 Free Flow Dynamics",
-    submitLabel: "Send enquiry",
+    subject: "Coaching inquiry \u2014 Free Flow Dynamics",
+    submitLabel: "Send inquiry",
     fields: [{
       name: 'name',
       label: 'Name',
@@ -1356,13 +1356,13 @@ function App() {
       ph: 'Goals, questions, scheduling…'
     }]
   }), /*#__PURE__*/React.createElement(Courses, null), /*#__PURE__*/React.createElement(MailForm, {
-    id: "course-enquiry",
+    id: "course-inquiry",
     eyebrow: "Certifications",
-    title: "Enquire about a course",
+    title: "Inquire about a course",
     intro: "Which course and location are you interested in? Send the details and I'll get back to you.",
     to: "nataliefreediverbruce@gmail.com",
-    subject: "Course enquiry \u2014 Free Flow Dynamics",
-    submitLabel: "Send enquiry",
+    subject: "Course inquiry \u2014 Free Flow Dynamics",
+    submitLabel: "Send inquiry",
     fields: [{
       name: 'name',
       label: 'Name',

@@ -220,7 +220,7 @@ function Schedule() {
                     <h3 style={{fontFamily:'var(--ffd-font-display)',fontWeight:500,fontSize:'clamp(1.3rem,2.6vw,1.7rem)',letterSpacing:'-0.01em',color:'var(--ffd-ink)',marginBottom:'0.5rem',lineHeight:1.15}}>{it.title}</h3>
                     <p style={{fontSize:'0.95rem',color:'var(--ffd-stone)',fontWeight:300,lineHeight:1.6,maxWidth:'56ch'}}>{it.desc}</p>
                   </div>
-                  <Btn variant="primary" href="#event-enquiry">Enquire</Btn>
+                  <Btn variant="primary" href="#event-inquiry">Inquire</Btn>
                 </div>
               ))}
             </div>
@@ -265,7 +265,7 @@ function MailForm({ id, eyebrow, title, intro, to, subject, fields, submitLabel 
 
 function App() {
   return <div><Nav/><main><EventsHero/><Schedule/>
-    <MailForm id="event-enquiry" eyebrow="Reserve your spot" title="Enquire about a date" intro="Let me know which block, workshop, or event you're interested in and I'll be in touch with the details." to="nataliefreediverbruce@gmail.com" subject="Schedule enquiry — Free Flow Dynamics" submitLabel="Send enquiry" fields={[
+    <MailForm id="event-inquiry" eyebrow="Reserve your spot" title="Inquire about a date" intro="Let me know which block, workshop, or event you're interested in and I'll be in touch with the details." to="nataliefreediverbruce@gmail.com" subject="Schedule inquiry — Free Flow Dynamics" submitLabel="Send inquiry" fields={[
       {name:'name',label:'Name',required:true},
       {name:'email',label:'Email',type:'email',required:true},
       {name:'event',label:'Which block / workshop / location?'},
