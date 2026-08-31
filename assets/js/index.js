@@ -224,15 +224,15 @@ function Nav() {
     Coaching: [{
       l: 'Pool Training Plan',
       sub: '$175 / month',
-      h: 'programs.html'
+      h: 'programs.html#pool'
     }, {
       l: 'Full Performance Package',
       sub: '$275 / month',
-      h: 'programs.html'
+      h: 'programs.html#full'
     }, {
       l: 'Private Coaching',
       sub: '1:1 · Custom',
-      h: 'programs.html'
+      h: 'programs.html#private'
     }],
     Story: [{
       l: 'Story',
@@ -397,9 +397,10 @@ function Nav() {
       }
     }, l, hasDd && /*#__PURE__*/React.createElement("span", {
       style: {
-        fontSize: '0.5rem',
+        fontSize: '0.72rem',
         color: caret,
-        lineHeight: 1
+        lineHeight: 1,
+        marginTop: '0.05rem'
       }
     }, "\u25BE")), hasDd && /*#__PURE__*/React.createElement("div", {
       style: {
@@ -454,8 +455,7 @@ function Nav() {
   }), /*#__PURE__*/React.createElement(Btn, {
     size: "sm",
     variant: "primary",
-    href: BOOKING_URL,
-    onClick: openBooking
+    href: "programs.html#start-coaching"
   }, "Get Started"), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 1,
@@ -762,7 +762,7 @@ function About() {
       lineHeight: 1.72,
       marginBottom: '2rem'
     }
-  }, "Natalie Bruce is a US professional freediver and performance coach with a foundation in kinesiology, yoga, and meditation. The answer starts with the breath."), /*#__PURE__*/React.createElement(Btn, {
+  }, "Natalie Bruce is a US professional freediver and performance coach based in Evergreen, Colorado, with a foundation in kinesiology, yoga, and meditation. The answer starts with the breath."), /*#__PURE__*/React.createElement(Btn, {
     variant: "outline",
     size: "lg",
     href: "about.html"
@@ -1360,10 +1360,95 @@ function Reviews() {
     who: 'Murphy Anderson',
     role: 'Workshop · Idaho Springs, CO'
   }];
+  const trackRef = React.useRef(null);
+  const [mounted, setMounted] = React.useState(false);
+  const [nav, setNav] = React.useState({
+    page: 0,
+    pages: 1
+  });
+  const [open, setOpen] = React.useState({});
+
+  // step = one card + gap; perView tells us how many cards a swipe advances.
+  const metrics = () => {
+    const el = trackRef.current;
+    if (!el || !el.clientWidth) return null;
+    const gap = parseFloat(getComputedStyle(el).columnGap) || 0;
+    const card = el.firstElementChild;
+    const step = card ? card.getBoundingClientRect().width + gap : el.clientWidth;
+    const perView = Math.max(1, Math.round((el.clientWidth + gap) / step));
+    return {
+      el,
+      step,
+      perView,
+      pages: Math.max(1, Math.ceil(items.length / perView))
+    };
+  };
+  const measure = React.useCallback(() => {
+    const m = metrics();
+    if (!m) return;
+    const page = Math.min(m.pages - 1, Math.max(0, Math.round(m.el.scrollLeft / (m.perView * m.step))));
+    setNav(n => n.page === page && n.pages === m.pages ? n : {
+      page,
+      pages: m.pages
+    });
+  }, []);
+  React.useEffect(() => {
+    setMounted(true);
+    measure();
+    const el = trackRef.current;
+    if (!el) return;
+    el.addEventListener('scroll', measure, {
+      passive: true
+    });
+    window.addEventListener('resize', measure);
+    return () => {
+      el.removeEventListener('scroll', measure);
+      window.removeEventListener('resize', measure);
+    };
+  }, [measure]);
+  const goTo = i => {
+    const m = metrics();
+    if (!m) return;
+    const page = Math.max(0, Math.min(i, m.pages - 1));
+    setNav({
+      page,
+      pages: m.pages
+    });
+    m.el.scrollTo({
+      left: page * m.perView * m.step,
+      behavior: 'smooth'
+    });
+  };
+  const go = dir => goTo(nav.page + dir);
+  const arrowStyle = disabled => ({
+    width: 44,
+    height: 44,
+    borderRadius: '50%',
+    flexShrink: 0,
+    background: 'var(--ffd-foam)',
+    border: '1.5px solid var(--ffd-line)',
+    color: disabled ? 'var(--ffd-stone-soft)' : 'var(--ffd-deep-tide)',
+    cursor: disabled ? 'default' : 'pointer',
+    opacity: disabled ? 0.4 : 1,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    boxShadow: '0 10px 26px -12px rgba(35,60,58,0.4)',
+    transition: 'opacity 0.2s, color 0.2s',
+    fontFamily: 'var(--ffd-font-body)',
+    fontSize: '1.15rem',
+    lineHeight: 1,
+    padding: 0
+  });
+  const atStart = nav.page <= 0;
+  const atEnd = nav.page >= nav.pages - 1;
+  const LONG = 420;
   return /*#__PURE__*/React.createElement("section", {
+    id: "reviews",
     style: {
       background: 'var(--ffd-foam)',
-      padding: 'clamp(5rem,11vw,9rem) 0'
+      padding: 'clamp(5rem,11vw,9rem) 0',
+      scrollMarginTop: '86px'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -1401,59 +1486,131 @@ function Reviews() {
       margin: '0 auto'
     }
   }, "A few words from divers I\u2019ve worked with.")), /*#__PURE__*/React.createElement("div", {
-    style: {
-      columnWidth: '360px',
-      columnGap: '1.4rem'
-    }
-  }, items.map((r, i) => /*#__PURE__*/React.createElement("div", {
-    key: i,
-    style: {
-      breakInside: 'avoid',
-      WebkitColumnBreakInside: 'avoid',
-      marginBottom: '1.4rem',
-      background: 'var(--ffd-shell)',
-      border: '1px solid var(--ffd-line)',
-      borderRadius: 'var(--ffd-radius-lg)',
-      padding: '2rem 1.9rem',
-      boxShadow: 'var(--ffd-shadow)'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontFamily: 'var(--ffd-font-display)',
-      fontSize: '2.4rem',
-      lineHeight: 0.6,
-      color: 'var(--ffd-clay)',
-      marginBottom: '0.8rem'
-    }
-  }, "\u201C"), /*#__PURE__*/React.createElement("p", {
-    style: {
+    className: "ffd-rev-wrap"
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "ffd-rev-arrow",
+    "data-dir": "prev",
+    "aria-label": "Previous reviews",
+    onClick: () => go(-1),
+    disabled: mounted && atStart,
+    style: arrowStyle(mounted && atStart)
+  }, "\u2039"), /*#__PURE__*/React.createElement("button", {
+    className: "ffd-rev-arrow",
+    "data-dir": "next",
+    "aria-label": "Next reviews",
+    onClick: () => go(1),
+    disabled: mounted && atEnd,
+    style: arrowStyle(mounted && atEnd)
+  }, "\u203A"), /*#__PURE__*/React.createElement("div", {
+    className: "ffd-rev-track",
+    ref: trackRef
+  }, items.map((r, i) => {
+    const isLong = r.q.length > LONG;
+    const expanded = !!open[i];
+    const quoteStyle = {
       fontFamily: 'var(--ffd-font-display)',
       fontStyle: 'italic',
       fontSize: '1.08rem',
       lineHeight: 1.55,
       color: 'var(--ffd-deep-tide)',
-      marginBottom: '1.4rem'
+      marginBottom: isLong ? '0.7rem' : '1.4rem'
+    };
+    if (isLong && !expanded) {
+      quoteStyle.display = '-webkit-box';
+      quoteStyle.WebkitLineClamp = 9;
+      quoteStyle.WebkitBoxOrient = 'vertical';
+      quoteStyle.overflow = 'hidden';
     }
-  }, r.q), /*#__PURE__*/React.createElement(Waterline, {
+    return /*#__PURE__*/React.createElement("div", {
+      key: i,
+      className: "ffd-rev-card",
+      style: {
+        background: 'var(--ffd-shell)',
+        border: '1px solid var(--ffd-line)',
+        borderRadius: 'var(--ffd-radius-lg)',
+        padding: '2rem 1.9rem',
+        boxShadow: 'var(--ffd-shadow)'
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontFamily: 'var(--ffd-font-display)',
+        fontSize: '2.4rem',
+        lineHeight: 0.6,
+        color: 'var(--ffd-clay)',
+        marginBottom: '0.8rem'
+      }
+    }, "\u201C"), /*#__PURE__*/React.createElement("p", {
+      style: quoteStyle
+    }, r.q), isLong && /*#__PURE__*/React.createElement("button", {
+      onClick: () => setOpen(o => ({
+        ...o,
+        [i]: !o[i]
+      })),
+      style: {
+        alignSelf: 'flex-start',
+        background: 'none',
+        border: 'none',
+        padding: 0,
+        marginBottom: '1.4rem',
+        cursor: 'pointer',
+        fontFamily: 'var(--ffd-font-body)',
+        fontSize: '0.78rem',
+        letterSpacing: '0.1em',
+        textTransform: 'uppercase',
+        color: 'var(--ffd-clay)',
+        borderBottom: '1px solid var(--ffd-clay)'
+      }
+    }, expanded ? 'Read less' : 'Read more'), /*#__PURE__*/React.createElement("div", {
+      style: {
+        marginTop: 'auto'
+      }
+    }, /*#__PURE__*/React.createElement(Waterline, {
+      style: {
+        marginBottom: '1rem'
+      }
+    }), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontFamily: 'var(--ffd-font-body)',
+        fontWeight: 500,
+        fontSize: '0.9rem',
+        color: 'var(--ffd-ink)'
+      }
+    }, r.who), /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontSize: '0.7rem',
+        letterSpacing: '0.14em',
+        textTransform: 'uppercase',
+        color: 'var(--ffd-stone-soft)',
+        marginTop: '0.25rem'
+      }
+    }, r.role)));
+  }))), /*#__PURE__*/React.createElement("div", {
     style: {
-      marginBottom: '1rem'
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: '0.55rem',
+      marginTop: '2rem',
+      minHeight: 10
     }
-  }), /*#__PURE__*/React.createElement("div", {
+  }, mounted && nav.pages > 1 && Array.from({
+    length: nav.pages
+  }).map((_, i) => /*#__PURE__*/React.createElement("button", {
+    key: i,
+    className: "ffd-rev-dot",
+    "aria-label": `Go to reviews ${i + 1} of ${nav.pages}`,
+    "aria-current": i === nav.page ? 'true' : undefined,
+    onClick: () => goTo(i)
+  }, /*#__PURE__*/React.createElement("span", {
     style: {
-      fontFamily: 'var(--ffd-font-body)',
-      fontWeight: 500,
-      fontSize: '0.9rem',
-      color: 'var(--ffd-ink)'
+      display: 'block',
+      width: i === nav.page ? 26 : 9,
+      height: 9,
+      borderRadius: 99,
+      backgroundColor: i === nav.page ? 'var(--ffd-clay)' : 'var(--ffd-line)',
+      transition: 'width 0.25s, background-color 0.25s'
     }
-  }, r.who), /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: '0.7rem',
-      letterSpacing: '0.14em',
-      textTransform: 'uppercase',
-      color: 'var(--ffd-stone-soft)',
-      marginTop: '0.25rem'
-    }
-  }, r.role))))));
+  }))))));
 }
 
 /* ── ENSŌ / BRAND ── */
