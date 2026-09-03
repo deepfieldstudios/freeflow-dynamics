@@ -227,15 +227,15 @@ function Nav() {
     Coaching: [{
       l: 'Pool Training Plan',
       sub: '$175 / month',
-      h: 'programs.html'
+      h: 'programs.html#pool'
     }, {
       l: 'Full Performance Package',
       sub: '$275 / month',
-      h: 'programs.html'
+      h: 'programs.html#full'
     }, {
       l: 'Private Coaching',
       sub: '1:1 · Custom',
-      h: 'programs.html'
+      h: 'programs.html#private'
     }],
     Story: [{
       l: 'Story',
@@ -400,9 +400,10 @@ function Nav() {
       }
     }, l, hasDd && /*#__PURE__*/React.createElement("span", {
       style: {
-        fontSize: '0.5rem',
+        fontSize: '0.72rem',
         color: caret,
-        lineHeight: 1
+        lineHeight: 1,
+        marginTop: '0.05rem'
       }
     }, "\u25BE")), hasDd && /*#__PURE__*/React.createElement("div", {
       style: {
@@ -457,8 +458,7 @@ function Nav() {
   }), /*#__PURE__*/React.createElement(Btn, {
     size: "sm",
     variant: onLight ? 'primary' : 'ghost',
-    href: BOOKING_URL,
-    onClick: openBooking
+    href: "mailto:nataliefreediverbruce@gmail.com?subject=Coaching%20inquiry%20%E2%80%94%20Free%20Flow%20Dynamics"
   }, "Get Started"), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 1,
@@ -653,6 +653,11 @@ function ProgramsHero() {
     }
   }, "Flow isn't found. It's trained. All programs run online with Natalie.")));
 }
+const PROGRAM_ANCHORS = {
+  1: 'pool',
+  2: 'full',
+  3: 'private'
+};
 function ProgramDetail({
   num,
   tag,
@@ -672,10 +677,11 @@ function ProgramDetail({
   credit
 }) {
   return /*#__PURE__*/React.createElement("section", {
-    id: `program-${num}`,
+    id: PROGRAM_ANCHORS[num] || `program-${num}`,
     style: {
       background: dark ? 'var(--ffd-deep-tide)' : 'var(--ffd-foam)',
-      padding: 'clamp(4.5rem,9vw,7.5rem) 0'
+      padding: 'clamp(4.5rem,9vw,7.5rem) 0',
+      scrollMarginTop: '86px'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -937,8 +943,8 @@ function FAQ() {
     q: 'Do I need to be an experienced freediver to join?',
     a: 'You\'ll want at least a Molchanovs Wave 1 certification (or equivalent) to start, so you\'re safe and comfortable in the water. From there, coaching is tailored from newly certified divers through to competitive athletes. The Pool Training Plan suits anyone comfortable in the water — and it\'s excellent base training for divers looking to improve their depth, too. The Full Performance package adds dry and gym programming for divers chasing a measurable next level.'
   }, {
-    q: 'Are the programs online only, or can I train with you in person?',
-    a: 'All programs run online, which means you can train wherever you are in the world. If you\'d like in-water sessions, they can be arranged as an add-on — just mention it in your inquiry.'
+    q: 'Where are you based, and can I train with you in person?',
+    a: 'I\'m based in Evergreen, Colorado, and I run pool sessions, workshops and clinics across the Front Range — including Denver and Idaho Springs. The coaching programs themselves run online, so you can train with me from anywhere in the world. For depth work I also run training blocks abroad — Tenerife in the Canary Islands, and Dominica in the Caribbean. Upcoming dates are on the Schedule page.'
   }, {
     q: 'What equipment do I need?',
     a: 'For the online programs, you need access to a pool or open water, a mask, snorkel, and fins. For depth work, a wetsuit is recommended. I\'ll give you a full kit list at the start.'
@@ -1156,7 +1162,8 @@ function MailForm({
     style: {
       background: 'var(--ffd-shell)',
       padding: 'clamp(4.5rem,9vw,7rem) 0',
-      borderTop: '1px solid var(--ffd-line)'
+      borderTop: '1px solid var(--ffd-line)',
+      scrollMarginTop: '86px'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {

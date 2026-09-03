@@ -227,15 +227,15 @@ function Nav() {
     Coaching: [{
       l: 'Pool Training Plan',
       sub: '$175 / month',
-      h: 'programs.html'
+      h: 'programs.html#pool'
     }, {
       l: 'Full Performance Package',
       sub: '$275 / month',
-      h: 'programs.html'
+      h: 'programs.html#full'
     }, {
       l: 'Private Coaching',
       sub: '1:1 · Custom',
-      h: 'programs.html'
+      h: 'programs.html#private'
     }],
     Story: [{
       l: 'Story',
@@ -400,9 +400,10 @@ function Nav() {
       }
     }, l, hasDd && /*#__PURE__*/React.createElement("span", {
       style: {
-        fontSize: '0.5rem',
+        fontSize: '0.72rem',
         color: caret,
-        lineHeight: 1
+        lineHeight: 1,
+        marginTop: '0.05rem'
       }
     }, "\u25BE")), hasDd && /*#__PURE__*/React.createElement("div", {
       style: {
@@ -457,8 +458,7 @@ function Nav() {
   }), /*#__PURE__*/React.createElement(Btn, {
     size: "sm",
     variant: onLight ? 'primary' : 'ghost',
-    href: BOOKING_URL,
-    onClick: openBooking
+    href: "mailto:nataliefreediverbruce@gmail.com?subject=Coaching%20inquiry%20%E2%80%94%20Free%20Flow%20Dynamics"
   }, "Get Started"), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 1,
@@ -814,7 +814,8 @@ function MailForm({
     style: {
       background: 'var(--ffd-foam)',
       padding: 'clamp(4.5rem,9vw,7rem) 0',
-      borderTop: '1px solid var(--ffd-line)'
+      borderTop: '1px solid var(--ffd-line)',
+      scrollMarginTop: '86px'
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
