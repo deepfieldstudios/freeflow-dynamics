@@ -813,29 +813,29 @@ function TheRecord() {
     name: 'Free immersion',
     pb: 98,
     wr: 102,
-    worldRank: 7,
+    worldRank: 8,
     natRank: 2
   }, {
     code: 'CWTB',
     name: 'Constant weight · bi-fins',
-    pb: 80,
+    pb: 85,
     wr: 106,
-    worldRank: 59,
+    worldRank: 45,
     natRank: 3
   }, {
     code: 'CNF',
     name: 'Constant weight · no fins',
     pb: 57,
     wr: 84,
-    worldRank: 48,
+    worldRank: 53,
     natRank: 6
   }, {
     code: 'CWT',
     name: 'Constant weight',
     pb: 82,
     wr: 123,
-    worldRank: 90,
-    natRank: 5
+    worldRank: 95,
+    natRank: 6
   }];
   const stats = [{
     v: 'No. 7',

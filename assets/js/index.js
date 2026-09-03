@@ -490,7 +490,7 @@ function Hero() {
     v: '17×',
     l: 'US national records'
   }, {
-    v: '102m',
+    v: '98m',
     l: 'Down the line'
   }, {
     v: '1 breath',
