@@ -503,6 +503,8 @@ function Footer() {
       overflow: 'hidden'
     }
   }, /*#__PURE__*/React.createElement("img", {
+    loading: "lazy",
+    decoding: "async",
     src: `${P}/natalie-bruce-atmosphere-sunset-coast.jpg`,
     alt: "Sunset over volcanic rock and Atlantic, Tenerife",
     style: {
@@ -613,6 +615,8 @@ function ProgramsHero() {
       overflow: 'hidden'
     }
   }, /*#__PURE__*/React.createElement("img", {
+    fetchPriority: "high",
+    decoding: "async",
     src: `${P}/natalie-bruce-coaching-pool-dynamic-orca.jpg`,
     alt: "Natalie Bruce in dynamic freediving training in the pool, Orca wetsuit",
     style: {
@@ -713,6 +717,8 @@ function ProgramDetail({
       overflow: 'hidden'
     }
   }, /*#__PURE__*/React.createElement("img", {
+    loading: "lazy",
+    decoding: "async",
     src: img,
     alt: imgAlt,
     style: {
@@ -1002,6 +1008,7 @@ function FAQ() {
     }
   }, /*#__PURE__*/React.createElement("button", {
     onClick: () => setOpen(open === i ? null : i),
+    "aria-expanded": open === i,
     style: {
       width: '100%',
       textAlign: 'left',
@@ -1032,9 +1039,13 @@ function FAQ() {
       display: 'block',
       lineHeight: 1
     }
-  }, open === i ? '×' : '+')), open === i && /*#__PURE__*/React.createElement("div", {
+  }, open === i ? '×' : '+')), /*#__PURE__*/React.createElement("div", {
     style: {
-      paddingBottom: '1.5rem',
+      maxHeight: open === i ? '34rem' : 0,
+      opacity: open === i ? 1 : 0,
+      overflow: 'hidden',
+      paddingBottom: open === i ? '1.5rem' : 0,
+      transition: 'max-height 0.32s ease, opacity 0.24s ease, padding-bottom 0.32s ease',
       fontSize: '0.98rem',
       color: 'var(--ffd-stone)',
       lineHeight: 1.7,
@@ -1077,7 +1088,7 @@ function ProgramsCTA() {
       lineHeight: 1.65,
       marginBottom: '2rem'
     }
-  }, "Send a message. We\\'ll have a short call and work it out together \u2014 no commitment until it feels right."), /*#__PURE__*/React.createElement(Btn, {
+  }, "Send a message. We\u2019ll have a short call and work it out together \u2014 no commitment until it feels right."), /*#__PURE__*/React.createElement(Btn, {
     variant: "secondary",
     size: "lg",
     href: BOOKING_URL,
