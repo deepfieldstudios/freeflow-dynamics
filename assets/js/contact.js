@@ -648,6 +648,116 @@ function Channel({
     }
   }, note));
 }
+function MailForm({
+  id,
+  eyebrow,
+  title,
+  intro,
+  to,
+  subject,
+  fields,
+  submitLabel
+}) {
+  const onSubmit = e => {
+    e.preventDefault();
+    const lines = fields.map(f => `${f.label}: ${(e.target.elements[f.name].value || '').trim()}`);
+    window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+  };
+  const inp = {
+    width: '100%',
+    padding: '0.8rem 1rem',
+    fontFamily: 'var(--ffd-font-body)',
+    fontSize: '1rem',
+    color: 'var(--ffd-ink)',
+    background: 'var(--ffd-foam)',
+    border: '1.5px solid var(--ffd-line)',
+    borderRadius: 'var(--ffd-radius)'
+  };
+  const lbl = {
+    display: 'block',
+    fontSize: '0.72rem',
+    letterSpacing: '0.12em',
+    textTransform: 'uppercase',
+    color: 'var(--ffd-stone)',
+    marginBottom: '0.4rem',
+    fontFamily: 'var(--ffd-font-body)'
+  };
+  return /*#__PURE__*/React.createElement("section", {
+    id: id,
+    style: {
+      background: 'var(--ffd-foam)',
+      padding: 'clamp(4.5rem,9vw,7rem) 0',
+      borderTop: '1px solid var(--ffd-line)',
+      scrollMarginTop: '86px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 680,
+      margin: '0 auto',
+      padding: '0 clamp(1.25rem,5vw,4rem)'
+    }
+  }, /*#__PURE__*/React.createElement(Eyebrow, {
+    style: {
+      marginBottom: '1.2rem'
+    }
+  }, eyebrow), /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontFamily: 'var(--ffd-font-display)',
+      fontWeight: 500,
+      fontSize: 'clamp(1.9rem,3.8vw,2.7rem)',
+      letterSpacing: '-0.02em',
+      lineHeight: 1.1,
+      color: 'var(--ffd-ink)',
+      marginBottom: '1rem'
+    }
+  }, title), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '1.02rem',
+      color: 'var(--ffd-stone)',
+      fontWeight: 300,
+      lineHeight: 1.68,
+      marginBottom: '2.2rem'
+    }
+  }, intro), /*#__PURE__*/React.createElement("form", {
+    onSubmit: onSubmit,
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '1.2rem'
+    }
+  }, fields.map((f, i) => /*#__PURE__*/React.createElement("div", {
+    key: i
+  }, /*#__PURE__*/React.createElement("label", {
+    style: lbl,
+    htmlFor: `${id}-${f.name}`
+  }, f.label, f.required && ' *'), f.type === 'textarea' ? /*#__PURE__*/React.createElement("textarea", {
+    id: `${id}-${f.name}`,
+    name: f.name,
+    rows: 5,
+    required: f.required,
+    placeholder: f.ph || '',
+    style: {
+      ...inp,
+      resize: 'vertical'
+    }
+  }) : /*#__PURE__*/React.createElement("input", {
+    id: `${id}-${f.name}`,
+    name: f.name,
+    type: f.type || 'text',
+    required: f.required,
+    placeholder: f.ph || '',
+    style: inp
+  }))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Btn, {
+    variant: "primary",
+    size: "lg"
+  }, submitLabel)), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '0.8rem',
+      color: 'var(--ffd-stone-soft)',
+      fontWeight: 300
+    }
+  }, "Opens your email app with the details ready to send."))));
+}
 function ContactPage() {
   const channels = [{
     k: 'Email',
@@ -732,18 +842,56 @@ function ContactPage() {
     }
   }, channels.map((c, i) => /*#__PURE__*/React.createElement(Channel, _extends({
     key: i
-  }, c)))), /*#__PURE__*/React.createElement("p", {
+  }, c))))));
+}
+function App() {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(ContactPage, null), /*#__PURE__*/React.createElement(MailForm, {
+    id: "contact-form",
+    eyebrow: "Prefer a form",
+    title: "Send a message",
+    intro: "Tell me a little about what you\u2019re after and I\u2019ll come back to you.",
+    to: "nataliefreediverbruce@gmail.com",
+    subject: "General inquiry \u2014 Free Flow Dynamics",
+    submitLabel: "Send message",
+    fields: [{
+      name: 'name',
+      label: 'Name',
+      required: true
+    }, {
+      name: 'email',
+      label: 'Email',
+      type: 'email',
+      required: true
+    }, {
+      name: 'about',
+      label: "What’s it about?",
+      ph: 'Coaching, a workshop, a collaboration…'
+    }, {
+      name: 'message',
+      label: 'Message',
+      type: 'textarea',
+      required: true,
+      ph: 'Where you are in your practice, what you’re hoping to work toward…'
+    }]
+  }), /*#__PURE__*/React.createElement("section", {
     style: {
-      marginTop: '2.6rem',
+      background: 'var(--ffd-foam)',
+      padding: '0 0 clamp(4rem,8vw,6rem)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 680,
+      margin: '0 auto',
+      padding: '0 clamp(1.25rem,5vw,4rem)'
+    }
+  }, /*#__PURE__*/React.createElement("p", {
+    style: {
       fontFamily: 'var(--ffd-font-display)',
       fontStyle: 'italic',
       fontSize: '1.1rem',
       color: 'var(--ffd-stone-soft)'
     }
-  }, "One breath at a time.")));
-}
-function App() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(ContactPage, null)), /*#__PURE__*/React.createElement(Footer, null));
+  }, "One breath at a time.")))), /*#__PURE__*/React.createElement(Footer, null));
 }
 ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(App));
 })();
