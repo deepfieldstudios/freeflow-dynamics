@@ -635,7 +635,7 @@ function Bar({
   code,
   name,
   pb,
-  wr,
+  wrPct,
   max,
   unit,
   worldRank,
@@ -644,8 +644,11 @@ function Bar({
   accent
 }) {
   const pct = Math.min(100, pb / max * 100);
-  const wrPos = Math.min(100, wr / max * 100);
-  const ofWr = Math.round(pb / wr * 100);
+  // freedivingranking.com publishes the percentage of the world record, not the
+  // record itself — so the marker is placed from that rather than from a figure
+  // we would have to guess at and then keep up to date.
+  const wrPos = Math.min(100, pb / (wrPct / 100) / max * 100);
+  const ofWr = wrPct;
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
@@ -711,7 +714,7 @@ function Bar({
       textTransform: 'uppercase',
       color: 'var(--ffd-gold)'
     }
-  }, "WR ", wr, unit)), /*#__PURE__*/React.createElement("div", {
+  }, "WR")), /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'relative',
       height: 16,
@@ -790,21 +793,21 @@ function TheRecord() {
     code: 'DYNB',
     name: 'Dynamic · bi-fins',
     pb: 249,
-    wr: 259,
+    wrPct: 89,
     worldRank: 6,
     natRank: 1
   }, {
     code: 'DYN',
     name: 'Dynamic · fins',
     pb: 257,
-    wr: 280,
+    wrPct: 86,
     worldRank: 8,
     natRank: 1
   }, {
     code: 'DNF',
     name: 'Dynamic · no fins',
     pb: 171,
-    wr: 213,
+    wrPct: 77,
     worldRank: 20,
     natRank: 1
   }];
@@ -812,30 +815,30 @@ function TheRecord() {
     code: 'FIM',
     name: 'Free immersion',
     pb: 98,
-    wr: 102,
-    worldRank: 7,
+    wrPct: 92,
+    worldRank: 8,
     natRank: 2
   }, {
     code: 'CWTB',
     name: 'Constant weight · bi-fins',
-    pb: 80,
-    wr: 106,
-    worldRank: 59,
+    pb: 85,
+    wrPct: 75,
+    worldRank: 45,
     natRank: 3
   }, {
     code: 'CNF',
     name: 'Constant weight · no fins',
     pb: 57,
-    wr: 84,
-    worldRank: 48,
+    wrPct: 65,
+    worldRank: 53,
     natRank: 6
   }, {
     code: 'CWT',
     name: 'Constant weight',
     pb: 82,
-    wr: 123,
-    worldRank: 90,
-    natRank: 5
+    wrPct: 67,
+    worldRank: 95,
+    natRank: 6
   }];
   const stats = [{
     v: 'No. 7',
@@ -955,7 +958,7 @@ function TheRecord() {
   }, pool.map((p, i) => /*#__PURE__*/React.createElement(Bar, _extends({
     key: i
   }, p, {
-    max: 290,
+    max: 305,
     unit: "m",
     grown: grown
   })))), /*#__PURE__*/React.createElement("div", {
@@ -1007,7 +1010,7 @@ function TheRecord() {
       color: 'var(--ffd-stone-soft)',
       marginTop: '0.32rem'
     }
-  }, "#141 world")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+  }, "#6 US \xB7 #142 world")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'baseline',
