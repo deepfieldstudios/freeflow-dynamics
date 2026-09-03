@@ -503,6 +503,8 @@ function Footer() {
       overflow: 'hidden'
     }
   }, /*#__PURE__*/React.createElement("img", {
+    loading: "lazy",
+    decoding: "async",
     src: `${P}/natalie-bruce-atmosphere-sunset-coast.jpg`,
     alt: "Sunset over volcanic rock and Atlantic, Tenerife",
     style: {
@@ -613,6 +615,8 @@ function ProgramsHero() {
       overflow: 'hidden'
     }
   }, /*#__PURE__*/React.createElement("img", {
+    fetchPriority: "high",
+    decoding: "async",
     src: `${P}/natalie-bruce-coaching-pool-dynamic-orca.jpg`,
     alt: "Natalie Bruce in dynamic freediving training in the pool, Orca wetsuit",
     style: {
@@ -713,6 +717,8 @@ function ProgramDetail({
       overflow: 'hidden'
     }
   }, /*#__PURE__*/React.createElement("img", {
+    loading: "lazy",
+    decoding: "async",
     src: img,
     alt: imgAlt,
     style: {

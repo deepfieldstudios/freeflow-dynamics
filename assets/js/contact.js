@@ -503,6 +503,8 @@ function Footer() {
       overflow: 'hidden'
     }
   }, /*#__PURE__*/React.createElement("img", {
+    loading: "lazy",
+    decoding: "async",
     src: `${P}/natalie-bruce-atmosphere-sunset-coast.jpg`,
     alt: "Sunset over volcanic rock and Atlantic ocean, Tenerife",
     style: {

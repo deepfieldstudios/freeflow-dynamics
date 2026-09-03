@@ -77,42 +77,6 @@ function Eyebrow({
     }
   }), children);
 }
-function Waterline({
-  dark = false,
-  style: s
-}) {
-  return /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      alignItems: 'center',
-      height: 6,
-      ...s
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      flex: 1,
-      height: 1,
-      background: dark ? 'var(--ffd-line-dark)' : 'var(--ffd-line)'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      width: 6,
-      height: 6,
-      borderRadius: '50%',
-      background: dark ? 'var(--ffd-clay-glow)' : 'var(--ffd-clay)',
-      margin: '0 -3px',
-      flexShrink: 0,
-      position: 'relative',
-      zIndex: 1
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      flex: 1,
-      height: 1,
-      background: dark ? 'var(--ffd-line-dark)' : 'var(--ffd-line)'
-    }
-  }));
-}
 function Btn({
   children,
   variant = 'primary',
@@ -503,6 +467,8 @@ function Footer() {
       overflow: 'hidden'
     }
   }, /*#__PURE__*/React.createElement("img", {
+    loading: "lazy",
+    decoding: "async",
     src: `${P}/natalie-bruce-atmosphere-sunset-coast.jpg`,
     alt: "Sunset over volcanic rock and Atlantic, Tenerife",
     style: {
@@ -613,6 +579,8 @@ function CompHero() {
       overflow: 'hidden'
     }
   }, /*#__PURE__*/React.createElement("img", {
+    fetchPriority: "high",
+    decoding: "async",
     src: `${P}/natalie-bruce-hero-descent-lightrays.jpg`,
     alt: "Natalie Bruce descending the line into deep blue water with light rays from the surface above",
     style: {
@@ -1315,6 +1283,8 @@ function EventGallery() {
       position: 'relative'
     }
   }, /*#__PURE__*/React.createElement("img", {
+    loading: "lazy",
+    decoding: "async",
     src: ph.src,
     alt: ph.alt,
     style: {
@@ -1351,6 +1321,8 @@ function AtmosphereDivider() {
       height: 560
     }
   }, /*#__PURE__*/React.createElement("img", {
+    loading: "lazy",
+    decoding: "async",
     src: `${P}/natalie-bruce-atmosphere-boat-coastline-bw.jpg`,
     alt: "Black and white waterline view of the dive boat with crew and coastline behind",
     style: {
