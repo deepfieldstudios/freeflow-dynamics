@@ -463,7 +463,7 @@ function Nav() {
   }), /*#__PURE__*/React.createElement(Btn, {
     size: "sm",
     variant: onLight ? 'primary' : 'ghost',
-    href: "programs.html#start-coaching"
+    href: "mailto:nataliefreediverbruce@gmail.com?subject=Coaching%20inquiry%20%E2%80%94%20Free%20Flow%20Dynamics"
   }, "Get Started"), /*#__PURE__*/React.createElement("div", {
     style: {
       width: 1,
