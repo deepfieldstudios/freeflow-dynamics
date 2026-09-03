@@ -12,6 +12,7 @@
 //   5. rewrites the page HTML accordingly and emits it to the repo root.
 
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { execSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
@@ -103,6 +104,44 @@ ReactDOM.hydrateRoot(document.getElementById('root'), React.createElement(App));
   console.log(`✓ ${file}  (ssr ${ssr.length.toLocaleString()} chars, bundle ${clientJs.length.toLocaleString()} chars)`);
   ok++;
 }
+
+// 6. Generate sitemap.xml.
+//    This used to be hand-maintained and had drifted 44 days stale on every URL —
+//    telling Google nothing had changed while pages were being edited weekly.
+//    Generating it here means it can never drift again.
+//    lastmod comes from the src file's last commit, so an untouched page keeps an
+//    honest older date rather than everything claiming to be new on every deploy.
+const PRIORITY = {
+  'index.html': '1.0',
+  'about.html': '0.9', 'programs.html': '0.9',
+  'competition.html': '0.8',
+  'events.html': '0.7', 'contact.html': '0.7',
+  'media.html': '0.6', 'partners.html': '0.6',
+};
+const today = new Date().toISOString().slice(0, 10);
+const lastmodFor = (file) => {
+  try {
+    const srcPath = join('src', file);
+    // uncommitted edits mean the git date understates it — today is the honest answer
+    if (execSync(`git status --porcelain -- "${srcPath}"`, { cwd: ROOT }).toString().trim()) return today;
+    const d = execSync(`git log -1 --format=%cI -- "${srcPath}"`, { cwd: ROOT }).toString().trim();
+    return d ? d.slice(0, 10) : today;
+  } catch {
+    return today;
+  }
+};
+const entries = pages
+  .slice()
+  .sort((a, b) => (PRIORITY[b] ?? '0.5').localeCompare(PRIORITY[a] ?? '0.5'))
+  .map((file) => {
+    const loc = file === 'index.html' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}/${file}`;
+    return `  <url><loc>${loc}</loc><lastmod>${lastmodFor(file)}</lastmod><priority>${PRIORITY[file] ?? '0.5'}</priority></url>`;
+  });
+writeFileSync(
+  join(ROOT, 'sitemap.xml'),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.join('\n')}\n</urlset>\n`
+);
+console.log(`✓ sitemap.xml  (${entries.length} urls)`);
 
 console.log(`\nBuilt ${ok}/${pages.length} pages.`);
 if (ok !== pages.length) process.exit(1);
