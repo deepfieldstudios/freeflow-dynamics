@@ -248,7 +248,6 @@ function Nav() {
   const txtActive = 'var(--ffd-ink)';
   const logoColor = onLight ? 'var(--ffd-deep-tide)' : 'var(--ffd-foam)';
   const flowColor = onLight ? 'var(--ffd-tide-deep)' : 'var(--ffd-tide-light)';
-  const caret = 'var(--ffd-clay)';
   return /*#__PURE__*/React.createElement("nav", {
     style: {
       position: 'fixed',
@@ -395,14 +394,26 @@ function Nav() {
         paddingBottom: '1px',
         transition: 'color 0.3s ease'
       }
-    }, l, hasDd && /*#__PURE__*/React.createElement("span", {
+    }, l, hasDd && /*#__PURE__*/React.createElement("svg", {
+      className: "ffd-nav-caret",
+      width: "13",
+      height: "9",
+      viewBox: "0 0 13 9",
+      fill: "none",
+      "aria-hidden": "true",
       style: {
-        fontSize: '0.72rem',
-        color: caret,
-        lineHeight: 1,
-        marginTop: '0.05rem'
+        flexShrink: 0,
+        marginTop: '0.15rem',
+        transform: dd === l ? 'rotate(180deg)' : 'none',
+        transition: 'transform 0.22s ease'
       }
-    }, "\u25BE")), hasDd && /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React.createElement("path", {
+      d: "M1.75 2.25L6.5 7L11.25 2.25",
+      stroke: "currentColor",
+      strokeWidth: "2.2",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }))), hasDd && /*#__PURE__*/React.createElement("div", {
       style: {
         position: 'absolute',
         top: '100%',

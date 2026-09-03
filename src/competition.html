@@ -88,7 +88,6 @@ function Nav(){
   const txtActive = onLight ? 'var(--ffd-ink)' : 'var(--ffd-foam)';
   const logoColor = onLight ? 'var(--ffd-deep-tide)' : 'var(--ffd-foam)';
   const flowColor = onLight ? 'var(--ffd-tide-deep)' : 'var(--ffd-tide-light)';
-  const caret = onLight ? 'var(--ffd-clay)' : 'var(--ffd-clay-glow)';
   return (
     <nav style={{position:'fixed',top:0,left:0,right:0,zIndex:100,background:scrolled?'rgba(242,235,220,0.97)':'transparent',backdropFilter:scrolled?'blur(20px)':'none',borderBottom:scrolled?'1px solid var(--ffd-line)':'1px solid transparent',transition:'background 0.35s ease, border-color 0.35s ease'}}>
       
@@ -105,7 +104,7 @@ function Nav(){
             return(
               <div key={l} style={{position:'relative'}} onMouseEnter={()=>setDd(l)} onMouseLeave={()=>setDd(null)}>
                 <a href={h} style={{fontFamily:'var(--ffd-font-body)',fontWeight:active?500:400,fontSize:'0.9rem',color:active?txtActive:txt,textDecoration:'none',display:'flex',alignItems:'center',gap:'0.3rem',borderBottom:active?'1.5px solid var(--ffd-clay)':'none',paddingBottom:'1px',transition:'color 0.3s ease'}}>
-                  {l}{hasDd&&<span style={{fontSize:'0.72rem',color:caret,lineHeight:1,marginTop:'0.05rem'}}>▾</span>}
+                  {l}{hasDd&&<svg className="ffd-nav-caret" width="13" height="9" viewBox="0 0 13 9" fill="none" aria-hidden="true" style={{flexShrink:0,marginTop:'0.15rem',transform:dd===l?'rotate(180deg)':'none',transition:'transform 0.22s ease'}}><path d="M1.75 2.25L6.5 7L11.25 2.25" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>}
                 </a>
                 {hasDd&&(
                   <div style={{position:'absolute',top:'100%',left:'-1rem',paddingTop:'0.7rem',zIndex:200,opacity:dd===l?1:0,visibility:dd===l?'visible':'hidden',pointerEvents:dd===l?'auto':'none',transition:'opacity 0.18s ease'}}><div style={{background:'var(--ffd-foam)',border:'1px solid var(--ffd-line)',borderRadius:'var(--ffd-radius-lg)',boxShadow:'0 20px 44px -16px rgba(35,60,58,0.26)',minWidth:230,padding:'0.4rem'}}>
