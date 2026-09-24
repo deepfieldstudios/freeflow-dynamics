@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Workshops & Training Schedule — Freeflow Dynamics</title>
-<meta name="description" content="Upcoming freediving workshops, depth training trips, and competition coaching with Natalie Bruce of Freeflow Dynamics. New events announced here first.">
+<meta name="description" content="Winter freediving workshops and Molchanovs Lap 1 courses in Idaho Springs, Colorado, plus depth training blocks and competitions with Natalie Bruce.">
 <link rel="stylesheet" href="styles.css">
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
@@ -23,14 +23,14 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://freeflowdynamics.com/events.html">
 <meta property="og:title" content="Workshops &amp; Training Schedule — Freeflow Dynamics">
-<meta property="og:description" content="Upcoming freediving workshops, depth training trips, and competition coaching with Natalie Bruce of Freeflow Dynamics. New events announced here first.">
+<meta property="og:description" content="Winter freediving workshops and Molchanovs Lap 1 courses in Idaho Springs, Colorado, plus depth training blocks and competitions with Natalie Bruce.">
 <meta property="og:image" content="https://freeflowdynamics.com/assets/og/og-default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Natalie Bruce surfacing after a freedive — Freeflow Dynamics">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Workshops &amp; Training Schedule — Freeflow Dynamics">
-<meta name="twitter:description" content="Upcoming freediving workshops, depth training trips, and competition coaching with Natalie Bruce of Freeflow Dynamics. New events announced here first.">
+<meta name="twitter:description" content="Winter freediving workshops and Molchanovs Lap 1 courses in Idaho Springs, Colorado, plus depth training blocks and competitions with Natalie Bruce.">
 <meta name="twitter:image" content="https://freeflowdynamics.com/assets/og/og-default.jpg">
 <meta name="theme-color" content="#233c3a">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
@@ -185,14 +185,72 @@ function EventsHero() {
   );
 }
 
+/* Winter 2026–27 checkout links (Natalie's Stripe). Every workshop registers
+   through the single-session link; the date is picked at checkout. */
+const PAY = {
+  lap1Dec:'https://buy.stripe.com/dRmeVd5nE4HMeyggge7ok03',
+  lap1Jan:'https://buy.stripe.com/fZu00j4jAa261Lu0hg7ok04',
+  single:'https://buy.stripe.com/fZubJ17vM2zE1LuaVU7ok00',
+  pack4:'https://buy.stripe.com/6oU5kD6rIeim3TC3ts7ok01',
+  season:'https://buy.stripe.com/9B600jg2i8Y2ai00hg7ok02',
+};
+const VENUE = 'Clear Creek Metropolitan Recreation District, 98 12th Ave, Idaho Springs, CO 80452';
+
+function EventCard({ it }) {
+  return (
+    <div style={{display:'flex',flexWrap:'wrap',gap:'1.2rem',justifyContent:'space-between',alignItems:'center',background:'var(--ffd-foam)',border:'1px solid var(--ffd-line)',borderRadius:'var(--ffd-radius-lg)',padding:'clamp(1.4rem,3vw,2rem)',boxShadow:'var(--ffd-shadow)'}}>
+      <div style={{flex:'1 1 320px'}}>
+        <div style={{fontFamily:'var(--ffd-font-metric)',fontSize:'0.82rem',color:'var(--ffd-tide-deep)',marginBottom:'0.5rem'}}>{it.when} · {it.where}</div>
+        <h3 style={{fontFamily:'var(--ffd-font-display)',fontWeight:500,fontSize:'clamp(1.3rem,2.6vw,1.7rem)',letterSpacing:'-0.01em',color:'var(--ffd-ink)',marginBottom:'0.5rem',lineHeight:1.15}}>{it.title}</h3>
+        <p style={{fontSize:'0.95rem',color:'var(--ffd-stone)',fontWeight:300,lineHeight:1.6,maxWidth:'56ch'}}>{it.desc}</p>
+      </div>
+      <div style={{display:'flex',alignItems:'center',gap:'1rem'}}>
+        {it.price&&<span style={{fontFamily:'var(--ffd-font-metric)',fontSize:'1.05rem',color:'var(--ffd-ink)'}}>{it.price}</span>}
+        <Btn variant="primary" href={it.href||'#event-inquiry'}>{it.cta||'Inquire'}</Btn>
+      </div>
+    </div>
+  );
+}
+
+function WorkshopPricing() {
+  const tiers = [
+    {name:'Single Session', price:'$70', note:'Pick your date at checkout', href:PAY.single},
+    {name:'4-Pack', price:'$240', note:'$60 / session · save $40', href:PAY.pack4},
+    {name:'Season Pass', price:'$400', note:'All 7 sessions · save $90', href:PAY.season, best:true},
+  ];
+  return (
+    <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'1rem',marginTop:'1.6rem'}}>
+      {tiers.map((t,i)=>(
+        <div key={i} style={{display:'flex',flexDirection:'column',gap:'0.4rem',background:t.best?'var(--ffd-deep-tide)':'var(--ffd-foam)',color:t.best?'var(--ffd-foam)':'var(--ffd-ink)',border:t.best?'1px solid var(--ffd-deep-tide)':'1px solid var(--ffd-line)',borderRadius:'var(--ffd-radius-lg)',padding:'clamp(1.3rem,3vw,1.7rem)',boxShadow:'var(--ffd-shadow)'}}>
+          <div style={{fontFamily:'var(--ffd-font-body)',fontWeight:500,fontSize:'0.72rem',letterSpacing:'0.2em',textTransform:'uppercase',color:t.best?'var(--ffd-clay-glow)':'var(--ffd-tide-deep)'}}>{t.name}</div>
+          <div style={{fontFamily:'var(--ffd-font-display)',fontWeight:500,fontSize:'2.2rem',lineHeight:1.1}}>{t.price}</div>
+          <div style={{fontSize:'0.88rem',fontWeight:300,color:t.best?'rgba(242,235,220,0.8)':'var(--ffd-stone)',marginBottom:'0.8rem'}}>{t.note}</div>
+          <Btn variant={t.best?'ghost':'primary'} href={t.href} style={{marginTop:'auto',alignSelf:'flex-start'}}>Buy {t.name}</Btn>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function Schedule() {
+  const W = {where:'Idaho Springs, CO', cta:'Register', href:PAY.single};
   const groups = [
+    { label:'Molchanovs Lap 1 courses', note:'$350 · rental gear included: mask, snorkel, weights, wetsuit, long fins.', items:[
+      {title:'Molchanovs Lap 1 Course', when:'Dec 18 – 20, 2026', where:'Idaho Springs, CO', desc:'Pool freediving foundation — a three-day Molchanovs certification course.', price:'$350', cta:'Register', href:PAY.lap1Dec},
+      {title:'Molchanovs Lap 1 Course', when:'Jan 8 – 10, 2027', where:'Idaho Springs, CO', desc:'Pool freediving foundation — a three-day Molchanovs certification course.', price:'$350', cta:'Register', href:PAY.lap1Jan},
+    ]},
+    { label:'Winter workshop series', note:'All sessions 10:00am – 12:00pm.', pricing:true, items:[
+      {...W, title:'Christmas CO2 Games', when:'Sat Dec 26, 2026', desc:'Fun, low-pressure CO2 exposure.'},
+      {...W, title:'Charge & Calm: CO2 Training', when:'Sat Jan 9, 2027', desc:'CO2 and O2 training.'},
+      {...W, title:'Back to Basics', when:'Sun Jan 10, 2027', desc:'Buoyancy, technique, turns, and breathe-up.'},
+      {...W, title:'Everything No Fins', when:'Sat Jan 16, 2027', desc:'A full no-fins technique session.'},
+      {...W, title:'Mental Resilience CO2 Training', when:'Sat Jan 23, 2027', desc:'CO2 training and discomfort tolerance.'},
+      {...W, title:'Comp Preparation', when:'Sun Jan 24, 2027', desc:'Protocols, pacing, and warm-up routines.'},
+      {...W, title:'Comp Simulation', when:'Sat Jan 30, 2027', desc:'A full mock meet with judging — one attempt.'},
+    ]},
     { label:'Training blocks', items:[
       {title:'Tenerife — Depth Block', when:'Sep 24 – Dec 1, 2026', where:'Tenerife, Canary Islands', desc:'In-water depth training on the volcanic coast — line work, technique, and personal-best progression.'},
       {title:'Dominica — Depth Block', when:'Sep 1 – Dec 1, 2027', where:'Dominica', desc:'Warm, deep-water depth training blocks in Dominica — line work and personal-best progression.'},
-    ]},
-    { label:'Workshops', items:[
-      {title:'Dynamic Apnea Workshop', when:'Dates TBA', where:'Idaho Springs, CO', desc:'Altitude dynamic apnea — technique, breath, and the mental side of the dive.'},
     ]},
     { label:'Competitions', items:[
       {title:'AIDA Altitude Apnea Challenge', when:'Feb 13 – 14, 2027', where:'Idaho Springs, CO', desc:'High-altitude pool apnea competition in the Colorado mountains.'},
@@ -201,21 +259,18 @@ function Schedule() {
   return (
     <section style={{background:'var(--ffd-shell)',padding:'clamp(5rem,10vw,8rem) 0'}}>
       <div style={{maxWidth:1000,margin:'0 auto',padding:'0 clamp(1.25rem,5vw,4rem)'}}>
+        <div style={{marginBottom:'clamp(3rem,6vw,4.5rem)'}}>
+          <h2 style={{fontFamily:'var(--ffd-font-display)',fontWeight:500,fontSize:'clamp(1.9rem,3.8vw,2.7rem)',letterSpacing:'-0.02em',lineHeight:1.1,color:'var(--ffd-ink)',marginBottom:'0.7rem'}}>Winter in Idaho Springs</h2>
+          <p style={{fontSize:'1.02rem',color:'var(--ffd-stone)',fontWeight:300,lineHeight:1.68,maxWidth:'60ch'}}>Courses and workshops run December to January. All sessions are at {VENUE}.</p>
+        </div>
         {groups.map((g,gi)=>(
           <div key={gi} style={{marginBottom:gi<groups.length-1?'clamp(3rem,6vw,4.5rem)':0}}>
-            <Eyebrow style={{marginBottom:'1.8rem'}}>{g.label}</Eyebrow>
+            <Eyebrow style={{marginBottom:g.note?'0.7rem':'1.8rem'}}>{g.label}</Eyebrow>
+            {g.note&&<p style={{fontSize:'0.95rem',color:'var(--ffd-stone)',fontWeight:300,marginBottom:'1.4rem'}}>{g.note}</p>}
             <div style={{display:'flex',flexDirection:'column',gap:'1rem'}}>
-              {g.items.map((it,i)=>(
-                <div key={i} style={{display:'flex',flexWrap:'wrap',gap:'1.2rem',justifyContent:'space-between',alignItems:'center',background:'var(--ffd-foam)',border:'1px solid var(--ffd-line)',borderRadius:'var(--ffd-radius-lg)',padding:'clamp(1.4rem,3vw,2rem)',boxShadow:'var(--ffd-shadow)'}}>
-                  <div style={{flex:'1 1 320px'}}>
-                    <div style={{fontFamily:'var(--ffd-font-metric)',fontSize:'0.82rem',color:'var(--ffd-tide-deep)',marginBottom:'0.5rem'}}>{it.when} · {it.where}</div>
-                    <h3 style={{fontFamily:'var(--ffd-font-display)',fontWeight:500,fontSize:'clamp(1.3rem,2.6vw,1.7rem)',letterSpacing:'-0.01em',color:'var(--ffd-ink)',marginBottom:'0.5rem',lineHeight:1.15}}>{it.title}</h3>
-                    <p style={{fontSize:'0.95rem',color:'var(--ffd-stone)',fontWeight:300,lineHeight:1.6,maxWidth:'56ch'}}>{it.desc}</p>
-                  </div>
-                  <Btn variant="primary" href="#event-inquiry">Inquire</Btn>
-                </div>
-              ))}
+              {g.items.map((it,i)=><EventCard key={i} it={it}/>)}
             </div>
+            {g.pricing&&<WorkshopPricing/>}
           </div>
         ))}
         <p style={{textAlign:'center',marginTop:'clamp(3rem,6vw,4.5rem)',fontFamily:'var(--ffd-font-display)',fontStyle:'italic',fontSize:'1.1rem',color:'var(--ffd-stone-soft)'}}>New dates announced here first.</p>
