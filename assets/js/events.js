@@ -628,65 +628,21 @@ function EventsHero() {
     }
   }, "Where I'll be \u2014 and where you can train with me.")));
 }
-function Schedule() {
-  const groups = [{
-    label: 'Training blocks',
-    items: [{
-      title: 'Tenerife — Depth Block',
-      when: 'Sep 24 – Dec 1, 2026',
-      where: 'Tenerife, Canary Islands',
-      desc: 'In-water depth training on the volcanic coast — line work, technique, and personal-best progression.'
-    }, {
-      title: 'Dominica — Depth Block',
-      when: 'Sep 1 – Dec 1, 2027',
-      where: 'Dominica',
-      desc: 'Warm, deep-water depth training blocks in Dominica — line work and personal-best progression.'
-    }]
-  }, {
-    label: 'Workshops',
-    items: [{
-      title: 'Dynamic Apnea Workshop',
-      when: 'Dates TBA',
-      where: 'Idaho Springs, CO',
-      desc: 'Altitude dynamic apnea — technique, breath, and the mental side of the dive.'
-    }]
-  }, {
-    label: 'Competitions',
-    items: [{
-      title: 'AIDA Altitude Apnea Challenge',
-      when: 'Feb 13 – 14, 2027',
-      where: 'Idaho Springs, CO',
-      desc: 'High-altitude pool apnea competition in the Colorado mountains.'
-    }]
-  }];
-  return /*#__PURE__*/React.createElement("section", {
-    style: {
-      background: 'var(--ffd-shell)',
-      padding: 'clamp(5rem,10vw,8rem) 0'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      maxWidth: 1000,
-      margin: '0 auto',
-      padding: '0 clamp(1.25rem,5vw,4rem)'
-    }
-  }, groups.map((g, gi) => /*#__PURE__*/React.createElement("div", {
-    key: gi,
-    style: {
-      marginBottom: gi < groups.length - 1 ? 'clamp(3rem,6vw,4.5rem)' : 0
-    }
-  }, /*#__PURE__*/React.createElement(Eyebrow, {
-    style: {
-      marginBottom: '1.8rem'
-    }
-  }, g.label), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '1rem'
-    }
-  }, g.items.map((it, i) => /*#__PURE__*/React.createElement("div", {
-    key: i,
+
+/* Winter 2026–27 checkout links (Natalie's Stripe). Every workshop registers
+   through the single-session link; the date is picked at checkout. */
+const PAY = {
+  lap1Dec: 'https://buy.stripe.com/dRmeVd5nE4HMeyggge7ok03',
+  lap1Jan: 'https://buy.stripe.com/fZu00j4jAa261Lu0hg7ok04',
+  single: 'https://buy.stripe.com/fZubJ17vM2zE1LuaVU7ok00',
+  pack4: 'https://buy.stripe.com/6oU5kD6rIeim3TC3ts7ok01',
+  season: 'https://buy.stripe.com/9B600jg2i8Y2ai00hg7ok02'
+};
+const VENUE = 'Clear Creek Metropolitan Recreation District, 98 12th Ave, Idaho Springs, CO 80452';
+function EventCard({
+  it
+}) {
+  return /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       flexWrap: 'wrap',
@@ -728,10 +684,240 @@ function Schedule() {
       lineHeight: 1.6,
       maxWidth: '56ch'
     }
-  }, it.desc)), /*#__PURE__*/React.createElement(Btn, {
+  }, it.desc)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '1rem'
+    }
+  }, it.price && /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--ffd-font-metric)',
+      fontSize: '1.05rem',
+      color: 'var(--ffd-ink)'
+    }
+  }, it.price), /*#__PURE__*/React.createElement(Btn, {
     variant: "primary",
-    href: "#event-inquiry"
-  }, "Inquire")))))), /*#__PURE__*/React.createElement("p", {
+    href: it.href || '#event-inquiry'
+  }, it.cta || 'Inquire')));
+}
+function WorkshopPricing() {
+  const tiers = [{
+    name: 'Single Session',
+    price: '$70',
+    note: 'Pick your date at checkout',
+    href: PAY.single
+  }, {
+    name: '4-Pack',
+    price: '$240',
+    note: '$60 / session · save $40',
+    href: PAY.pack4
+  }, {
+    name: 'Season Pass',
+    price: '$400',
+    note: 'All 7 sessions · save $90',
+    href: PAY.season,
+    best: true
+  }];
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))',
+      gap: '1rem',
+      marginTop: '1.6rem'
+    }
+  }, tiers.map((t, i) => /*#__PURE__*/React.createElement("div", {
+    key: i,
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '0.4rem',
+      background: t.best ? 'var(--ffd-deep-tide)' : 'var(--ffd-foam)',
+      color: t.best ? 'var(--ffd-foam)' : 'var(--ffd-ink)',
+      border: t.best ? '1px solid var(--ffd-deep-tide)' : '1px solid var(--ffd-line)',
+      borderRadius: 'var(--ffd-radius-lg)',
+      padding: 'clamp(1.3rem,3vw,1.7rem)',
+      boxShadow: 'var(--ffd-shadow)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--ffd-font-body)',
+      fontWeight: 500,
+      fontSize: '0.72rem',
+      letterSpacing: '0.2em',
+      textTransform: 'uppercase',
+      color: t.best ? 'var(--ffd-clay-glow)' : 'var(--ffd-tide-deep)'
+    }
+  }, t.name), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontFamily: 'var(--ffd-font-display)',
+      fontWeight: 500,
+      fontSize: '2.2rem',
+      lineHeight: 1.1
+    }
+  }, t.price), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: '0.88rem',
+      fontWeight: 300,
+      color: t.best ? 'rgba(242,235,220,0.8)' : 'var(--ffd-stone)',
+      marginBottom: '0.8rem'
+    }
+  }, t.note), /*#__PURE__*/React.createElement(Btn, {
+    variant: t.best ? 'ghost' : 'primary',
+    href: t.href,
+    style: {
+      marginTop: 'auto',
+      alignSelf: 'flex-start'
+    }
+  }, "Buy ", t.name))));
+}
+function Schedule() {
+  const W = {
+    where: 'Idaho Springs, CO',
+    cta: 'Register',
+    href: PAY.single
+  };
+  const groups = [{
+    label: 'Molchanovs Lap 1 courses',
+    note: '$350 · rental gear included: mask, snorkel, weights, wetsuit, long fins.',
+    items: [{
+      title: 'Molchanovs Lap 1 Course',
+      when: 'Dec 18 – 20, 2026',
+      where: 'Idaho Springs, CO',
+      desc: 'Pool freediving foundation — a three-day Molchanovs certification course.',
+      price: '$350',
+      cta: 'Register',
+      href: PAY.lap1Dec
+    }, {
+      title: 'Molchanovs Lap 1 Course',
+      when: 'Jan 8 – 10, 2027',
+      where: 'Idaho Springs, CO',
+      desc: 'Pool freediving foundation — a three-day Molchanovs certification course.',
+      price: '$350',
+      cta: 'Register',
+      href: PAY.lap1Jan
+    }]
+  }, {
+    label: 'Winter workshop series',
+    note: 'All sessions 10:00am – 12:00pm.',
+    pricing: true,
+    items: [{
+      ...W,
+      title: 'Christmas CO2 Games',
+      when: 'Sat Dec 26, 2026',
+      desc: 'Fun, low-pressure CO2 exposure.'
+    }, {
+      ...W,
+      title: 'Charge & Calm: CO2 Training',
+      when: 'Sat Jan 9, 2027',
+      desc: 'CO2 and O2 training.'
+    }, {
+      ...W,
+      title: 'Back to Basics',
+      when: 'Sun Jan 10, 2027',
+      desc: 'Buoyancy, technique, turns, and breathe-up.'
+    }, {
+      ...W,
+      title: 'Everything No Fins',
+      when: 'Sat Jan 16, 2027',
+      desc: 'A full no-fins technique session.'
+    }, {
+      ...W,
+      title: 'Mental Resilience CO2 Training',
+      when: 'Sat Jan 23, 2027',
+      desc: 'CO2 training and discomfort tolerance.'
+    }, {
+      ...W,
+      title: 'Comp Preparation',
+      when: 'Sun Jan 24, 2027',
+      desc: 'Protocols, pacing, and warm-up routines.'
+    }, {
+      ...W,
+      title: 'Comp Simulation',
+      when: 'Sat Jan 30, 2027',
+      desc: 'A full mock meet with judging — one attempt.'
+    }]
+  }, {
+    label: 'Training blocks',
+    items: [{
+      title: 'Tenerife — Depth Block',
+      when: 'Sep 24 – Dec 1, 2026',
+      where: 'Tenerife, Canary Islands',
+      desc: 'In-water depth training on the volcanic coast — line work, technique, and personal-best progression.'
+    }, {
+      title: 'Dominica — Depth Block',
+      when: 'Sep 1 – Dec 1, 2027',
+      where: 'Dominica',
+      desc: 'Warm, deep-water depth training blocks in Dominica — line work and personal-best progression.'
+    }]
+  }, {
+    label: 'Competitions',
+    items: [{
+      title: 'AIDA Altitude Apnea Challenge',
+      when: 'Feb 13 – 14, 2027',
+      where: 'Idaho Springs, CO',
+      desc: 'High-altitude pool apnea competition in the Colorado mountains.'
+    }]
+  }];
+  return /*#__PURE__*/React.createElement("section", {
+    style: {
+      background: 'var(--ffd-shell)',
+      padding: 'clamp(5rem,10vw,8rem) 0'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      maxWidth: 1000,
+      margin: '0 auto',
+      padding: '0 clamp(1.25rem,5vw,4rem)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginBottom: 'clamp(3rem,6vw,4.5rem)'
+    }
+  }, /*#__PURE__*/React.createElement("h2", {
+    style: {
+      fontFamily: 'var(--ffd-font-display)',
+      fontWeight: 500,
+      fontSize: 'clamp(1.9rem,3.8vw,2.7rem)',
+      letterSpacing: '-0.02em',
+      lineHeight: 1.1,
+      color: 'var(--ffd-ink)',
+      marginBottom: '0.7rem'
+    }
+  }, "Winter in Idaho Springs"), /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '1.02rem',
+      color: 'var(--ffd-stone)',
+      fontWeight: 300,
+      lineHeight: 1.68,
+      maxWidth: '60ch'
+    }
+  }, "Courses and workshops run December to January. All sessions are at ", VENUE, ".")), groups.map((g, gi) => /*#__PURE__*/React.createElement("div", {
+    key: gi,
+    style: {
+      marginBottom: gi < groups.length - 1 ? 'clamp(3rem,6vw,4.5rem)' : 0
+    }
+  }, /*#__PURE__*/React.createElement(Eyebrow, {
+    style: {
+      marginBottom: g.note ? '0.7rem' : '1.8rem'
+    }
+  }, g.label), g.note && /*#__PURE__*/React.createElement("p", {
+    style: {
+      fontSize: '0.95rem',
+      color: 'var(--ffd-stone)',
+      fontWeight: 300,
+      marginBottom: '1.4rem'
+    }
+  }, g.note), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '1rem'
+    }
+  }, g.items.map((it, i) => /*#__PURE__*/React.createElement(EventCard, {
+    key: i,
+    it: it
+  }))), g.pricing && /*#__PURE__*/React.createElement(WorkshopPricing, null))), /*#__PURE__*/React.createElement("p", {
     style: {
       textAlign: 'center',
       marginTop: 'clamp(3rem,6vw,4.5rem)',
