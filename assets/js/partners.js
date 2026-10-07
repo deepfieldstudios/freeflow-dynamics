@@ -848,7 +848,7 @@ function CurrentPartners() {
   }, {
     name: 'Lobster',
     cat: 'Freediving equipment',
-    desc: 'Monofins and bi-fins for pool and depth.',
+    desc: 'Freediving Neckweights.',
     url: 'https://lobsterneckweight.com'
   }, {
     name: 'Blue Element',

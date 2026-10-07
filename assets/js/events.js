@@ -696,7 +696,17 @@ function EventCard({
       fontSize: '1.05rem',
       color: 'var(--ffd-ink)'
     }
-  }, it.price), /*#__PURE__*/React.createElement(Btn, {
+  }, it.price), it.full ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontFamily: 'var(--ffd-font-metric)',
+      fontSize: '0.82rem',
+      letterSpacing: '0.12em',
+      color: 'var(--ffd-ink)',
+      border: '1px solid var(--ffd-ink)',
+      borderRadius: '999px',
+      padding: '0.55rem 1.1rem'
+    }
+  }, "FULL") : /*#__PURE__*/React.createElement(Btn, {
     variant: "primary",
     href: it.href || '#event-inquiry'
   }, it.cta || 'Inquire')));
@@ -795,13 +805,19 @@ function Schedule() {
       desc: 'Pool freediving foundation — a three-day Molchanovs certification course.',
       price: '$350',
       cta: 'Register',
-      href: PAY.lap1Jan
+      href: PAY.lap1Jan,
+      full: true
     }]
   }, {
     label: 'Winter workshop series',
     note: 'All sessions 10:00am – 12:00pm.',
     pricing: true,
     items: [{
+      ...W,
+      title: 'Back to Basics',
+      when: 'Sat Dec 19, 2026',
+      desc: 'Buoyancy, technique, turns, and breathe-up.'
+    }, {
       ...W,
       title: 'Christmas CO2 Games',
       when: 'Sat Dec 26, 2026',
@@ -811,11 +827,6 @@ function Schedule() {
       title: 'Charge & Calm: CO2 Training',
       when: 'Sat Jan 9, 2027',
       desc: 'CO2 and O2 training.'
-    }, {
-      ...W,
-      title: 'Back to Basics',
-      when: 'Sun Jan 10, 2027',
-      desc: 'Buoyancy, technique, turns, and breathe-up.'
     }, {
       ...W,
       title: 'Everything No Fins',
@@ -835,7 +846,7 @@ function Schedule() {
       ...W,
       title: 'Comp Simulation',
       when: 'Sat Jan 30, 2027',
-      desc: 'A full mock meet with judging — one attempt.'
+      desc: 'A full mock meet with judging.'
     }]
   }, {
     label: 'Training blocks',
