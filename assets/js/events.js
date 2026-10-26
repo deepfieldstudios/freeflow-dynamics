@@ -867,7 +867,9 @@ function Schedule() {
       title: 'AIDA Altitude Apnea Challenge',
       when: 'Feb 13 – 14, 2027',
       where: 'Idaho Springs, CO',
-      desc: 'High-altitude pool apnea competition in the Colorado mountains.'
+      desc: 'High-altitude pool apnea competition in the Colorado mountains.',
+      cta: 'Register',
+      href: 'https://frontrangefreedivers.com/altitude-apnea-challenge-2027'
     }]
   }];
   return /*#__PURE__*/React.createElement("section", {
